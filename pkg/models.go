@@ -1894,8 +1894,8 @@ type HypixelPlayerResponse struct {
 		Eugene              struct {
 			DailyTwoKExp int64 `json:"dailyTwoKExp"`
 		} `json:"eugene"`
-		NetworkExp float64   `json:"networkExp"`
-		LastLogout int64 `json:"lastLogout"`
+		NetworkExp float64 `json:"networkExp"`
+		LastLogout int64   `json:"lastLogout"`
 		Voting     struct {
 			Total           int   `json:"total"`
 			TotalMcsorg     int   `json:"total_mcsorg"`
@@ -2013,19 +2013,19 @@ type HypixelPlayerResponse struct {
 		LevelingReward4         bool  `json:"levelingReward_4"`
 		LastAdsenseGenerateTime int64 `json:"lastAdsenseGenerateTime"`
 		//LastClaimedReward       int64 `json:"lastClaimedReward"`
-		TotalRewards            int   `json:"totalRewards"`
-		TotalDailyRewards       int   `json:"totalDailyRewards"`
-		RewardStreak            int   `json:"rewardStreak"`
-		RewardScore             int   `json:"rewardScore"`
-		RewardHighScore         int   `json:"rewardHighScore"`
-		LevelingReward5         bool  `json:"levelingReward_5"`
-		LevelUpMVPPLUS          int64 `json:"levelUp_MVP_PLUS"`
-		LevelingReward6         bool  `json:"levelingReward_6"`
-		LevelingReward7         bool  `json:"levelingReward_7"`
-		LevelingReward8         bool  `json:"levelingReward_8"`
-		AdsenseTokens           int   `json:"adsense_tokens"`
-		LevelingReward9         bool  `json:"levelingReward_9"`
-		ParkourCheckpointBests  struct {
+		TotalRewards           int   `json:"totalRewards"`
+		TotalDailyRewards      int   `json:"totalDailyRewards"`
+		RewardStreak           int   `json:"rewardStreak"`
+		RewardScore            int   `json:"rewardScore"`
+		RewardHighScore        int   `json:"rewardHighScore"`
+		LevelingReward5        bool  `json:"levelingReward_5"`
+		LevelUpMVPPLUS         int64 `json:"levelUp_MVP_PLUS"`
+		LevelingReward6        bool  `json:"levelingReward_6"`
+		LevelingReward7        bool  `json:"levelingReward_7"`
+		LevelingReward8        bool  `json:"levelingReward_8"`
+		AdsenseTokens          int   `json:"adsense_tokens"`
+		LevelingReward9        bool  `json:"levelingReward_9"`
+		ParkourCheckpointBests struct {
 			Bedwars struct {
 				Num0 int `json:"0"`
 				Num1 int `json:"1"`
@@ -2470,8 +2470,6 @@ type HypixelPlayerResponse struct {
 	} `json:"player"`
 }
 
-
-
 type HypixelFriendsResponse struct {
 	Success bool   `json:"success"`
 	UUID    string `json:"uuid"`
@@ -2493,3298 +2491,3301 @@ type HypixelStatusResponse struct {
 	} `json:"session"`
 }
 
+type HypixelSkyblockMember struct {
+	LastSave       int64 `json:"last_save"`
+	CoopInvitation struct {
+		Timestamp int64  `json:"timestamp"`
+		InvitedBy string `json:"invited_by"`
+		Confirmed bool   `json:"confirmed"`
+	} `json:"coop_invitation"`
+	FirstJoin    int64 `json:"first_join"`
+	FirstJoinHub int   `json:"first_join_hub"`
+	Stats        struct {
+		Deaths                                              float64 `json:"deaths"`
+		DeathsVoid                                          float64 `json:"deaths_void"`
+		HighestCriticalDamage                               float64 `json:"highest_critical_damage"`
+		Kills                                               float64 `json:"kills"`
+		KillsPondSquid                                      float64 `json:"kills_pond_squid"`
+		KillsZombie                                         float64 `json:"kills_zombie"`
+		DeathsEnderman                                      float64 `json:"deaths_enderman"`
+		KillsSkeleton                                       float64 `json:"kills_skeleton"`
+		KillsSpider                                         float64 `json:"kills_spider"`
+		KillsEnderman                                       float64 `json:"kills_enderman"`
+		KillsPig                                            float64 `json:"kills_pig"`
+		PetMilestoneOresMined                               float64 `json:"pet_milestone_ores_mined"`
+		KillsLapisZombie                                    float64 `json:"kills_lapis_zombie"`
+		KillsRedstonePigman                                 float64 `json:"kills_redstone_pigman"`
+		KillsEmeraldSlime                                   float64 `json:"kills_emerald_slime"`
+		KillsDiamondZombie                                  float64 `json:"kills_diamond_zombie"`
+		KillsDiamondSkeleton                                float64 `json:"kills_diamond_skeleton"`
+		DeathsDiamondZombie                                 float64 `json:"deaths_diamond_zombie"`
+		AuctionsBids                                        float64 `json:"auctions_bids"`
+		AuctionsHighestBid                                  float64 `json:"auctions_highest_bid"`
+		AuctionsWon                                         float64 `json:"auctions_won"`
+		AuctionsBoughtUncommon                              float64 `json:"auctions_bought_uncommon"`
+		AuctionsGoldSpent                                   float64 `json:"auctions_gold_spent"`
+		DeathsSpider                                        float64 `json:"deaths_spider"`
+		KillsSheep                                          float64 `json:"kills_sheep"`
+		DeathsFire                                          float64 `json:"deaths_fire"`
+		DeathsFall                                          float64 `json:"deaths_fall"`
+		KillsInvisibleCreeper                               float64 `json:"kills_invisible_creeper"`
+		KillsWitherSkeleton                                 float64 `json:"kills_wither_skeleton"`
+		KillsMagmaCube                                      float64 `json:"kills_magma_cube"`
+		KillsFireballMagmaCube                              float64 `json:"kills_fireball_magma_cube"`
+		KillsDasherSpider                                   float64 `json:"kills_dasher_spider"`
+		KillsSplitterSpiderSilverfish                       float64 `json:"kills_splitter_spider_silverfish"`
+		KillsBlaze                                          float64 `json:"kills_blaze"`
+		KillsPigman                                         float64 `json:"kills_pigman"`
+		KillsGhast                                          float64 `json:"kills_ghast"`
+		DeathsEndermite                                     float64 `json:"deaths_endermite"`
+		KillsEndermite                                      float64 `json:"kills_endermite"`
+		KillsObsidianWither                                 float64 `json:"kills_obsidian_wither"`
+		KillsWatcher                                        float64 `json:"kills_watcher"`
+		DeathsWatcher                                       float64 `json:"deaths_watcher"`
+		DeathsZealotEnderman                                float64 `json:"deaths_zealot_enderman"`
+		KillsZombieVillager                                 float64 `json:"kills_zombie_villager"`
+		DeathsZombie                                        float64 `json:"deaths_zombie"`
+		DeathsPlayer                                        float64 `json:"deaths_player"`
+		AuctionsBoughtEpic                                  float64 `json:"auctions_bought_epic"`
+		KillsUnburriedZombie                                float64 `json:"kills_unburried_zombie"`
+		DeathsUnburriedZombie                               float64 `json:"deaths_unburried_zombie"`
+		AuctionsBoughtCommon                                float64 `json:"auctions_bought_common"`
+		KillsSplitterSpider                                 float64 `json:"kills_splitter_spider"`
+		KillsSpiderJockey                                   float64 `json:"kills_spider_jockey"`
+		KillsJockeySkeleton                                 float64 `json:"kills_jockey_skeleton"`
+		KillsVoraciousSpider                                float64 `json:"kills_voracious_spider"`
+		KillsWeaverSpider                                   float64 `json:"kills_weaver_spider"`
+		KillsJockeyShotSilverfish                           float64 `json:"kills_jockey_shot_silverfish"`
+		KillsRuinWolf                                       float64 `json:"kills_ruin_wolf"`
+		KillsOldWolf                                        float64 `json:"kills_old_wolf"`
+		DeathsOldWolf                                       float64 `json:"deaths_old_wolf"`
+		DeathsWolf                                          float64 `json:"deaths_wolf"`
+		KillsRandomSlime                                    float64 `json:"kills_random_slime"`
+		AuctionsCreated                                     float64 `json:"auctions_created"`
+		AuctionsFees                                        float64 `json:"auctions_fees"`
+		KillsGeneratorGhast                                 float64 `json:"kills_generator_ghast"`
+		AuctionsCompleted                                   float64 `json:"auctions_completed"`
+		AuctionsSoldUncommon                                float64 `json:"auctions_sold_uncommon"`
+		AuctionsGoldEarned                                  float64 `json:"auctions_gold_earned"`
+		AuctionsNoBids                                      float64 `json:"auctions_no_bids"`
+		KillsNightRespawningSkeleton                        float64 `json:"kills_night_respawning_skeleton"`
+		KillsBatPinata                                      float64 `json:"kills_bat_pinata"`
+		KillsHorsemanBat                                    float64 `json:"kills_horseman_bat"`
+		DeathsHorsemanHorse                                 float64 `json:"deaths_horseman_horse"`
+		KillsHorsemanZombie                                 float64 `json:"kills_horseman_zombie"`
+		GiftsGiven                                          float64 `json:"gifts_given"`
+		KillsPlayer                                         float64 `json:"kills_player"`
+		ItemsFished                                         float64 `json:"items_fished"`
+		ItemsFishedNormal                                   float64 `json:"items_fished_normal"`
+		PetMilestoneSeaCreaturesKilled                      float64 `json:"pet_milestone_sea_creatures_killed"`
+		KillsNightSquid                                     float64 `json:"kills_night_squid"`
+		KillsSeaWalker                                      float64 `json:"kills_sea_walker"`
+		KillsSeaGuardian                                    float64 `json:"kills_sea_guardian"`
+		ItemsFishedTreasure                                 float64 `json:"items_fished_treasure"`
+		DeathsSeaGuardian                                   float64 `json:"deaths_sea_guardian"`
+		ItemsFishedLargeTreasure                            float64 `json:"items_fished_large_treasure"`
+		GiftsReceived                                       float64 `json:"gifts_received"`
+		KillsZealotEnderman                                 float64 `json:"kills_zealot_enderman"`
+		KillsRespawningSkeleton                             float64 `json:"kills_respawning_skeleton"`
+		DeathsYoungDragon                                   float64 `json:"deaths_young_dragon"`
+		AuctionsBoughtLegendary                             float64 `json:"auctions_bought_legendary"`
+		ForagingRaceBestTime                                float64 `json:"foraging_race_best_time"`
+		KillsSeaArcher                                      float64 `json:"kills_sea_archer"`
+		DeathsWitherSkeleton                                float64 `json:"deaths_wither_skeleton"`
+		DeathsBlaze                                         float64 `json:"deaths_blaze"`
+		AuctionsBoughtRare                                  float64 `json:"auctions_bought_rare"`
+		DeathsUnknown                                       float64 `json:"deaths_unknown"`
+		DeathsUnstableDragon                                float64 `json:"deaths_unstable_dragon"`
+		EnderCrystalsDestroyed                              float64 `json:"ender_crystals_destroyed"`
+		KillsMagmaCubeBoss                                  float64 `json:"kills_magma_cube_boss"`
+		DeathsCorruptedProtector                            float64 `json:"deaths_corrupted_protector"`
+		KillsZombieDeep                                     float64 `json:"kills_zombie_deep"`
+		KillsGuardianDefender                               float64 `json:"kills_guardian_defender"`
+		KillsCreeper                                        float64 `json:"kills_creeper"`
+		KillsWitch                                          float64 `json:"kills_witch"`
+		DeathsProtectorDragon                               float64 `json:"deaths_protector_dragon"`
+		KillsGeneratorSlime                                 float64 `json:"kills_generator_slime"`
+		KillsGeneratorMagmaCube                             float64 `json:"kills_generator_magma_cube"`
+		DeathsOldDragon                                     float64 `json:"deaths_old_dragon"`
+		AuctionsSoldRare                                    float64 `json:"auctions_sold_rare"`
+		KillsBroodMotherCaveSpider                          float64 `json:"kills_brood_mother_cave_spider"`
+		AuctionsSoldCommon                                  float64 `json:"auctions_sold_common"`
+		KillsCatfish                                        float64 `json:"kills_catfish"`
+		KillsChickenDeep                                    float64 `json:"kills_chicken_deep"`
+		KillsCarrotKing                                     float64 `json:"kills_carrot_king"`
+		KillsSeaLeech                                       float64 `json:"kills_sea_leech"`
+		KillsWaterHydra                                     float64 `json:"kills_water_hydra"`
+		KillsDeepSeaProtector                               float64 `json:"kills_deep_sea_protector"`
+		KillsFrozenSteve                                    float64 `json:"kills_frozen_steve"`
+		KillsFrostyTheSnowman                               float64 `json:"kills_frosty_the_snowman"`
+		KillsChicken                                        float64 `json:"kills_chicken"`
+		KillsCow                                            float64 `json:"kills_cow"`
+		KillsRabbit                                         float64 `json:"kills_rabbit"`
+		KillsCryptLurker                                    float64 `json:"kills_crypt_lurker"`
+		KillsCryptTankZombie                                float64 `json:"kills_crypt_tank_zombie"`
+		KillsZombieGrunt                                    float64 `json:"kills_zombie_grunt"`
+		KillsCryptDreadlord                                 float64 `json:"kills_crypt_dreadlord"`
+		DeathsLostAdventurer                                float64 `json:"deaths_lost_adventurer"`
+		KillsScaredSkeleton                                 float64 `json:"kills_scared_skeleton"`
+		KillsDungeonRespawningSkeleton                      float64 `json:"kills_dungeon_respawning_skeleton"`
+		KillsCryptSouleater                                 float64 `json:"kills_crypt_souleater"`
+		DeathsDiamondGuy                                    float64 `json:"deaths_diamond_guy"`
+		KillsSkeletonGrunt                                  float64 `json:"kills_skeleton_grunt"`
+		DeathsSkeletonGrunt                                 float64 `json:"deaths_skeleton_grunt"`
+		DeathsWatcherSummonUndead                           float64 `json:"deaths_watcher_summon_undead"`
+		KillsWatcherSummonUndead                            float64 `json:"kills_watcher_summon_undead"`
+		KillsCellarSpider                                   float64 `json:"kills_cellar_spider"`
+		KillsLostAdventurer                                 float64 `json:"kills_lost_adventurer"`
+		DeathsTrap                                          float64 `json:"deaths_trap"`
+		KillsSkeletonSoldier                                float64 `json:"kills_skeleton_soldier"`
+		DeathsScaredSkeleton                                float64 `json:"deaths_scared_skeleton"`
+		DeathsCryptSouleater                                float64 `json:"deaths_crypt_souleater"`
+		DeathsCryptLurker                                   float64 `json:"deaths_crypt_lurker"`
+		DeathsCryptDreadlord                                float64 `json:"deaths_crypt_dreadlord"`
+		DeathsSkeletonSoldier                               float64 `json:"deaths_skeleton_soldier"`
+		KillsDiamondGuy                                     float64 `json:"kills_diamond_guy"`
+		KillsCryptUndead                                    float64 `json:"kills_crypt_undead"`
+		DeathsZombieGrunt                                   float64 `json:"deaths_zombie_grunt"`
+		KillsSniperSkeleton                                 float64 `json:"kills_sniper_skeleton"`
+		KillsCryptUndeadPieter                              float64 `json:"kills_crypt_undead_pieter"`
+		DeathsBonzoSummonUndead                             float64 `json:"deaths_bonzo_summon_undead"`
+		KillsBonzoSummonUndead                              float64 `json:"kills_bonzo_summon_undead"`
+		DeathsBonzo                                         float64 `json:"deaths_bonzo"`
+		KillsBlazeHigherOrLower                             float64 `json:"kills_blaze_higher_or_lower"`
+		KillsSkeletonMaster                                 float64 `json:"kills_skeleton_master"`
+		DeathsScarfWarrior                                  float64 `json:"deaths_scarf_warrior"`
+		KillsRevenantZombie                                 float64 `json:"kills_revenant_zombie"`
+		KillsDungeonSecretBat                               float64 `json:"kills_dungeon_secret_bat"`
+		KillsCryptUndeadChristian                           float64 `json:"kills_crypt_undead_christian"`
+		DungeonHubCrystalCoreAnythingNoReturnBestTime       float64 `json:"dungeon_hub_crystal_core_anything_no_return_best_time"`
+		DungeonHubCrystalCoreNoPearlsNoReturnBestTime       float64 `json:"dungeon_hub_crystal_core_no_pearls_no_return_best_time"`
+		DungeonHubCrystalCoreNoAbilitiesNoReturnBestTime    float64 `json:"dungeon_hub_crystal_core_no_abilities_no_return_best_time"`
+		KillsCryptUndeadAlexander                           float64 `json:"kills_crypt_undead_alexander"`
+		DeathsScarfArcher                                   float64 `json:"deaths_scarf_archer"`
+		DeathsScarfMage                                     float64 `json:"deaths_scarf_mage"`
+		DeathsScarf                                         float64 `json:"deaths_scarf"`
+		DungeonHubCrystalCoreNothingNoReturnBestTime        float64 `json:"dungeon_hub_crystal_core_nothing_no_return_best_time"`
+		DungeonHubGiantMushroomAnythingNoReturnBestTime     float64 `json:"dungeon_hub_giant_mushroom_anything_no_return_best_time"`
+		DungeonHubGiantMushroomNoPearlsNoReturnBestTime     float64 `json:"dungeon_hub_giant_mushroom_no_pearls_no_return_best_time"`
+		DungeonHubGiantMushroomNoAbilitiesNoReturnBestTime  float64 `json:"dungeon_hub_giant_mushroom_no_abilities_no_return_best_time"`
+		DungeonHubGiantMushroomNothingNoReturnBestTime      float64 `json:"dungeon_hub_giant_mushroom_nothing_no_return_best_time"`
+		DungeonHubPrecursorRuinsAnythingNoReturnBestTime    float64 `json:"dungeon_hub_precursor_ruins_anything_no_return_best_time"`
+		DungeonHubPrecursorRuinsNoPearlsNoReturnBestTime    float64 `json:"dungeon_hub_precursor_ruins_no_pearls_no_return_best_time"`
+		DungeonHubPrecursorRuinsNoAbilitiesNoReturnBestTime float64 `json:"dungeon_hub_precursor_ruins_no_abilities_no_return_best_time"`
+		DungeonHubPrecursorRuinsNothingNoReturnBestTime     float64 `json:"dungeon_hub_precursor_ruins_nothing_no_return_best_time"`
+		KillsTarantulaSpider                                float64 `json:"kills_tarantula_spider"`
+		DeathsSniperSkeleton                                float64 `json:"deaths_sniper_skeleton"`
+		KillsLonelySpider                                   float64 `json:"kills_lonely_spider"`
+		KillsCryptUndeadValentin                            float64 `json:"kills_crypt_undead_valentin"`
+		KillsPackSpirit                                     float64 `json:"kills_pack_spirit"`
+		KillsSoulOfTheAlpha                                 float64 `json:"kills_soul_of_the_alpha"`
+		KillsHowlingSpirit                                  float64 `json:"kills_howling_spirit"`
+		KillsDungeonRespawningSkeletonSkull                 float64 `json:"kills_dungeon_respawning_skeleton_skull"`
+		KillsCryptUndeadMarius                              float64 `json:"kills_crypt_undead_marius"`
+		DeathsObsidianWither                                float64 `json:"deaths_obsidian_wither"`
+		KillsCorruptedProtector                             float64 `json:"kills_corrupted_protector"`
+		DeathsTarantulaSpider                               float64 `json:"deaths_tarantula_spider"`
+		KillsBroodMotherSpider                              float64 `json:"kills_brood_mother_spider"`
+		DeathsSkeletor                                      float64 `json:"deaths_skeletor"`
+		DeathsSkeletonMaster                                float64 `json:"deaths_skeleton_master"`
+		DeathsDungeonRespawningSkeleton                     float64 `json:"deaths_dungeon_respawning_skeleton"`
+		DeathsShadowAssassin                                float64 `json:"deaths_shadow_assassin"`
+		DeathsCryptTankZombie                               float64 `json:"deaths_crypt_tank_zombie"`
+		KillsScarfWarrior                                   float64 `json:"kills_scarf_warrior"`
+		KillsParasite                                       float64 `json:"kills_parasite"`
+		AuctionsSoldEpic                                    float64 `json:"auctions_sold_epic"`
+		MythosKills                                         float64 `json:"mythos_kills"`
+		KillsMinosHunter                                    float64 `json:"kills_minos_hunter"`
+		MythosBurrowsDugNext                                float64 `json:"mythos_burrows_dug_next"`
+		MythosBurrowsDugNextCOMMON                          float64 `json:"mythos_burrows_dug_next_COMMON"`
+		MythosBurrowsDugCombat                              float64 `json:"mythos_burrows_dug_combat"`
+		MythosBurrowsDugCombatCOMMON                        float64 `json:"mythos_burrows_dug_combat_COMMON"`
+		KillsSiameseLynx                                    float64 `json:"kills_siamese_lynx"`
+		MythosBurrowsDugTreasure                            float64 `json:"mythos_burrows_dug_treasure"`
+		MythosBurrowsDugTreasureCOMMON                      float64 `json:"mythos_burrows_dug_treasure_COMMON"`
+		MythosBurrowsChainsComplete                         float64 `json:"mythos_burrows_chains_complete"`
+		MythosBurrowsChainsCompleteCOMMON                   float64 `json:"mythos_burrows_chains_complete_COMMON"`
+		MythosBurrowsDugNextRARE                            float64 `json:"mythos_burrows_dug_next_RARE"`
+		MythosBurrowsDugCombatRARE                          float64 `json:"mythos_burrows_dug_combat_RARE"`
+		KillsMinotaur                                       float64 `json:"kills_minotaur"`
+		DeathsMinotaur                                      float64 `json:"deaths_minotaur"`
+		MythosBurrowsDugTreasureRARE                        float64 `json:"mythos_burrows_dug_treasure_RARE"`
+		DeathsGaiaConstruct                                 float64 `json:"deaths_gaia_construct"`
+		MythosBurrowsChainsCompleteRARE                     float64 `json:"mythos_burrows_chains_complete_RARE"`
+		KillsGaiaConstruct                                  float64 `json:"kills_gaia_construct"`
+		KillsLiquidHotMagma                                 float64 `json:"kills_liquid_hot_magma"`
+		MostWinterSnowballsHit                              float64 `json:"most_winter_snowballs_hit"`
+		MostWinterDamageDealt                               float64 `json:"most_winter_damage_dealt"`
+		MostWinterMagmaDamageDealt                          float64 `json:"most_winter_magma_damage_dealt"`
+		KillsNurseShark                                     float64 `json:"kills_nurse_shark"`
+		KillsBlueShark                                      float64 `json:"kills_blue_shark"`
+		KillsSeaWitch                                       float64 `json:"kills_sea_witch"`
+		KillsTigerShark                                     float64 `json:"kills_tiger_shark"`
+		DeathsWaterHydra                                    float64 `json:"deaths_water_hydra"`
+		AuctionsSoldLegendary                               float64 `json:"auctions_sold_legendary"`
+		AuctionsBoughtSpecial                               float64 `json:"auctions_bought_special"`
+		EndRaceBestTime                                     float64 `json:"end_race_best_time"`
+		MythosBurrowsDugNextNull                            float64 `json:"mythos_burrows_dug_next_null"`
+		MythosBurrowsDugCombatNull                          float64 `json:"mythos_burrows_dug_combat_null"`
+		MythosBurrowsDugTreasureNull                        float64 `json:"mythos_burrows_dug_treasure_null"`
+		MythosBurrowsChainsCompleteNull                     float64 `json:"mythos_burrows_chains_complete_null"`
+		DeathsSpiritBat                                     float64 `json:"deaths_spirit_bat"`
+		DeathsLividClone                                    float64 `json:"deaths_livid_clone"`
+		DeathsLivid                                         float64 `json:"deaths_livid"`
+		KillsWitherGourd                                    float64 `json:"kills_wither_gourd"`
+		KillsPhantomSpirit                                  float64 `json:"kills_phantom_spirit"`
+		KillsWraith                                         float64 `json:"kills_wraith"`
+		KillsTrickOrTreater                                 float64 `json:"kills_trick_or_treater"`
+		KillsBatSpooky                                      float64 `json:"kills_bat_spooky"`
+		KillsScaryJerry                                     float64 `json:"kills_scary_jerry"`
+		KillsBattyWitch                                     float64 `json:"kills_batty_witch"`
+		KillsScarfPriest                                    float64 `json:"kills_scarf_priest"`
+		KillsScarfArcher                                    float64 `json:"kills_scarf_archer"`
+		KillsZombieSoldier                                  float64 `json:"kills_zombie_soldier"`
+		KillsSkeletor                                       float64 `json:"kills_skeletor"`
+		KillsZombieKnight                                   float64 `json:"kills_zombie_knight"`
+		KillsProfessorGuardianSummon                        float64 `json:"kills_professor_guardian_summon"`
+		DeathsZombieSoldier                                 float64 `json:"deaths_zombie_soldier"`
+		KillsWitchBat                                       float64 `json:"kills_witch_bat"`
+		DeathsDeathmite                                     float64 `json:"deaths_deathmite"`
+		DeathsProfessorMageGuardian                         float64 `json:"deaths_professor_mage_guardian"`
+		KillsCryptUndeadNicholas                            float64 `json:"kills_crypt_undead_nicholas"`
+		KillsShadowAssassin                                 float64 `json:"kills_shadow_assassin"`
+		KillsWatcherBonzo                                   float64 `json:"kills_watcher_bonzo"`
+		DeathsProfessor                                     float64 `json:"deaths_professor"`
+		KillsCryptWitherskeleton                            float64 `json:"kills_crypt_witherskeleton"`
+		KillsSuperTankZombie                                float64 `json:"kills_super_tank_zombie"`
+		KillsSuperArcher                                    float64 `json:"kills_super_archer"`
+		KillsSpiritBull                                     float64 `json:"kills_spirit_bull"`
+		KillsSpiritRabbit                                   float64 `json:"kills_spirit_rabbit"`
+		KillsSpiritWolf                                     float64 `json:"kills_spirit_wolf"`
+		KillsSpiritSheep                                    float64 `json:"kills_spirit_sheep"`
+		DeathsSpiritChicken                                 float64 `json:"deaths_spirit_chicken"`
+		KillsSpiritBat                                      float64 `json:"kills_spirit_bat"`
+		DeathsSpiritWolf                                    float64 `json:"deaths_spirit_wolf"`
+		KillsSpiritMiniboss                                 float64 `json:"kills_spirit_miniboss"`
+		DeathsSpiritMiniboss                                float64 `json:"deaths_spirit_miniboss"`
+		KillsThorn                                          float64 `json:"kills_thorn"`
+		KillsSpiritChicken                                  float64 `json:"kills_spirit_chicken"`
+		DeathsSpiritBull                                    float64 `json:"deaths_spirit_bull"`
+		KillsTentaclees                                     float64 `json:"kills_tentaclees"`
+		AuctionsSoldSpecial                                 float64 `json:"auctions_sold_special"`
+		DeathsSpiritSheep                                   float64 `json:"deaths_spirit_sheep"`
+		DeathsSpiritRabbit                                  float64 `json:"deaths_spirit_rabbit"`
+		DeathsWatcherBonzo                                  float64 `json:"deaths_watcher_bonzo"`
+		DeathsArmorStand                                    float64 `json:"deaths_armor_stand"`
+		DeathsTentaclees                                    float64 `json:"deaths_tentaclees"`
+		KillsWatcherScarf                                   float64 `json:"kills_watcher_scarf"`
+		DeathsSkeletorPrime                                 float64 `json:"deaths_skeletor_prime"`
+		KillsZombieCommander                                float64 `json:"kills_zombie_commander"`
+		KillsSkeletorPrime                                  float64 `json:"kills_skeletor_prime"`
+		DeathsMimic                                         float64 `json:"deaths_mimic"`
+		DeathsWatcherLivid                                  float64 `json:"deaths_watcher_livid"`
+		KillsWatcherLivid                                   float64 `json:"kills_watcher_livid"`
+		KillsCryptUndeadBernhard                            float64 `json:"kills_crypt_undead_bernhard"`
+		DeathsCryptWitherskeleton                           float64 `json:"deaths_crypt_witherskeleton"`
+		DeathsSadanStatue                                   float64 `json:"deaths_sadan_statue"`
+		KillsKingMidas                                      float64 `json:"kills_king_midas"`
+		KillsSadanGolem                                     float64 `json:"kills_sadan_golem"`
+		DeathsSadan                                         float64 `json:"deaths_sadan"`
+		KillsMimic                                          float64 `json:"kills_mimic"`
+		DeathsSadanGolem                                    float64 `json:"deaths_sadan_golem"`
+		DeathsSuperTankZombie                               float64 `json:"deaths_super_tank_zombie"`
+		KillsSadanStatue                                    float64 `json:"kills_sadan_statue"`
+		DeathsWatcherGuardian                               float64 `json:"deaths_watcher_guardian"`
+		DeathsWatcherScarf                                  float64 `json:"deaths_watcher_scarf"`
+		KillsGrinch                                         float64 `json:"kills_grinch"`
+		DeathsSadanGiant                                    float64 `json:"deaths_sadan_giant"`
+		KillsSadanGiant                                     float64 `json:"kills_sadan_giant"`
+		DeathsKingMidas                                     float64 `json:"deaths_king_midas"`
+		KillsGreatWhiteShark                                float64 `json:"kills_great_white_shark"`
+		KillsSkeletonLord                                   float64 `json:"kills_skeleton_lord"`
+		KillsZombieLord                                     float64 `json:"kills_zombie_lord"`
+		DeathsZombieLord                                    float64 `json:"deaths_zombie_lord"`
+		DeathsCryptUndeadMinikloon                          float64 `json:"deaths_crypt_undead_minikloon"`
+		DeathsLonelySpider                                  float64 `json:"deaths_lonely_spider"`
+		DeathsCellarSpider                                  float64 `json:"deaths_cellar_spider"`
+		KillsSkeletonEmperor                                float64 `json:"kills_skeleton_emperor"`
+		KillsWerewolf                                       float64 `json:"kills_werewolf"`
+		KillsNightmare                                      float64 `json:"kills_nightmare"`
+		KillsScarecrow                                      float64 `json:"kills_scarecrow"`
+		DeathsZombieCommander                               float64 `json:"deaths_zombie_commander"`
+		KillsWitherMiner                                    float64 `json:"kills_wither_miner"`
+		DeathsMaxor                                         float64 `json:"deaths_maxor"`
+		KillsWitherGuard                                    float64 `json:"kills_wither_guard"`
+		DeathsWitherGuard                                   float64 `json:"deaths_wither_guard"`
+		KillsCryptUndeadFriedrich                           float64 `json:"kills_crypt_undead_friedrich"`
+		DeathsWitherMiner                                   float64 `json:"deaths_wither_miner"`
+		KillsWatcherGiantBoulder                            float64 `json:"kills_watcher_giant_boulder"`
+		DeathsSoulOfTheAlpha                                float64 `json:"deaths_soul_of_the_alpha"`
+		KillsWatcherGiantBigfoot                            float64 `json:"kills_watcher_giant_bigfoot"`
+		DeathsProfessorArcherGuardian                       float64 `json:"deaths_professor_archer_guardian"`
+		KillsWatcherGiantDiamond                            float64 `json:"kills_watcher_giant_diamond"`
+		KillsWatcherGiantLaser                              float64 `json:"kills_watcher_giant_laser"`
+		DeathsCrushed                                       float64 `json:"deaths_crushed"`
+		KillsNecronGuard                                    float64 `json:"kills_necron_guard"`
+		DeathsSkeletonLord                                  float64 `json:"deaths_skeleton_lord"`
+		DeathsWatcherGiantLaser                             float64 `json:"deaths_watcher_giant_laser"`
+		DeathsWatcherGiantBigfoot                           float64 `json:"deaths_watcher_giant_bigfoot"`
+		DeathsSuperArcher                                   float64 `json:"deaths_super_archer"`
+		DeathsSuffocation                                   float64 `json:"deaths_suffocation"`
+		KillsWiseDragon                                     float64 `json:"kills_wise_dragon"`
+		KillsMayorJerryBlue                                 float64 `json:"kills_mayor_jerry_blue"`
+		KillsMayorJerryGreen                                float64 `json:"kills_mayor_jerry_green"`
+		KillsYoungDragon                                    float64 `json:"kills_young_dragon"`
+		KillsMayorJerryPurple                               float64 `json:"kills_mayor_jerry_purple"`
+		KillsStrongDragon                                   float64 `json:"kills_strong_dragon"`
+		KillsMayorJerryGolden                               float64 `json:"kills_mayor_jerry_golden"`
+		DeathsCavernsGhost                                  float64 `json:"deaths_caverns_ghost"`
+		KillsIceWalker                                      float64 `json:"kills_ice_walker"`
+		KillsGoblinWeaklingMelee                            float64 `json:"kills_goblin_weakling_melee"`
+		KillsGoblinKnifeThrower                             float64 `json:"kills_goblin_knife_thrower"`
+		KillsCavernsGhost                                   float64 `json:"kills_caverns_ghost"`
+		KillsGoblin                                         float64 `json:"kills_goblin"`
+		KillsTreasureHoarder                                float64 `json:"kills_treasure_hoarder"`
+		KillsPowderGhast                                    float64 `json:"kills_powder_ghast"`
+		KillsGoblinWeaklingBow                              float64 `json:"kills_goblin_weakling_bow"`
+		KillsCrystalSentry                                  float64 `json:"kills_crystal_sentry"`
+		KillsGoblinCreepertamer                             float64 `json:"kills_goblin_creepertamer"`
+		KillsGoblinCreeper                                  float64 `json:"kills_goblin_creeper"`
+		KillsGoblinBattler                                  float64 `json:"kills_goblin_battler"`
+		KillsGoblinGolem                                    float64 `json:"kills_goblin_golem"`
+		KillsGoblinMurderlover                              float64 `json:"kills_goblin_murderlover"`
+		KillsPhantomFisherman                               float64 `json:"kills_phantom_fisherman"`
+		KillsYeti                                           float64 `json:"kills_yeti"`
+		KillsScarfMage                                      float64 `json:"kills_scarf_mage"`
+		MythosBurrowsDugNextEPIC                            float64 `json:"mythos_burrows_dug_next_EPIC"`
+		MythosBurrowsDugCombatEPIC                          float64 `json:"mythos_burrows_dug_combat_EPIC"`
+		MythosBurrowsDugTreasureEPIC                        float64 `json:"mythos_burrows_dug_treasure_EPIC"`
+		MythosBurrowsChainsCompleteEPIC                     float64 `json:"mythos_burrows_chains_complete_EPIC"`
+		KillsMinosChampion                                  float64 `json:"kills_minos_champion"`
+		MythosBurrowsDugNextLEGENDARY                       float64 `json:"mythos_burrows_dug_next_LEGENDARY"`
+		MythosBurrowsDugCombatLEGENDARY                     float64 `json:"mythos_burrows_dug_combat_LEGENDARY"`
+		MythosBurrowsDugTreasureLEGENDARY                   float64 `json:"mythos_burrows_dug_treasure_LEGENDARY"`
+		MythosBurrowsChainsCompleteLEGENDARY                float64 `json:"mythos_burrows_chains_complete_LEGENDARY"`
+		DeathsMinosChampion                                 float64 `json:"deaths_minos_champion"`
+		DeathsMinosInquisitor                               float64 `json:"deaths_minos_inquisitor"`
+		DeathsSiameseLynx                                   float64 `json:"deaths_siamese_lynx"`
+		KillsForestIslandBat                                float64 `json:"kills_forest_island_bat"`
+		KillsArachne                                        float64 `json:"kills_arachne"`
+		KillsArachneBrood                                   float64 `json:"kills_arachne_brood"`
+		DeathsArachneBrood                                  float64 `json:"deaths_arachne_brood"`
+		KillsArachneKeeper                                  float64 `json:"kills_arachne_keeper"`
+		DeathsArachne                                       float64 `json:"deaths_arachne"`
+		DeathsWeaverSpider                                  float64 `json:"deaths_weaver_spider"`
+		KillsMasterCryptTankZombie                          float64 `json:"kills_master_crypt_tank_zombie"`
+		KillsMasterZombieGrunt                              float64 `json:"kills_master_zombie_grunt"`
+		KillsMasterCryptDreadlord                           float64 `json:"kills_master_crypt_dreadlord"`
+		KillsMasterCryptLurker                              float64 `json:"kills_master_crypt_lurker"`
+		KillsMasterCryptSouleater                           float64 `json:"kills_master_crypt_souleater"`
+		KillsMasterScaredSkeleton                           float64 `json:"kills_master_scared_skeleton"`
+		KillsMasterSkeletonSoldier                          float64 `json:"kills_master_skeleton_soldier"`
+		KillsMasterSkeletonGrunt                            float64 `json:"kills_master_skeleton_grunt"`
+		KillsMasterLostAdventurer                           float64 `json:"kills_master_lost_adventurer"`
+		KillsMasterDungeonRespawningSkeleton                float64 `json:"kills_master_dungeon_respawning_skeleton"`
+		KillsMasterWatcherSummonUndead                      float64 `json:"kills_master_watcher_summon_undead"`
+		DeathsMasterWatcherSummonUndead                     float64 `json:"deaths_master_watcher_summon_undead"`
+		KillsMasterDiamondGuy                               float64 `json:"kills_master_diamond_guy"`
+		KillsMasterCellarSpider                             float64 `json:"kills_master_cellar_spider"`
+		KillsMasterBonzoSummonUndead                        float64 `json:"kills_master_bonzo_summon_undead"`
+		DeathsMasterBonzoSummonUndead                       float64 `json:"deaths_master_bonzo_summon_undead"`
+		DeathsMasterBonzo                                   float64 `json:"deaths_master_bonzo"`
+		KillsMushroomCow                                    float64 `json:"kills_mushroom_cow"`
+		KillsTrapperRabbit                                  float64 `json:"kills_trapper_rabbit"`
+		KillsTrapperChicken                                 float64 `json:"kills_trapper_chicken"`
+		KillsTrapperSheep                                   float64 `json:"kills_trapper_sheep"`
+		KillsLavaPigman                                     float64 `json:"kills_lava_pigman"`
+		KillsLavaBlaze                                      float64 `json:"kills_lava_blaze"`
+		KillsSludge                                         float64 `json:"kills_sludge"`
+		KillsVoidlingFanatic                                float64 `json:"kills_voidling_fanatic"`
+		KillsVoidlingExtremist                              float64 `json:"kills_voidling_extremist"`
+		KillsMasterCryptUndeadPieter                        float64 `json:"kills_master_crypt_undead_pieter"`
+		KillsMasterCryptUndead                              float64 `json:"kills_master_crypt_undead"`
+		KillsMasterSkeletonMaster                           float64 `json:"kills_master_skeleton_master"`
+		DeathsMasterScarfWarrior                            float64 `json:"deaths_master_scarf_warrior"`
+		DeathsMasterScarfMage                               float64 `json:"deaths_master_scarf_mage"`
+		DeathsMasterScarf                                   float64 `json:"deaths_master_scarf"`
+		KillsMasterParasite                                 float64 `json:"kills_master_parasite"`
+		DeathsMasterSkeletonSoldier                         float64 `json:"deaths_master_skeleton_soldier"`
+		KillsMasterCryptUndeadFriedrich                     float64 `json:"kills_master_crypt_undead_friedrich"`
+		DeathsMasterLostAdventurer                          float64 `json:"deaths_master_lost_adventurer"`
+		DeathsMasterShadowAssassin                          float64 `json:"deaths_master_shadow_assassin"`
+		KillsMasterZombieSoldier                            float64 `json:"kills_master_zombie_soldier"`
+		DeathsMasterProfessorMageGuardian                   float64 `json:"deaths_master_professor_mage_guardian"`
+		KillsMasterSkeletor                                 float64 `json:"kills_master_skeletor"`
+		KillsMasterProfessorGuardianSummon                  float64 `json:"kills_master_professor_guardian_summon"`
+		KillsMasterZombieKnight                             float64 `json:"kills_master_zombie_knight"`
+		KillsMasterSniperSkeleton                           float64 `json:"kills_master_sniper_skeleton"`
+		DeathsMasterWatcherBonzo                            float64 `json:"deaths_master_watcher_bonzo"`
+		DeathsMasterProfessor                               float64 `json:"deaths_master_professor"`
+		DeathsMasterProfessorGuardianSummon                 float64 `json:"deaths_master_professor_guardian_summon"`
+		DeathsVoidlingExtremist                             float64 `json:"deaths_voidling_extremist"`
+		KillsOldDragon                                      float64 `json:"kills_old_dragon"`
+	} `json:"stats"`
+	Objectives struct {
+		CollectLog struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"collect_log"`
+		TalkToGuide struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guide"`
+		PublicIsland struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"public_island"`
+		ExploreHub struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"explore_hub"`
+		ExploreVillage struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"explore_village"`
+		TalkToLibrarian struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_librarian"`
+		TalkToFarmer struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_farmer"`
+		TalkToBlacksmith struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_blacksmith"`
+		TalkToLumberjack struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_lumberjack"`
+		TalkToEventMaster struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_event_master"`
+		TalkToAuctionMaster struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_auction_master"`
+		TalkToBanker struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_banker"`
+		TalkToFairy struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_fairy"`
+		TalkToFisherman1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"talk_to_fisherman_1"`
+		TalkToCarpenter struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_carpenter"`
+		TalkToArtist1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_artist_1"`
+		PaintCanvas struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"paint_canvas"`
+		TalkToPetCollector struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_pet_collector"`
+		TalkToPetSitter struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_pet_sitter"`
+		ChopTree struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"chop_tree"`
+		TalkToLumberjack2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_lumberjack_2"`
+		IncreaseForagingSkill struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"increase_foraging_skill"`
+		WarpForagingIslands struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"warp_foraging_islands"`
+		IncreaseForagingSkill5 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"increase_foraging_skill_5"`
+		TalkToGustave1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_gustave_1"`
+		CollectBirchLogs struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"collect_birch_logs"`
+		CollectDarkOakLogs struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"collect_dark_oak_logs"`
+		TalkToCharlie struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_charlie"`
+		TalkToCharlie2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"talk_to_charlie_2"`
+		DepositCoins struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"deposit_coins"`
+		CraftWorkbench struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"craft_workbench"`
+		MineCoal struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"mine_coal"`
+		TalkToLazyMiner struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_lazy_miner"`
+		IncreaseMiningSkill5 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"increase_mining_skill_5"`
+		TalkToTelekinesisApplier struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_telekinesis_applier"`
+		FindPickaxe struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"find_pickaxe"`
+		CollectIngots struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+			IronIngot   bool   `json:"IRON_INGOT"`
+			GoldIngot   bool   `json:"GOLD_INGOT"`
+		} `json:"collect_ingots"`
+		WarpDeepCaverns struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"warp_deep_caverns"`
+		TalkToLapisMiner struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_lapis_miner"`
+		TalkToLiftOperator struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_lift_operator"`
+		ReachLapisQuarry struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"reach_lapis_quarry"`
+		CollectLapis struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+			INKSACK4    bool   `json:"INK_SACK:4"`
+		} `json:"collect_lapis"`
+		ReachPigmensDen struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"reach_pigmens_den"`
+		CollectRedstone struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+			Redstone    bool   `json:"REDSTONE"`
+		} `json:"collect_redstone"`
+		TalkToBlacksmith2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_blacksmith_2"`
+		TalkToFarmhand1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_farmhand_1"`
+		IncreaseFarmingSkill5 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"increase_farming_skill_5"`
+		WarpMushroomDesert struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"warp_mushroom_desert"`
+		KillDangerMobs struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"kill_danger_mobs"`
+		TalkToBartender struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_bartender"`
+		IncreaseCombatSkill struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"increase_combat_skill"`
+		WarpSpidersDen struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"warp_spiders_den"`
+		IncreaseCombatSkill5 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"increase_combat_skill_5"`
+		TalkToRick struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_rick"`
+		WarpTheEnd struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"warp_the_end"`
+		WarpBlazingFortress struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"warp_blazing_fortress"`
+		IncreaseMiningSkill struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"increase_mining_skill"`
+		ReforgeItem struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"reforge_item"`
+		WarpGoldMine struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"warp_gold_mine"`
+		ReachSlimehill struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"reach_slimehill"`
+		TalkToGuber1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guber_1"`
+		TalkToEndDealer struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_end_dealer"`
+		CollectEndStone struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+			EnderStone  bool   `json:"ENDER_STONE"`
+		} `json:"collect_end_stone"`
+		ReachDragonsNest struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"reach_dragons_nest"`
+		FightDragon struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"fight_dragon"`
+		TalkToHaymitch struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_haymitch"`
+		CollectEmerald struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+			Emerald     bool   `json:"EMERALD"`
+		} `json:"collect_emerald"`
+		ReachDiamondReserve struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"reach_diamond_reserve"`
+		TalkToArtist2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_artist_2"`
+		GiveFairySouls struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"give_fairy_souls"`
+		CollectDiamond struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+			Diamond     bool   `json:"DIAMOND"`
+		} `json:"collect_diamond"`
+		ReachObsidianSanctuary struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"reach_obsidian_sanctuary"`
+		CollectObsidian struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+			Obsidian    bool   `json:"OBSIDIAN"`
+		} `json:"collect_obsidian"`
+		CollectWoolCarpenter struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"collect_wool_carpenter"`
+		CompleteTheEndRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_end_race_1"`
+		CompleteTheWoodsRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_woods_race_1"`
+		TalkToGustave2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_gustave_2"`
+		CompleteTheWoodsRace2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_woods_race_2"`
+		TalkToGustave3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_gustave_3"`
+		CompleteTheWoodsRace3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_woods_race_3"`
+		CollectWheat struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"collect_wheat"`
+		TalkToFarmer2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_farmer_2"`
+		IncreaseFarmingSkill struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"increase_farming_skill"`
+		WarpBarnIsland struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"warp_barn_island"`
+		CraftWheatMinion struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"craft_wheat_minion"`
+		TalkToFarmhand2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_farmhand_2"`
+		CollectFarmingResources2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+			INKSACK3    bool   `json:"INK_SACK:3"`
+			Cactus      bool   `json:"CACTUS"`
+			SugarCane   bool   `json:"SUGAR_CANE"`
+		} `json:"collect_farming_resources_2"`
+		CollectFarmAnimalResources2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+			Rabbit      bool   `json:"RABBIT"`
+			Mutton      bool   `json:"MUTTON"`
+		} `json:"collect_farm_animal_resources_2"`
+		TalkToElle struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_elle"`
+		EnchantItem struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"enchant_item"`
+		TalkToMelody struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_melody"`
+		TalkToFrosty struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_frosty"`
+		TalkToGulliver1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_gulliver_1"`
+		CompleteTheChickenRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_chicken_race_1"`
+		TalkToGulliver2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_gulliver_2"`
+		CompleteTheChickenRace2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_chicken_race_2"`
+		TalkToGuildford1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_1"`
+		CompleteTheGiantMushroomAnythingWithReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_anything_with_return_race_1"`
+		CompleteTheGiantMushroomNoPearlsWithReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_no_pearls_with_return_race_1"`
+		CompleteTheGiantMushroomNoAbilitiesWithReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_no_abilities_with_return_race_1"`
+		CompleteTheGiantMushroomNothingWithReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_nothing_with_return_race_1"`
+		CompleteThePrecursorRuinsAnythingWithReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_anything_with_return_race_1"`
+		CompleteThePrecursorRuinsNoPearlsWithReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_no_pearls_with_return_race_1"`
+		CompleteThePrecursorRuinsNoAbilitiesWithReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_no_abilities_with_return_race_1"`
+		CompleteThePrecursorRuinsNothingWithReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_nothing_with_return_race_1"`
+		CompleteTheCrystalCoreAnythingWithReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"complete_the_crystal_core_anything_with_return_race_1"`
+		CompleteTheCrystalCoreNoPearlsWithReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"complete_the_crystal_core_no_pearls_with_return_race_1"`
+		CompleteTheCrystalCoreNoAbilitiesWithReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"complete_the_crystal_core_no_abilities_with_return_race_1"`
+		CompleteTheCrystalCoreNothingWithReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"complete_the_crystal_core_nothing_with_return_race_1"`
+		CompleteTheGiantMushroomAnythingNoReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_anything_no_return_race_1"`
+		CompleteTheGiantMushroomNoPearlsNoReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_no_pearls_no_return_race_1"`
+		CompleteTheGiantMushroomNoAbilitiesNoReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_no_abilities_no_return_race_1"`
+		CompleteTheGiantMushroomNothingNoReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_nothing_no_return_race_1"`
+		CompleteThePrecursorRuinsAnythingNoReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_anything_no_return_race_1"`
+		CompleteThePrecursorRuinsNoPearlsNoReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_no_pearls_no_return_race_1"`
+		CompleteThePrecursorRuinsNoAbilitiesNoReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_no_abilities_no_return_race_1"`
+		CompleteThePrecursorRuinsNothingNoReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_nothing_no_return_race_1"`
+		CompleteTheCrystalCoreAnythingNoReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_crystal_core_anything_no_return_race_1"`
+		CompleteTheCrystalCoreNoPearlsNoReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_crystal_core_no_pearls_no_return_race_1"`
+		CompleteTheCrystalCoreNoAbilitiesNoReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_crystal_core_no_abilities_no_return_race_1"`
+		CompleteTheCrystalCoreNothingNoReturnRace1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_crystal_core_nothing_no_return_race_1"`
+		GiveRickIngots struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"give_rick_ingots"`
+		CollectFarmingResources struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+			PotatoItem  bool   `json:"POTATO_ITEM"`
+			CarrotItem  bool   `json:"CARROT_ITEM"`
+			Pumpkin     bool   `json:"PUMPKIN"`
+			Melon       bool   `json:"MELON"`
+		} `json:"collect_farming_resources"`
+		CollectFarmAnimalResources struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+			RawChicken  bool   `json:"RAW_CHICKEN"`
+			Leather     bool   `json:"LEATHER"`
+			Pork        bool   `json:"PORK"`
+		} `json:"collect_farm_animal_resources"`
+		TalkToGuildfordCrystalCoreAnythingNoReturn1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_crystal_core_anything_no_return_1"`
+		TalkToGuildfordCrystalCoreNoPearlsNoReturn1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_crystal_core_no_pearls_no_return_1"`
+		CompleteTheCrystalCoreAnythingNoReturnRace2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_crystal_core_anything_no_return_race_2"`
+		CompleteTheCrystalCoreNoPearlsNoReturnRace2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_crystal_core_no_pearls_no_return_race_2"`
+		TalkToGuildfordCrystalCoreNoAbilitiesNoReturn1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_crystal_core_no_abilities_no_return_1"`
+		CompleteTheCrystalCoreNoAbilitiesNoReturnRace2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_crystal_core_no_abilities_no_return_race_2"`
+		TalkToGuildfordCrystalCoreAnythingNoReturn2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_crystal_core_anything_no_return_2"`
+		CompleteTheCrystalCoreAnythingNoReturnRace3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_crystal_core_anything_no_return_race_3"`
+		TalkToGuildfordCrystalCoreAnythingNoReturn3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_crystal_core_anything_no_return_3"`
+		CompleteTheCrystalCoreAnythingNoReturnRace4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_crystal_core_anything_no_return_race_4"`
+		TalkToGuildfordCrystalCoreAnythingNoReturn4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_crystal_core_anything_no_return_4"`
+		TalkToGuildfordCrystalCoreNoPearlsNoReturn2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_crystal_core_no_pearls_no_return_2"`
+		CompleteTheCrystalCoreNoPearlsNoReturnRace3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_crystal_core_no_pearls_no_return_race_3"`
+		TalkToGuildfordCrystalCoreNoPearlsNoReturn3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_crystal_core_no_pearls_no_return_3"`
+		CompleteTheCrystalCoreNoPearlsNoReturnRace4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_crystal_core_no_pearls_no_return_race_4"`
+		TalkToGuildfordCrystalCoreNoPearlsNoReturn4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_crystal_core_no_pearls_no_return_4"`
+		TalkToGuildfordCrystalCoreNoAbilitiesNoReturn2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_crystal_core_no_abilities_no_return_2"`
+		CompleteTheCrystalCoreNoAbilitiesNoReturnRace3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_crystal_core_no_abilities_no_return_race_3"`
+		TalkToGuildfordCrystalCoreNoAbilitiesNoReturn3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_crystal_core_no_abilities_no_return_3"`
+		CompleteTheCrystalCoreNoAbilitiesNoReturnRace4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_crystal_core_no_abilities_no_return_race_4"`
+		TalkToGuildfordCrystalCoreNoAbilitiesNoReturn4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_crystal_core_no_abilities_no_return_4"`
+		TalkToGuildfordCrystalCoreNothingNoReturn1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_crystal_core_nothing_no_return_1"`
+		CompleteTheCrystalCoreNothingNoReturnRace2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_crystal_core_nothing_no_return_race_2"`
+		TalkToGuildfordCrystalCoreNothingNoReturn2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_crystal_core_nothing_no_return_2"`
+		CompleteTheCrystalCoreNothingNoReturnRace3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_crystal_core_nothing_no_return_race_3"`
+		TalkToGuildfordCrystalCoreNothingNoReturn3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_crystal_core_nothing_no_return_3"`
+		CompleteTheCrystalCoreNothingNoReturnRace4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_crystal_core_nothing_no_return_race_4"`
+		TalkToGuildfordCrystalCoreNothingNoReturn4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_crystal_core_nothing_no_return_4"`
+		TalkToGuildfordGiantMushroomAnythingNoReturn1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_giant_mushroom_anything_no_return_1"`
+		CompleteTheGiantMushroomAnythingNoReturnRace2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_anything_no_return_race_2"`
+		TalkToGuildfordGiantMushroomAnythingNoReturn2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_giant_mushroom_anything_no_return_2"`
+		CompleteTheGiantMushroomAnythingNoReturnRace3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_anything_no_return_race_3"`
+		TalkToGuildfordGiantMushroomAnythingNoReturn3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_giant_mushroom_anything_no_return_3"`
+		CompleteTheGiantMushroomAnythingNoReturnRace4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_anything_no_return_race_4"`
+		TalkToGuildfordGiantMushroomAnythingNoReturn4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_giant_mushroom_anything_no_return_4"`
+		TalkToGuildfordGiantMushroomNoPearlsNoReturn1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_giant_mushroom_no_pearls_no_return_1"`
+		CompleteTheGiantMushroomNoPearlsNoReturnRace2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_no_pearls_no_return_race_2"`
+		TalkToGuildfordGiantMushroomNoPearlsNoReturn2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_giant_mushroom_no_pearls_no_return_2"`
+		CompleteTheGiantMushroomNoPearlsNoReturnRace3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_no_pearls_no_return_race_3"`
+		TalkToGuildfordGiantMushroomNoPearlsNoReturn3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_giant_mushroom_no_pearls_no_return_3"`
+		CompleteTheGiantMushroomNoPearlsNoReturnRace4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_no_pearls_no_return_race_4"`
+		TalkToGuildfordGiantMushroomNoPearlsNoReturn4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_giant_mushroom_no_pearls_no_return_4"`
+		TalkToGuildfordGiantMushroomNoAbilitiesNoReturn1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_giant_mushroom_no_abilities_no_return_1"`
+		CompleteTheGiantMushroomNoAbilitiesNoReturnRace2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_no_abilities_no_return_race_2"`
+		TalkToGuildfordGiantMushroomNoAbilitiesNoReturn2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_giant_mushroom_no_abilities_no_return_2"`
+		CompleteTheGiantMushroomNoAbilitiesNoReturnRace3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_no_abilities_no_return_race_3"`
+		TalkToGuildfordGiantMushroomNoAbilitiesNoReturn3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_giant_mushroom_no_abilities_no_return_3"`
+		CompleteTheGiantMushroomNoAbilitiesNoReturnRace4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_no_abilities_no_return_race_4"`
+		TalkToGuildfordGiantMushroomNoAbilitiesNoReturn4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_giant_mushroom_no_abilities_no_return_4"`
+		TalkToGuildfordGiantMushroomNothingNoReturn1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_giant_mushroom_nothing_no_return_1"`
+		CompleteTheGiantMushroomNothingNoReturnRace2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_nothing_no_return_race_2"`
+		TalkToGuildfordGiantMushroomNothingNoReturn2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_giant_mushroom_nothing_no_return_2"`
+		CompleteTheGiantMushroomNothingNoReturnRace3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_nothing_no_return_race_3"`
+		TalkToGuildfordGiantMushroomNothingNoReturn3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_giant_mushroom_nothing_no_return_3"`
+		CompleteTheGiantMushroomNothingNoReturnRace4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_giant_mushroom_nothing_no_return_race_4"`
+		TalkToGuildfordGiantMushroomNothingNoReturn4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_giant_mushroom_nothing_no_return_4"`
+		TalkToGuildfordPrecursorRuinsAnythingNoReturn1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_precursor_ruins_anything_no_return_1"`
+		CompleteThePrecursorRuinsAnythingNoReturnRace2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_anything_no_return_race_2"`
+		TalkToGuildfordPrecursorRuinsAnythingNoReturn2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_precursor_ruins_anything_no_return_2"`
+		CompleteThePrecursorRuinsAnythingNoReturnRace3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_anything_no_return_race_3"`
+		TalkToGuildfordPrecursorRuinsAnythingNoReturn3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_precursor_ruins_anything_no_return_3"`
+		CompleteThePrecursorRuinsAnythingNoReturnRace4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_anything_no_return_race_4"`
+		TalkToGuildfordPrecursorRuinsAnythingNoReturn4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_precursor_ruins_anything_no_return_4"`
+		TalkToGuildfordPrecursorRuinsNoPearlsNoReturn1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_precursor_ruins_no_pearls_no_return_1"`
+		CompleteThePrecursorRuinsNoPearlsNoReturnRace2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_no_pearls_no_return_race_2"`
+		TalkToGuildfordPrecursorRuinsNoPearlsNoReturn2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_precursor_ruins_no_pearls_no_return_2"`
+		CompleteThePrecursorRuinsNoPearlsNoReturnRace3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_no_pearls_no_return_race_3"`
+		TalkToGuildfordPrecursorRuinsNoPearlsNoReturn3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_precursor_ruins_no_pearls_no_return_3"`
+		CompleteThePrecursorRuinsNoPearlsNoReturnRace4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_no_pearls_no_return_race_4"`
+		TalkToGuildfordPrecursorRuinsNoPearlsNoReturn4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_precursor_ruins_no_pearls_no_return_4"`
+		TalkToGuildfordPrecursorRuinsNoAbilitiesNoReturn1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_precursor_ruins_no_abilities_no_return_1"`
+		CompleteThePrecursorRuinsNoAbilitiesNoReturnRace2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_no_abilities_no_return_race_2"`
+		TalkToGuildfordPrecursorRuinsNoAbilitiesNoReturn2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_precursor_ruins_no_abilities_no_return_2"`
+		CompleteThePrecursorRuinsNoAbilitiesNoReturnRace3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_no_abilities_no_return_race_3"`
+		TalkToGuildfordPrecursorRuinsNoAbilitiesNoReturn3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_precursor_ruins_no_abilities_no_return_3"`
+		CompleteThePrecursorRuinsNoAbilitiesNoReturnRace4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_no_abilities_no_return_race_4"`
+		TalkToGuildfordPrecursorRuinsNoAbilitiesNoReturn4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_precursor_ruins_no_abilities_no_return_4"`
+		TalkToGuildfordPrecursorRuinsNothingNoReturn1 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_precursor_ruins_nothing_no_return_1"`
+		CompleteThePrecursorRuinsNothingNoReturnRace2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_nothing_no_return_race_2"`
+		TalkToGuildfordPrecursorRuinsNothingNoReturn2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_precursor_ruins_nothing_no_return_2"`
+		CompleteThePrecursorRuinsNothingNoReturnRace3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_nothing_no_return_race_3"`
+		TalkToGuildfordPrecursorRuinsNothingNoReturn3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_precursor_ruins_nothing_no_return_3"`
+		CompleteThePrecursorRuinsNothingNoReturnRace4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_precursor_ruins_nothing_no_return_race_4"`
+		TalkToGuildfordPrecursorRuinsNothingNoReturn4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guildford_precursor_ruins_nothing_no_return_4"`
+		TalkToGulliver3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_gulliver_3"`
+		CompleteTheChickenRace3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_chicken_race_3"`
+		GivePickaxeLapisMiner struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"give_pickaxe_lapis_miner"`
+		TalkToGulliver4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_gulliver_4"`
+		CompleteTheChickenRace4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"complete_the_chicken_race_4"`
+		TalkToGuber2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guber_2"`
+		CompleteTheEndRace2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_end_race_2"`
+		TalkToGuber3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guber_3"`
+		CompleteTheEndRace3 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_end_race_3"`
+		TalkToGuber4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guber_4"`
+		CompleteTheEndRace4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_end_race_4"`
+		TalkToGuber5 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_guber_5"`
+		CraftWoodPickaxe struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"craft_wood_pickaxe"`
+		TalkToGustave4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_gustave_4"`
+		CompleteTheWoodsRace4 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"complete_the_woods_race_4"`
+		TalkToGustave5 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_gustave_5"`
+		CollectSpider struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+			String      bool   `json:"STRING"`
+			SpiderEye   bool   `json:"SPIDER_EYE"`
+		} `json:"collect_spider"`
+		CollectNetherResources struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+			BlazeRod    bool   `json:"BLAZE_ROD"`
+			NetherStalk bool   `json:"NETHER_STALK"`
+		} `json:"collect_nether_resources"`
+		CollectNetherResources2 struct {
+			Status        string `json:"status"`
+			Progress      int    `json:"progress"`
+			CompletedAt   int64  `json:"completed_at"`
+			MagmaCream    bool   `json:"MAGMA_CREAM"`
+			GlowstoneDust bool   `json:"GLOWSTONE_DUST"`
+			Quartz        bool   `json:"QUARTZ"`
+		} `json:"collect_nether_resources_2"`
+		TalkToRhys struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_rhys"`
+		IncreaseMining12 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"increase_mining_12"`
+		HotmGiveMaterials struct {
+			Status            string `json:"status"`
+			Progress          int    `json:"progress"`
+			CompletedAt       int64  `json:"completed_at"`
+			Started           bool   `json:"started"`
+			EnchantedRedstone int    `json:"ENCHANTED_REDSTONE"`
+			EnchantedIron     int    `json:"ENCHANTED_IRON"`
+		} `json:"hotm_give_materials"`
+		Fetchur240 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"fetchur-24-0"`
+		Fetchur260 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"fetchur-26-0"`
+		Fetchur290 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"fetchur-29-0"`
+		Fetchur300 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"fetchur-30-0"`
+		TalkToArchaeologist struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_archaeologist"`
+		TalkToShaggy struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_shaggy"`
+		FindRelics struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"find_relics"`
+		TalkToArchaeologist2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_archaeologist_2"`
+		FindUberRelics struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"find_uber_relics"`
+		TalkToShaggy2 struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_shaggy_2"`
+		TalkToGwendolyn struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_gwendolyn"`
+		TalkToBraum struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"talk_to_braum"`
+		VisitGreaterMines struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int64  `json:"completed_at"`
+		} `json:"visit_greater_mines"`
+		TalkToTheGoblinKing struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"talk_to_the_goblin_king"`
+		KillAutomatons struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"kill_automatons"`
+		EnterDivanMines struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"enter_divan_mines"`
+		FindAJungleKey struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"find_a_jungle_key"`
+		MineRuby struct {
+			Status      string `json:"status"`
+			Progress    int    `json:"progress"`
+			CompletedAt int    `json:"completed_at"`
+		} `json:"mine_ruby"`
+	} `json:"objectives"`
+	Tutorial []string `json:"tutorial"`
+	Quests   struct {
+		CollectLog struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"collect_log"`
+		ExploreHub struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"explore_hub"`
+		ExploreVillage struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"explore_village"`
+		TalkToLibrarian struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_librarian"`
+		TalkToFarmer struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_farmer"`
+		TalkToBlacksmith struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_blacksmith"`
+		TalkToLumberjack struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_lumberjack"`
+		TalkToAuctionMaster struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_auction_master"`
+		TalkToBanker struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_banker"`
+		TalkToCarpenter struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_carpenter"`
+		TalkToArtist1 struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_artist_1"`
+		IncreaseForagingSkill5 struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int    `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"increase_foraging_skill_5"`
+		TalkToGustave1 struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_gustave_1"`
+		TalkToLazyMiner struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_lazy_miner"`
+		IncreaseMiningSkill5 struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"increase_mining_skill_5"`
+		TalkToLapisMiner struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_lapis_miner"`
+		TalkToFarmhand1 struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_farmhand_1"`
+		IncreaseFarmingSkill5 struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"increase_farming_skill_5"`
+		KillDangerMobs struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"kill_danger_mobs"`
+		IncreaseCombatSkill5 struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"increase_combat_skill_5"`
+		TalkToRick struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_rick"`
+		ReforgeItem struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"reforge_item"`
+		TalkToGuber1 struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_guber_1"`
+		TalkToEndDealer struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_end_dealer"`
+		TalkToGulliver1 struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int    `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_gulliver_1"`
+		TalkToGuildford1 struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int    `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_guildford_1"`
+		TalkToRhys struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_rhys"`
+		TalkToArchaeologist struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_archaeologist"`
+		TalkToGwendolyn struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int64  `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_gwendolyn"`
+		TalkToTheGoblinKing struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int    `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"talk_to_the_goblin_king"`
+		KillAutomatons struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int    `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"kill_automatons"`
+		EnterDivanMines struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int    `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"enter_divan_mines"`
+		FindAJungleKey struct {
+			Status        string `json:"status"`
+			ActivatedAt   int64  `json:"activated_at"`
+			ActivatedAtSb int    `json:"activated_at_sb"`
+			CompletedAt   int    `json:"completed_at"`
+			CompletedAtSb int    `json:"completed_at_sb"`
+		} `json:"find_a_jungle_key"`
+	} `json:"quests"`
+	LastDeath                     int      `json:"last_death"`
+	CraftedGenerators             []string `json:"crafted_generators"`
+	VisitedZones                  []string `json:"visited_zones"`
+	FairySoulsCollected           int      `json:"fairy_souls_collected"`
+	FairySouls                    int      `json:"fairy_souls"`
+	FairyExchanges                int      `json:"fairy_exchanges"`
+	FishingTreasureCaught         int      `json:"fishing_treasure_caught"`
+	DeathCount                    int      `json:"death_count"`
+	AchievementSpawnedIslandTypes []string `json:"achievement_spawned_island_types"`
+	SlayerQuest                   struct {
+		Type            string `json:"type"`
+		Tier            int    `json:"tier"`
+		StartTimestamp  int64  `json:"start_timestamp"`
+		CompletionState int    `json:"completion_state"`
+		CombatXp        int    `json:"combat_xp"`
+		RecentMobKills  []struct {
+			Xp        float64 `json:"xp"`
+			Timestamp int64   `json:"timestamp"`
+		} `json:"recent_mob_kills"`
+		LastKilledMobIsland string `json:"last_killed_mob_island"`
+	} `json:"slayer_quest"`
+	SlayerBosses struct {
+		Spider struct {
+			ClaimedLevels struct {
+				Level1 bool `json:"level_1"`
+				Level2 bool `json:"level_2"`
+				Level3 bool `json:"level_3"`
+				Level4 bool `json:"level_4"`
+				Level5 bool `json:"level_5"`
+				Level6 bool `json:"level_6"`
+				Level7 bool `json:"level_7"`
+			} `json:"claimed_levels"`
+			BossKillsTier0 int `json:"boss_kills_tier_0"`
+			Xp             int `json:"xp"`
+			BossKillsTier1 int `json:"boss_kills_tier_1"`
+			BossKillsTier2 int `json:"boss_kills_tier_2"`
+			BossKillsTier3 int `json:"boss_kills_tier_3"`
+		} `json:"spider"`
+		Zombie struct {
+			ClaimedLevels struct {
+				Level1        bool `json:"level_1"`
+				Level2        bool `json:"level_2"`
+				Level3        bool `json:"level_3"`
+				Level4        bool `json:"level_4"`
+				Level5        bool `json:"level_5"`
+				Level6        bool `json:"level_6"`
+				Level7        bool `json:"level_7"`
+				Level7Special bool `json:"level_7_special"`
+			} `json:"claimed_levels"`
+			BossKillsTier0 int `json:"boss_kills_tier_0"`
+			Xp             int `json:"xp"`
+			BossKillsTier1 int `json:"boss_kills_tier_1"`
+			BossKillsTier2 int `json:"boss_kills_tier_2"`
+			BossKillsTier3 int `json:"boss_kills_tier_3"`
+			BossKillsTier4 int `json:"boss_kills_tier_4"`
+		} `json:"zombie"`
+		Wolf struct {
+			ClaimedLevels struct {
+				Level1 bool `json:"level_1"`
+				Level2 bool `json:"level_2"`
+				Level3 bool `json:"level_3"`
+				Level4 bool `json:"level_4"`
+				Level5 bool `json:"level_5"`
+				Level6 bool `json:"level_6"`
+				Level7 bool `json:"level_7"`
+			} `json:"claimed_levels"`
+			BossKillsTier0 int `json:"boss_kills_tier_0"`
+			Xp             int `json:"xp"`
+			BossKillsTier1 int `json:"boss_kills_tier_1"`
+			BossKillsTier2 int `json:"boss_kills_tier_2"`
+			BossKillsTier3 int `json:"boss_kills_tier_3"`
+		} `json:"wolf"`
+		Enderman struct {
+			ClaimedLevels struct {
+				Level1 bool `json:"level_1"`
+				Level2 bool `json:"level_2"`
+				Level3 bool `json:"level_3"`
+			} `json:"claimed_levels"`
+			BossKillsTier0 int `json:"boss_kills_tier_0"`
+			Xp             int `json:"xp"`
+			BossKillsTier1 int `json:"boss_kills_tier_1"`
+		} `json:"enderman"`
+	} `json:"slayer_bosses"`
+	Dungeons struct {
+		DungeonTypes struct {
+			Catacombs struct {
+				TimesPlayed struct {
+					Num0 float64 `json:"0"`
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+					Num4 float64 `json:"4"`
+					Num5 float64 `json:"5"`
+					Num6 float64 `json:"6"`
+					Num7 float64 `json:"7"`
+				} `json:"times_played"`
+				Experience float64 `json:"experience"`
+				BestScore  struct {
+					Num0 float64 `json:"0"`
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+					Num4 float64 `json:"4"`
+					Num5 float64 `json:"5"`
+					Num6 float64 `json:"6"`
+					Num7 float64 `json:"7"`
+				} `json:"best_score"`
+				MobsKilled struct {
+					Num0 float64 `json:"0"`
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+					Num4 float64 `json:"4"`
+					Num5 float64 `json:"5"`
+					Num6 float64 `json:"6"`
+					Num7 float64 `json:"7"`
+				} `json:"mobs_killed"`
+				MostMobsKilled struct {
+					Num0 float64 `json:"0"`
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+					Num4 float64 `json:"4"`
+					Num5 float64 `json:"5"`
+					Num6 float64 `json:"6"`
+					Num7 float64 `json:"7"`
+				} `json:"most_mobs_killed"`
+				MostDamageBerserk struct {
+					Num0 float64 `json:"0"`
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+					Num4 float64 `json:"4"`
+					Num5 float64 `json:"5"`
+					Num6 float64 `json:"6"`
+					Num7 float64 `json:"7"`
+				} `json:"most_damage_berserk"`
+				MostHealing struct {
+					Num0 float64 `json:"0"`
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+					Num4 float64 `json:"4"`
+					Num5 float64 `json:"5"`
+					Num6 float64 `json:"6"`
+					Num7 float64 `json:"7"`
+				} `json:"most_healing"`
+				TierCompletions struct {
+					Num0 float64 `json:"0"`
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+					Num4 float64 `json:"4"`
+					Num5 float64 `json:"5"`
+					Num6 float64 `json:"6"`
+					Num7 float64 `json:"7"`
+				} `json:"tier_completions"`
+				FastestTime struct {
+					Num0 float64 `json:"0"`
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+					Num4 float64 `json:"4"`
+					Num5 float64 `json:"5"`
+					Num6 float64 `json:"6"`
+					Num7 float64 `json:"7"`
+				} `json:"fastest_time"`
+				BestRuns struct {
+					Num0 []struct {
+						Timestamp        int64    `json:"timestamp"`
+						ScoreExploration int      `json:"score_exploration"`
+						ScoreSpeed       int      `json:"score_speed"`
+						ScoreSkill       int      `json:"score_skill"`
+						ScoreBonus       int      `json:"score_bonus"`
+						DungeonClass     string   `json:"dungeon_class"`
+						Teammates        []string `json:"teammates"`
+						ElapsedTime      int      `json:"elapsed_time"`
+						DamageDealt      float64  `json:"damage_dealt"`
+						Deaths           int      `json:"deaths"`
+						MobsKilled       int      `json:"mobs_killed"`
+						SecretsFound     int      `json:"secrets_found"`
+						DamageMitigated  float64  `json:"damage_mitigated"`
+						AllyHealing      float64  `json:"ally_healing,omitempty"`
+					} `json:"0"`
+					Num1 []struct {
+						Timestamp        int64    `json:"timestamp"`
+						ScoreExploration int      `json:"score_exploration"`
+						ScoreSpeed       int      `json:"score_speed"`
+						ScoreSkill       int      `json:"score_skill"`
+						ScoreBonus       int      `json:"score_bonus"`
+						DungeonClass     string   `json:"dungeon_class"`
+						Teammates        []string `json:"teammates"`
+						ElapsedTime      int      `json:"elapsed_time"`
+						DamageDealt      float64  `json:"damage_dealt"`
+						Deaths           int      `json:"deaths"`
+						MobsKilled       int      `json:"mobs_killed"`
+						SecretsFound     int      `json:"secrets_found"`
+						DamageMitigated  float64  `json:"damage_mitigated"`
+						AllyHealing      float64  `json:"ally_healing,omitempty"`
+					} `json:"1"`
+					Num2 []struct {
+						Timestamp        int64    `json:"timestamp"`
+						ScoreExploration int      `json:"score_exploration"`
+						ScoreSpeed       int      `json:"score_speed"`
+						ScoreSkill       int      `json:"score_skill"`
+						ScoreBonus       int      `json:"score_bonus"`
+						DungeonClass     string   `json:"dungeon_class"`
+						Teammates        []string `json:"teammates"`
+						ElapsedTime      int      `json:"elapsed_time"`
+						DamageDealt      float64  `json:"damage_dealt"`
+						Deaths           int      `json:"deaths"`
+						MobsKilled       int      `json:"mobs_killed"`
+						SecretsFound     int      `json:"secrets_found"`
+						DamageMitigated  float64  `json:"damage_mitigated"`
+						AllyHealing      float64  `json:"ally_healing,omitempty"`
+					} `json:"2"`
+					Num3 []struct {
+						Timestamp        int64    `json:"timestamp"`
+						ScoreExploration int      `json:"score_exploration"`
+						ScoreSpeed       int      `json:"score_speed"`
+						ScoreSkill       int      `json:"score_skill"`
+						ScoreBonus       int      `json:"score_bonus"`
+						DungeonClass     string   `json:"dungeon_class"`
+						Teammates        []string `json:"teammates"`
+						ElapsedTime      int      `json:"elapsed_time"`
+						DamageDealt      float64  `json:"damage_dealt"`
+						Deaths           int      `json:"deaths"`
+						MobsKilled       int      `json:"mobs_killed"`
+						SecretsFound     int      `json:"secrets_found"`
+						DamageMitigated  float64  `json:"damage_mitigated"`
+						AllyHealing      float64  `json:"ally_healing,omitempty"`
+					} `json:"3"`
+					Num4 []struct {
+						Timestamp        int64    `json:"timestamp"`
+						ScoreExploration int      `json:"score_exploration"`
+						ScoreSpeed       int      `json:"score_speed"`
+						ScoreSkill       int      `json:"score_skill"`
+						ScoreBonus       int      `json:"score_bonus"`
+						DungeonClass     string   `json:"dungeon_class"`
+						Teammates        []string `json:"teammates"`
+						ElapsedTime      int      `json:"elapsed_time"`
+						DamageDealt      float64  `json:"damage_dealt"`
+						Deaths           int      `json:"deaths"`
+						MobsKilled       int      `json:"mobs_killed"`
+						SecretsFound     int      `json:"secrets_found"`
+						DamageMitigated  float64  `json:"damage_mitigated"`
+						AllyHealing      float64  `json:"ally_healing,omitempty"`
+					} `json:"4"`
+					Num5 []struct {
+						Timestamp        int64    `json:"timestamp"`
+						ScoreExploration int      `json:"score_exploration"`
+						ScoreSpeed       int      `json:"score_speed"`
+						ScoreSkill       int      `json:"score_skill"`
+						ScoreBonus       int      `json:"score_bonus"`
+						DungeonClass     string   `json:"dungeon_class"`
+						Teammates        []string `json:"teammates"`
+						ElapsedTime      int      `json:"elapsed_time"`
+						DamageDealt      float64  `json:"damage_dealt"`
+						Deaths           int      `json:"deaths"`
+						MobsKilled       int      `json:"mobs_killed"`
+						SecretsFound     int      `json:"secrets_found"`
+						DamageMitigated  float64  `json:"damage_mitigated"`
+						AllyHealing      float64  `json:"ally_healing"`
+					} `json:"5"`
+					Num6 []struct {
+						Timestamp        int64    `json:"timestamp"`
+						ScoreExploration int      `json:"score_exploration"`
+						ScoreSpeed       int      `json:"score_speed"`
+						ScoreSkill       int      `json:"score_skill"`
+						ScoreBonus       int      `json:"score_bonus"`
+						DungeonClass     string   `json:"dungeon_class"`
+						Teammates        []string `json:"teammates"`
+						ElapsedTime      int      `json:"elapsed_time"`
+						DamageDealt      float64  `json:"damage_dealt"`
+						Deaths           int      `json:"deaths"`
+						MobsKilled       int      `json:"mobs_killed"`
+						SecretsFound     int      `json:"secrets_found"`
+						DamageMitigated  float64  `json:"damage_mitigated"`
+						AllyHealing      float64  `json:"ally_healing"`
+					} `json:"6"`
+					Num7 []struct {
+						Timestamp        int64    `json:"timestamp"`
+						ScoreExploration int      `json:"score_exploration"`
+						ScoreSpeed       int      `json:"score_speed"`
+						ScoreSkill       int      `json:"score_skill"`
+						ScoreBonus       int      `json:"score_bonus"`
+						DungeonClass     string   `json:"dungeon_class"`
+						Teammates        []string `json:"teammates"`
+						ElapsedTime      int      `json:"elapsed_time"`
+						DamageDealt      float64  `json:"damage_dealt"`
+						Deaths           int      `json:"deaths"`
+						MobsKilled       int      `json:"mobs_killed"`
+						SecretsFound     int      `json:"secrets_found"`
+						DamageMitigated  float64  `json:"damage_mitigated"`
+						AllyHealing      float64  `json:"ally_healing"`
+					} `json:"7"`
+				} `json:"best_runs"`
+				WatcherKills struct {
+					Num0 float64 `json:"0"`
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+					Num4 float64 `json:"4"`
+					Num5 float64 `json:"5"`
+					Num6 float64 `json:"6"`
+					Num7 float64 `json:"7"`
+				} `json:"watcher_kills"`
+				HighestTierCompleted int `json:"highest_tier_completed"`
+				FastestTimeS         struct {
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+					Num4 float64 `json:"4"`
+					Num5 float64 `json:"5"`
+					Num6 float64 `json:"6"`
+					Num7 float64 `json:"7"`
+				} `json:"fastest_time_s"`
+				MostDamageArcher struct {
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+					Num4 float64 `json:"4"`
+					Num6 float64 `json:"6"`
+					Num7 float64 `json:"7"`
+				} `json:"most_damage_archer"`
+				MostDamageHealer struct {
+					Num3 float64 `json:"3"`
+					Num4 float64 `json:"4"`
+					Num5 float64 `json:"5"`
+				} `json:"most_damage_healer"`
+				FastestTimeSPlus struct {
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+					Num4 float64 `json:"4"`
+					Num5 float64 `json:"5"`
+					Num6 float64 `json:"6"`
+					Num7 float64 `json:"7"`
+				} `json:"fastest_time_s_plus"`
+				MostDamageTank struct {
+					Num4 float64 `json:"4"`
+				} `json:"most_damage_tank"`
+				MostDamageMage struct {
+					Num0 float64 `json:"0"`
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+					Num4 float64 `json:"4"`
+					Num5 float64 `json:"5"`
+					Num6 float64 `json:"6"`
+					Num7 float64 `json:"7"`
+				} `json:"most_damage_mage"`
+				MilestoneCompletions struct {
+					Num3 float64 `json:"3"`
+					Num5 float64 `json:"5"`
+					Num6 float64 `json:"6"`
+					Num7 float64 `json:"7"`
+				} `json:"milestone_completions"`
+			} `json:"catacombs"`
+			MasterCatacombs struct {
+				TierCompletions struct {
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+				} `json:"tier_completions"`
+				MilestoneCompletions struct {
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+				} `json:"milestone_completions"`
+				HighestTierCompleted int `json:"highest_tier_completed"`
+				FastestTime          struct {
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+				} `json:"fastest_time"`
+				BestRuns struct {
+					Num1 []struct {
+						Timestamp        int64    `json:"timestamp"`
+						ScoreExploration int      `json:"score_exploration"`
+						ScoreSpeed       int      `json:"score_speed"`
+						ScoreSkill       int      `json:"score_skill"`
+						ScoreBonus       int      `json:"score_bonus"`
+						DungeonClass     string   `json:"dungeon_class"`
+						Teammates        []string `json:"teammates"`
+						ElapsedTime      int      `json:"elapsed_time"`
+						DamageDealt      float64  `json:"damage_dealt"`
+						Deaths           int      `json:"deaths"`
+						MobsKilled       int      `json:"mobs_killed"`
+						SecretsFound     int      `json:"secrets_found"`
+						DamageMitigated  float64  `json:"damage_mitigated"`
+						AllyHealing      float64  `json:"ally_healing,omitempty"`
+					} `json:"1"`
+					Num2 []struct {
+						Timestamp        int64    `json:"timestamp"`
+						ScoreExploration int      `json:"score_exploration"`
+						ScoreSpeed       int      `json:"score_speed"`
+						ScoreSkill       int      `json:"score_skill"`
+						ScoreBonus       int      `json:"score_bonus"`
+						DungeonClass     string   `json:"dungeon_class"`
+						Teammates        []string `json:"teammates"`
+						ElapsedTime      int      `json:"elapsed_time"`
+						DamageDealt      float64  `json:"damage_dealt"`
+						Deaths           int      `json:"deaths"`
+						MobsKilled       int      `json:"mobs_killed"`
+						SecretsFound     int      `json:"secrets_found"`
+						DamageMitigated  float64  `json:"damage_mitigated"`
+					} `json:"2"`
+					Num3 []struct {
+						Timestamp        int64    `json:"timestamp"`
+						ScoreExploration int      `json:"score_exploration"`
+						ScoreSpeed       int      `json:"score_speed"`
+						ScoreSkill       int      `json:"score_skill"`
+						ScoreBonus       int      `json:"score_bonus"`
+						DungeonClass     string   `json:"dungeon_class"`
+						Teammates        []string `json:"teammates"`
+						ElapsedTime      int      `json:"elapsed_time"`
+						DamageDealt      float64  `json:"damage_dealt"`
+						Deaths           int      `json:"deaths"`
+						MobsKilled       int      `json:"mobs_killed"`
+						SecretsFound     int      `json:"secrets_found"`
+						DamageMitigated  float64  `json:"damage_mitigated"`
+						AllyHealing      float64  `json:"ally_healing"`
+					} `json:"3"`
+				} `json:"best_runs"`
+				BestScore struct {
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+				} `json:"best_score"`
+				MobsKilled struct {
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+				} `json:"mobs_killed"`
+				MostMobsKilled struct {
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+				} `json:"most_mobs_killed"`
+				MostDamageBerserk struct {
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+				} `json:"most_damage_berserk"`
+				MostHealing struct {
+					Num1 float64 `json:"1"`
+					Num3 float64 `json:"3"`
+				} `json:"most_healing"`
+				FastestTimeS struct {
+					Num1 float64 `json:"1"`
+					Num2 float64 `json:"2"`
+					Num3 float64 `json:"3"`
+				} `json:"fastest_time_s"`
+				MostDamageArcher struct {
+					Num1 float64 `json:"1"`
+					Num3 float64 `json:"3"`
+				} `json:"most_damage_archer"`
+				FastestTimeSPlus struct {
+					Num1 float64 `json:"1"`
+				} `json:"fastest_time_s_plus"`
+				MostDamageHealer struct {
+					Num3 float64 `json:"3"`
+				} `json:"most_damage_healer"`
+			} `json:"master_catacombs"`
+		} `json:"dungeon_types"`
+		PlayerClasses struct {
+			Healer struct {
+				Experience float64 `json:"experience"`
+			} `json:"healer"`
+			Mage struct {
+				Experience float64 `json:"experience"`
+			} `json:"mage"`
+			Berserk struct {
+				Experience float64 `json:"experience"`
+			} `json:"berserk"`
+			Archer struct {
+				Experience float64 `json:"experience"`
+			} `json:"archer"`
+			Tank struct {
+				Experience float64 `json:"experience"`
+			} `json:"tank"`
+		} `json:"player_classes"`
+		DungeonJournal struct {
+			JournalEntries struct {
+				KaryllesDiary      []int         `json:"karylles_diary"`
+				TheStudy           []int         `json:"the_study"`
+				ExpeditionVolume1  []int         `json:"expedition_volume_1"`
+				UncannyRemains     []int         `json:"uncanny_remains"`
+				ExpeditionVolume2  []int         `json:"expedition_volume_2"`
+				GrimAdversity      []int         `json:"grim_adversity"`
+				ExpeditionVolume3  []int         `json:"expedition_volume_3"`
+				ExpeditionVolume4  []int         `json:"expedition_volume_4"`
+				NecronsMagicScroll []interface{} `json:"necrons_magic_scroll"`
+				TheWalls           []int         `json:"the_walls"`
+			} `json:"journal_entries"`
+		} `json:"dungeon_journal"`
+		DungeonsBlahBlah     []string `json:"dungeons_blah_blah"`
+		SelectedDungeonClass string   `json:"selected_dungeon_class"`
+	} `json:"dungeons"`
+	Griffin struct {
+		Burrows []struct {
+			Ts    int64 `json:"ts"`
+			X     int   `json:"x"`
+			Y     int   `json:"y"`
+			Z     int   `json:"z"`
+			Type  int   `json:"type"`
+			Tier  int   `json:"tier"`
+			Chain int   `json:"chain"`
+		} `json:"burrows"`
+	} `json:"griffin"`
+	Jacob2 struct {
+		MedalsInv struct {
+			Bronze int `json:"bronze"`
+			Silver int `json:"silver"`
+			Gold   int `json:"gold"`
+		} `json:"medals_inv"`
+		Perks struct {
+			DoubleDrops     int `json:"double_drops"`
+			FarmingLevelCap int `json:"farming_level_cap"`
+		} `json:"perks"`
+		Contests struct {
+			One00108SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"100:10_8:SUGAR_CANE"`
+			One001014PUMPKIN struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"100:10_14:PUMPKIN"`
+			One001020INKSACK3 struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"100:10_20:INK_SACK:3"`
+			One001023SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"100:10_23:SUGAR_CANE"`
+			One001029POTATOITEM struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"100:10_29:POTATO_ITEM"`
+			One001224PUMPKIN struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"100:12_24:PUMPKIN"`
+			One001230SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"100:12_30:SUGAR_CANE"`
+			One0115PUMPKIN struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"101:1_5:PUMPKIN"`
+			One0118SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"101:1_8:SUGAR_CANE"`
+			One01111POTATOITEM struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"101:1_11:POTATO_ITEM"`
+			One01123SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"101:1_23:SUGAR_CANE"`
+			One01222SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"101:2_22:SUGAR_CANE"`
+			One01327SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"101:3_27:SUGAR_CANE"`
+			One0154SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"101:5_4:SUGAR_CANE"`
+			One0157POTATOITEM struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"101:5_7:POTATO_ITEM"`
+			One01510INKSACK3 struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"101:5_10:INK_SACK:3"`
+			One01516PUMPKIN struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"101:5_16:PUMPKIN"`
+			One01531POTATOITEM struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"101:5_31:POTATO_ITEM"`
+			One01717POTATOITEM struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"101:7_17:POTATO_ITEM"`
+			One011128PUMPKIN struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"101:11_28:PUMPKIN"`
+			One02321SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"102:3_21:SUGAR_CANE"`
+			One02423INKSACK3 struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"102:4_23:INK_SACK:3"`
+			One02426PUMPKIN struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"102:4_26:PUMPKIN"`
+			One02516PUMPKIN struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"102:5_16:PUMPKIN"`
+			One02522SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"102:5_22:SUGAR_CANE"`
+			One02525POTATOITEM struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"102:5_25:POTATO_ITEM"`
+			One04417PUMPKIN struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"104:4_17:PUMPKIN"`
+			One0454SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"104:5_4:SUGAR_CANE"`
+			One04624POTATOITEM struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"104:6_24:POTATO_ITEM"`
+			One04711SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"104:7_11:SUGAR_CANE"`
+			One04714POTATOITEM struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"104:7_14:POTATO_ITEM"`
+			One04114SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"104:11_4:SUGAR_CANE"`
+			One0612POTATOITEM struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"106:1_2:POTATO_ITEM"`
+			One07717POTATOITEM struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"107:7_17:POTATO_ITEM"`
+			One09219NETHERSTALK struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"109:2_19:NETHER_STALK"`
+			One09222NETHERSTALK struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"109:2_22:NETHER_STALK"`
+			One09231NETHERSTALK struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"109:2_31:NETHER_STALK"`
+			One09420SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"109:4_20:SUGAR_CANE"`
+			One0954NETHERSTALK struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"109:5_4:NETHER_STALK"`
+			One10711NETHERSTALK struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"110:7_11:NETHER_STALK"`
+			One10828NETHERSTALK struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"110:8_28:NETHER_STALK"`
+			One12126SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"112:1_26:SUGAR_CANE"`
+			One12330SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"112:3_30:SUGAR_CANE"`
+			One121017NETHERSTALK struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"112:10_17:NETHER_STALK"`
+			One121026NETHERSTALK struct {
+				Collected int `json:"collected"`
+			} `json:"112:10_26:NETHER_STALK"`
+			One14711NETHERSTALK struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"114:7_11:NETHER_STALK"`
+			One1575SUGARCANE struct {
+				Collected int `json:"collected"`
+			} `json:"115:7_5:SUGAR_CANE"`
+			One151224CARROTITEM struct {
+				Collected int `json:"collected"`
+			} `json:"115:12_24:CARROT_ITEM"`
+			One16129SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"116:1_29:SUGAR_CANE"`
+			One1624SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"116:2_4:SUGAR_CANE"`
+			One18111NETHERSTALK struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"118:1_11:NETHER_STALK"`
+			One18114SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"118:1_14:SUGAR_CANE"`
+			One1821PUMPKIN struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"118:2_1:PUMPKIN"`
+			One1839SUGARCANE struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"118:3_9:SUGAR_CANE"`
+			One18312PUMPKIN struct {
+				Collected           int  `json:"collected"`
+				ClaimedRewards      bool `json:"claimed_rewards"`
+				ClaimedPosition     int  `json:"claimed_position"`
+				ClaimedParticipants int  `json:"claimed_participants"`
+			} `json:"118:3_12:PUMPKIN"`
+			One18810PUMPKIN struct {
+				Collected int `json:"collected"`
+			} `json:"118:8_10:PUMPKIN"`
+			One32129SUGARCANE struct {
+				Collected int `json:"collected"`
+			} `json:"132:12_9:SUGAR_CANE"`
+			One33924NETHERSTALK struct {
+				Collected int `json:"collected"`
+			} `json:"133:9_24:NETHER_STALK"`
+			One52615SUGARCANE struct {
+				Collected int `json:"collected"`
+			} `json:"152:6_15:SUGAR_CANE"`
+		} `json:"contests"`
+		Talked       bool     `json:"talked"`
+		UniqueGolds2 []string `json:"unique_golds2"`
+	} `json:"jacob2"`
+	Experimentation struct {
+		Simon struct {
+			LastAttempt int64 `json:"last_attempt"`
+			Attempts0   int   `json:"attempts_0"`
+			BonusClicks int   `json:"bonus_clicks"`
+			LastClaimed int64 `json:"last_claimed"`
+			Claims0     int   `json:"claims_0"`
+			BestScore0  int   `json:"best_score_0"`
+			Attempts1   int   `json:"attempts_1"`
+			Claims1     int   `json:"claims_1"`
+			BestScore1  int   `json:"best_score_1"`
+			Attempts2   int   `json:"attempts_2"`
+			Claims2     int   `json:"claims_2"`
+			BestScore2  int   `json:"best_score_2"`
+			Attempts3   int   `json:"attempts_3"`
+			Claims3     int   `json:"claims_3"`
+			BestScore3  int   `json:"best_score_3"`
+			Attempts5   int   `json:"attempts_5"`
+			Claims5     int   `json:"claims_5"`
+			BestScore5  int   `json:"best_score_5"`
+		} `json:"simon"`
+		Pairings struct {
+			LastClaimed int64 `json:"last_claimed"`
+			Claims1     int   `json:"claims_1"`
+			LastAttempt int   `json:"last_attempt"`
+			BestScore1  int   `json:"best_score_1"`
+			Claims2     int   `json:"claims_2"`
+			BestScore2  int   `json:"best_score_2"`
+			Claims3     int   `json:"claims_3"`
+			BestScore3  int   `json:"best_score_3"`
+			Claims4     int   `json:"claims_4"`
+			BestScore4  int   `json:"best_score_4"`
+			Claims5     int   `json:"claims_5"`
+			BestScore5  int   `json:"best_score_5"`
+		} `json:"pairings"`
+		Numbers struct {
+			LastAttempt int64 `json:"last_attempt"`
+			Attempts1   int   `json:"attempts_1"`
+			BonusClicks int   `json:"bonus_clicks"`
+			LastClaimed int64 `json:"last_claimed"`
+			Claims1     int   `json:"claims_1"`
+			BestScore1  int   `json:"best_score_1"`
+			Attempts2   int   `json:"attempts_2"`
+			Claims2     int   `json:"claims_2"`
+			BestScore2  int   `json:"best_score_2"`
+			Attempts3   int   `json:"attempts_3"`
+			Claims3     int   `json:"claims_3"`
+			BestScore3  int   `json:"best_score_3"`
+		} `json:"numbers"`
+		ClaimsResets          int   `json:"claims_resets"`
+		ClaimsResetsTimestamp int64 `json:"claims_resets_timestamp"`
+	} `json:"experimentation"`
+	Perks struct {
+		PermanentHealth     int `json:"permanent_health"`
+		PermanentStrength   int `json:"permanent_strength"`
+		PermanentSpeed      int `json:"permanent_speed"`
+		CatacombsBossLuck   int `json:"catacombs_boss_luck"`
+		CatacombsCritDamage int `json:"catacombs_crit_damage"`
+		CatacombsLooting    int `json:"catacombs_looting"`
+		CatacombsStrength   int `json:"catacombs_strength"`
+		CatacombsHealth     int `json:"catacombs_health"`
+		CatacombsDefense    int `json:"catacombs_defense"`
+		PermanentDefense    int `json:"permanent_defense"`
+		ForbiddenBlessing   int `json:"forbidden_blessing"`
+	} `json:"perks"`
+	HarpQuest struct {
+		SelectedSong                          string  `json:"selected_song"`
+		SelectedSongEpoch                     int64   `json:"selected_song_epoch"`
+		SongHymnJoyBestCompletion             float64 `json:"song_hymn_joy_best_completion"`
+		SongHymnJoyCompletions                int     `json:"song_hymn_joy_completions"`
+		SongHymnJoyPerfectCompletions         int     `json:"song_hymn_joy_perfect_completions"`
+		SongFrereJacquesBestCompletion        float64 `json:"song_frere_jacques_best_completion"`
+		SongFrereJacquesCompletions           int     `json:"song_frere_jacques_completions"`
+		SongFrereJacquesPerfectCompletions    int     `json:"song_frere_jacques_perfect_completions"`
+		SongAmazingGraceBestCompletion        float64 `json:"song_amazing_grace_best_completion"`
+		SongAmazingGraceCompletions           int     `json:"song_amazing_grace_completions"`
+		SongAmazingGracePerfectCompletions    int     `json:"song_amazing_grace_perfect_completions"`
+		SongBrahmsBestCompletion              float64 `json:"song_brahms_best_completion"`
+		SongBrahmsCompletions                 int     `json:"song_brahms_completions"`
+		SongHappyBirthdayBestCompletion       float64 `json:"song_happy_birthday_best_completion"`
+		SongHappyBirthdayCompletions          int     `json:"song_happy_birthday_completions"`
+		SongHappyBirthdayPerfectCompletions   int     `json:"song_happy_birthday_perfect_completions"`
+		SongGreensleevesBestCompletion        float64 `json:"song_greensleeves_best_completion"`
+		SongGreensleevesCompletions           int     `json:"song_greensleeves_completions"`
+		SongGreensleevesPerfectCompletions    int     `json:"song_greensleeves_perfect_completions"`
+		SongJeopardyBestCompletion            float64 `json:"song_jeopardy_best_completion"`
+		SongJeopardyCompletions               int     `json:"song_jeopardy_completions"`
+		SongJeopardyPerfectCompletions        int     `json:"song_jeopardy_perfect_completions"`
+		SongMinuetCompletions                 int     `json:"song_minuet_completions"`
+		SongBrahmsPerfectCompletions          int     `json:"song_brahms_perfect_completions"`
+		SongMinuetBestCompletion              float64 `json:"song_minuet_best_completion"`
+		SongMinuetPerfectCompletions          int     `json:"song_minuet_perfect_completions"`
+		SongJoyWorldBestCompletion            float64 `json:"song_joy_world_best_completion"`
+		SongJoyWorldCompletions               int     `json:"song_joy_world_completions"`
+		SongJoyWorldPerfectCompletions        int     `json:"song_joy_world_perfect_completions"`
+		SongPureImaginationBestCompletion     float64 `json:"song_pure_imagination_best_completion"`
+		SongPureImaginationCompletions        int     `json:"song_pure_imagination_completions"`
+		SongPureImaginationPerfectCompletions int     `json:"song_pure_imagination_perfect_completions"`
+		SongVieEnRoseBestCompletion           float64 `json:"song_vie_en_rose_best_completion"`
+		SongVieEnRoseCompletions              int     `json:"song_vie_en_rose_completions"`
+	} `json:"harp_quest"`
+	ActiveEffects []struct {
+		Effect    string `json:"effect"`
+		Level     int    `json:"level"`
+		Modifiers []struct {
+			Key string `json:"key"`
+			Amp int    `json:"amp"`
+		} `json:"modifiers"`
+		TicksRemaining int  `json:"ticks_remaining"`
+		Infinite       bool `json:"infinite"`
+	} `json:"active_effects"`
+	PausedEffects         []interface{} `json:"paused_effects"`
+	DisabledPotionEffects []interface{} `json:"disabled_potion_effects"`
+	VisitedModes          []string      `json:"visited_modes"`
+	TempStatBuffs         []struct {
+		Stat     int    `json:"stat"`
+		Key      string `json:"key"`
+		Amount   int    `json:"amount"`
+		ExpireAt int64  `json:"expire_at"`
+	} `json:"temp_stat_buffs"`
+	MiningCore struct {
+		Nodes struct {
+			MiningSpeed      int `json:"mining_speed"`
+			MiningFortune    int `json:"mining_fortune"`
+			TitaniumInsanium int `json:"titanium_insanium"`
+			MiningSpeedBoost int `json:"mining_speed_boost"`
+			DailyPowder      int `json:"daily_powder"`
+			EfficientMiner   int `json:"efficient_miner"`
+			MiningExperience int `json:"mining_experience"`
+		} `json:"nodes"`
+		ReceivedFreeTier            bool    `json:"received_free_tier"`
+		Tokens                      int     `json:"tokens"`
+		PowderMithril               int     `json:"powder_mithril"`
+		PowderMithrilTotal          int     `json:"powder_mithril_total"`
+		TokensSpent                 int     `json:"tokens_spent"`
+		PowderSpentMithril          int     `json:"powder_spent_mithril"`
+		Experience                  float64 `json:"experience"`
+		LastReset                   int64   `json:"last_reset"`
+		RetroactiveTier2Token       bool    `json:"retroactive_tier2_token"`
+		SelectedPickaxeAbility      string  `json:"selected_pickaxe_ability"`
+		DailyOresMinedDayMithrilOre int     `json:"daily_ores_mined_day_mithril_ore"`
+		DailyOresMinedMithrilOre    int     `json:"daily_ores_mined_mithril_ore"`
+		GreaterMinesLastAccess      int64   `json:"greater_mines_last_access"`
+		Crystals                    struct {
+			JadeCrystal struct {
+			} `json:"jade_crystal"`
+			AmberCrystal struct {
+			} `json:"amber_crystal"`
+			AmethystCrystal struct {
+			} `json:"amethyst_crystal"`
+			SapphireCrystal struct {
+			} `json:"sapphire_crystal"`
+			TopazCrystal struct {
+			} `json:"topaz_crystal"`
+			JasperCrystal struct {
+			} `json:"jasper_crystal"`
+			RubyCrystal struct {
+			} `json:"ruby_crystal"`
+		} `json:"crystals"`
+		Biomes struct {
+			Dwarven struct {
+				StatuesPlaced []interface{} `json:"statues_placed"`
+			} `json:"dwarven"`
+		} `json:"biomes"`
+		PowderGemstone      int `json:"powder_gemstone"`
+		PowderGemstoneTotal int `json:"powder_gemstone_total"`
+	} `json:"mining_core"`
+	Forge struct {
+		ForgeProcesses struct {
+			Forge1 struct {
+			} `json:"forge_1"`
+		} `json:"forge_processes"`
+	} `json:"forge"`
+	ExperienceSkillRunecrafting float64  `json:"experience_skill_runecrafting"`
+	ExperienceSkillMining       float64  `json:"experience_skill_mining"`
+	UnlockedCollTiers           []string `json:"unlocked_coll_tiers"`
+	ExperienceSkillAlchemy      float64  `json:"experience_skill_alchemy"`
+	BackpackContents            struct {
+		Num0 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"0"`
+		Num1 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"1"`
+		Num2 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"2"`
+		Num3 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"3"`
+		Num4 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"4"`
+		Num5 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"5"`
+		Num6 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"6"`
+		Num7 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"7"`
+		Num8 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"8"`
+		Num9 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"9"`
+		Num10 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"10"`
+		Num11 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"11"`
+		Num12 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"12"`
+		Num13 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"13"`
+		Num14 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"14"`
+		Num15 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"15"`
+		Num16 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"16"`
+		Num17 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"17"`
+	} `json:"backpack_contents"`
+	ExperienceSkillTaming float64 `json:"experience_skill_taming"`
+	SacksCounts           struct {
+		String             int `json:"STRING"`
+		Sulphur            int `json:"SULPHUR"`
+		BlazeRod           int `json:"BLAZE_ROD"`
+		GhastTear          int `json:"GHAST_TEAR"`
+		SpiderEye          int `json:"SPIDER_EYE"`
+		RottenFlesh        int `json:"ROTTEN_FLESH"`
+		Bone               int `json:"BONE"`
+		SlimeBall          int `json:"SLIME_BALL"`
+		EnderPearl         int `json:"ENDER_PEARL"`
+		MagmaCream         int `json:"MAGMA_CREAM"`
+		Log                int `json:"LOG"`
+		LOG1               int `json:"LOG:1"`
+		LOG2               int `json:"LOG:2"`
+		LOG21              int `json:"LOG_2:1"`
+		Log2               int `json:"LOG_2"`
+		LOG3               int `json:"LOG:3"`
+		RevenantFlesh      int `json:"REVENANT_FLESH"`
+		TarantulaWeb       int `json:"TARANTULA_WEB"`
+		RAWFISH1           int `json:"RAW_FISH:1"`
+		RawFish            int `json:"RAW_FISH"`
+		ClayBall           int `json:"CLAY_BALL"`
+		WaterLily          int `json:"WATER_LILY"`
+		RAWFISH3           int `json:"RAW_FISH:3"`
+		InkSack            int `json:"INK_SACK"`
+		PrismarineCrystals int `json:"PRISMARINE_CRYSTALS"`
+		PrismarineShard    int `json:"PRISMARINE_SHARD"`
+		Sponge             int `json:"SPONGE"`
+		RAWFISH2           int `json:"RAW_FISH:2"`
+		WolfTooth          int `json:"WOLF_TOOTH"`
+		RuneWhiteSpiral1   int `json:"RUNE_WHITE_SPIRAL_1"`
+		RuneGem1           int `json:"RUNE_GEM_1"`
+		RuneBlood21        int `json:"RUNE_BLOOD_2_1"`
+		RuneSnow1          int `json:"RUNE_SNOW_1"`
+		RuneSparkling1     int `json:"RUNE_SPARKLING_1"`
+		RuneHearts1        int `json:"RUNE_HEARTS_1"`
+		RuneGolden1        int `json:"RUNE_GOLDEN_1"`
+		RuneLava1          int `json:"RUNE_LAVA_1"`
+		RuneRainbow1       int `json:"RUNE_RAINBOW_1"`
+		RuneZombieSlayer1  int `json:"RUNE_ZOMBIE_SLAYER_1"`
+		RuneZap1           int `json:"RUNE_ZAP_1"`
+		RuneClouds1        int `json:"RUNE_CLOUDS_1"`
+		RuneHot1           int `json:"RUNE_HOT_1"`
+		RuneIce1           int `json:"RUNE_ICE_1"`
+		RuneWake1          int `json:"RUNE_WAKE_1"`
+		NullSphere         int `json:"NULL_SPHERE"`
+		RedGift            int `json:"RED_GIFT"`
+		SnowBall           int `json:"SNOW_BALL"`
+		IceHunk            int `json:"ICE_HUNK"`
+	} `json:"sacks_counts"`
+	EssenceUndead int `json:"essence_undead"`
+	BackpackIcons struct {
+		Num0 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"0"`
+		Num1 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"1"`
+		Num2 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"2"`
+		Num3 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"3"`
+		Num4 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"4"`
+		Num5 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"5"`
+		Num6 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"6"`
+		Num7 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"7"`
+		Num8 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"8"`
+		Num9 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"9"`
+		Num10 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"10"`
+		Num11 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"11"`
+		Num12 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"12"`
+		Num13 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"13"`
+		Num14 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"14"`
+		Num15 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"15"`
+		Num16 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"16"`
+		Num17 struct {
+			Type int    `json:"type"`
+			Data string `json:"data"`
+		} `json:"17"`
+	} `json:"backpack_icons"`
+	ExperienceSkillCombat  float64 `json:"experience_skill_combat"`
+	EssenceDiamond         int     `json:"essence_diamond"`
+	ExperienceSkillFarming float64 `json:"experience_skill_farming"`
+	Collection             struct {
+		Log                    int `json:"LOG"`
+		LOG2                   int `json:"LOG:2"`
+		LOG1                   int `json:"LOG:1"`
+		LOG21                  int `json:"LOG_2:1"`
+		InkSack                int `json:"INK_SACK"`
+		WaterLily              int `json:"WATER_LILY"`
+		Log2                   int `json:"LOG_2"`
+		LOG3                   int `json:"LOG:3"`
+		RottenFlesh            int `json:"ROTTEN_FLESH"`
+		Cobblestone            int `json:"COBBLESTONE"`
+		Seeds                  int `json:"SEEDS"`
+		Bone                   int `json:"BONE"`
+		String                 int `json:"STRING"`
+		EnderPearl             int `json:"ENDER_PEARL"`
+		Pork                   int `json:"PORK"`
+		Wheat                  int `json:"WHEAT"`
+		Coal                   int `json:"COAL"`
+		GoldIngot              int `json:"GOLD_INGOT"`
+		INKSACK4               int `json:"INK_SACK:4"`
+		SpiderEye              int `json:"SPIDER_EYE"`
+		SlimeBall              int `json:"SLIME_BALL"`
+		Diamond                int `json:"DIAMOND"`
+		IronIngot              int `json:"IRON_INGOT"`
+		Mutton                 int `json:"MUTTON"`
+		CarrotItem             int `json:"CARROT_ITEM"`
+		MushroomCollection     int `json:"MUSHROOM_COLLECTION"`
+		Sulphur                int `json:"SULPHUR"`
+		MagmaCream             int `json:"MAGMA_CREAM"`
+		Redstone               int `json:"REDSTONE"`
+		BlazeRod               int `json:"BLAZE_ROD"`
+		GhastTear              int `json:"GHAST_TEAR"`
+		EnderStone             int `json:"ENDER_STONE"`
+		Obsidian               int `json:"OBSIDIAN"`
+		Emerald                int `json:"EMERALD"`
+		RawFish                int `json:"RAW_FISH"`
+		RAWFISH1               int `json:"RAW_FISH:1"`
+		ClayBall               int `json:"CLAY_BALL"`
+		RAWFISH3               int `json:"RAW_FISH:3"`
+		RAWFISH2               int `json:"RAW_FISH:2"`
+		PrismarineCrystals     int `json:"PRISMARINE_CRYSTALS"`
+		PrismarineShard        int `json:"PRISMARINE_SHARD"`
+		Melon                  int `json:"MELON"`
+		Pumpkin                int `json:"PUMPKIN"`
+		PotatoItem             int `json:"POTATO_ITEM"`
+		Ice                    int `json:"ICE"`
+		GlowstoneDust          int `json:"GLOWSTONE_DUST"`
+		Sponge                 int `json:"SPONGE"`
+		SugarCane              int `json:"SUGAR_CANE"`
+		Gravel                 int `json:"GRAVEL"`
+		Feather                int `json:"FEATHER"`
+		RawChicken             int `json:"RAW_CHICKEN"`
+		Leather                int `json:"LEATHER"`
+		Rabbit                 int `json:"RABBIT"`
+		Cactus                 int `json:"CACTUS"`
+		EnchantedFlint         int `json:"ENCHANTED_FLINT"`
+		EnchantedDiamond       int `json:"ENCHANTED_DIAMOND"`
+		EnchantedString        int `json:"ENCHANTED_STRING"`
+		EnchantedSpiderEye     int `json:"ENCHANTED_SPIDER_EYE"`
+		EnchantedRedstone      int `json:"ENCHANTED_REDSTONE"`
+		RabbitHide             int `json:"RABBIT_HIDE"`
+		RabbitFoot             int `json:"RABBIT_FOOT"`
+		EnchantedRabbit        int `json:"ENCHANTED_RABBIT"`
+		NetherStalk            int `json:"NETHER_STALK"`
+		Netherrack             int `json:"NETHERRACK"`
+		Quartz                 int `json:"QUARTZ"`
+		Sand                   int `json:"SAND"`
+		INKSACK3               int `json:"INK_SACK:3"`
+		Egg                    int `json:"EGG"`
+		EnchantedGlowstoneDust int `json:"ENCHANTED_GLOWSTONE_DUST"`
+		EnchantedCarrot        int `json:"ENCHANTED_CARROT"`
+		EnchantedLapisLazuli   int `json:"ENCHANTED_LAPIS_LAZULI"`
+		SnowBall               int `json:"SNOW_BALL"`
+		EnchantedEmerald       int `json:"ENCHANTED_EMERALD"`
+		EnchantedPotato        int `json:"ENCHANTED_POTATO"`
+		EnchantedClayBall      int `json:"ENCHANTED_CLAY_BALL"`
+		MithrilOre             int `json:"MITHRIL_ORE"`
+		EnchantedSnowBlock     int `json:"ENCHANTED_SNOW_BLOCK"`
+		HardStone              int `json:"HARD_STONE"`
+		GemstoneCollection     int `json:"GEMSTONE_COLLECTION"`
+	} `json:"collection"`
+	EssenceDragon             int     `json:"essence_dragon"`
+	EssenceGold               int     `json:"essence_gold"`
+	ExperienceSkillEnchanting float64 `json:"experience_skill_enchanting"`
+	ExperienceSkillFishing    float64 `json:"experience_skill_fishing"`
+	EssenceIce                int     `json:"essence_ice"`
+	EssenceWither             int     `json:"essence_wither"`
+	EssenceSpider             int     `json:"essence_spider"`
+	ExperienceSkillForaging   float64 `json:"experience_skill_foraging"`
+	ExperienceSkillCarpentry  float64 `json:"experience_skill_carpentry"`
+}
+
+type HypixelSkyblockProfile struct {
+	ProfileID string `json:"profile_id"`
+	Members   map[string]HypixelSkyblockMember `json:"members"`
+	CommunityUpgrades struct {
+		CurrentlyUpgrading interface{} `json:"currently_upgrading"`
+		UpgradeStates      []struct {
+			Upgrade     string `json:"upgrade"`
+			Tier        int    `json:"tier"`
+			StartedMs   int64  `json:"started_ms"`
+			StartedBy   string `json:"started_by"`
+			ClaimedMs   int64  `json:"claimed_ms"`
+			ClaimedBy   string `json:"claimed_by"`
+			Fasttracked bool   `json:"fasttracked"`
+		} `json:"upgrade_states"`
+	} `json:"community_upgrades"`
+	CuteName string `json:"cute_name"`
+	Banking  struct {
+		Balance      float64 `json:"balance"`
+		Transactions []struct {
+			Amount        float64 `json:"amount"`
+			Timestamp     int64   `json:"timestamp"`
+			Action        string  `json:"action"`
+			InitiatorName string  `json:"initiator_name"`
+		} `json:"transactions"`
+	} `json:"banking"`
+}
 
 type HypixelSkyblockResponse struct {
-	Success  bool `json:"success"`
-	Profiles []struct {
-		ProfileID string `json:"profile_id"`
-		Members   map[string] struct {
-				LastSave       int64 `json:"last_save"`
-				CoopInvitation struct {
-					Timestamp int64  `json:"timestamp"`
-					InvitedBy string `json:"invited_by"`
-					Confirmed bool   `json:"confirmed"`
-				} `json:"coop_invitation"`
-				FirstJoin    int64 `json:"first_join"`
-				FirstJoinHub int   `json:"first_join_hub"`
-				Stats        struct {
-					Deaths                                              float64 `json:"deaths"`
-					DeathsVoid                                          float64 `json:"deaths_void"`
-					HighestCriticalDamage                               float64 `json:"highest_critical_damage"`
-					Kills                                               float64 `json:"kills"`
-					KillsPondSquid                                      float64 `json:"kills_pond_squid"`
-					KillsZombie                                         float64 `json:"kills_zombie"`
-					DeathsEnderman                                      float64 `json:"deaths_enderman"`
-					KillsSkeleton                                       float64 `json:"kills_skeleton"`
-					KillsSpider                                         float64 `json:"kills_spider"`
-					KillsEnderman                                       float64 `json:"kills_enderman"`
-					KillsPig                                            float64 `json:"kills_pig"`
-					PetMilestoneOresMined                               float64 `json:"pet_milestone_ores_mined"`
-					KillsLapisZombie                                    float64 `json:"kills_lapis_zombie"`
-					KillsRedstonePigman                                 float64 `json:"kills_redstone_pigman"`
-					KillsEmeraldSlime                                   float64 `json:"kills_emerald_slime"`
-					KillsDiamondZombie                                  float64 `json:"kills_diamond_zombie"`
-					KillsDiamondSkeleton                                float64 `json:"kills_diamond_skeleton"`
-					DeathsDiamondZombie                                 float64 `json:"deaths_diamond_zombie"`
-					AuctionsBids                                        float64 `json:"auctions_bids"`
-					AuctionsHighestBid                                  float64     `json:"auctions_highest_bid"`
-					AuctionsWon                                         float64 `json:"auctions_won"`
-					AuctionsBoughtUncommon                              float64 `json:"auctions_bought_uncommon"`
-					AuctionsGoldSpent                                   float64     `json:"auctions_gold_spent"`
-					DeathsSpider                                        float64 `json:"deaths_spider"`
-					KillsSheep                                          float64 `json:"kills_sheep"`
-					DeathsFire                                          float64 `json:"deaths_fire"`
-					DeathsFall                                          float64 `json:"deaths_fall"`
-					KillsInvisibleCreeper                               float64 `json:"kills_invisible_creeper"`
-					KillsWitherSkeleton                                 float64 `json:"kills_wither_skeleton"`
-					KillsMagmaCube                                      float64 `json:"kills_magma_cube"`
-					KillsFireballMagmaCube                              float64 `json:"kills_fireball_magma_cube"`
-					KillsDasherSpider                                   float64 `json:"kills_dasher_spider"`
-					KillsSplitterSpiderSilverfish                       float64 `json:"kills_splitter_spider_silverfish"`
-					KillsBlaze                                          float64 `json:"kills_blaze"`
-					KillsPigman                                         float64 `json:"kills_pigman"`
-					KillsGhast                                          float64 `json:"kills_ghast"`
-					DeathsEndermite                                     float64 `json:"deaths_endermite"`
-					KillsEndermite                                      float64 `json:"kills_endermite"`
-					KillsObsidianWither                                 float64 `json:"kills_obsidian_wither"`
-					KillsWatcher                                        float64 `json:"kills_watcher"`
-					DeathsWatcher                                       float64 `json:"deaths_watcher"`
-					DeathsZealotEnderman                                float64 `json:"deaths_zealot_enderman"`
-					KillsZombieVillager                                 float64 `json:"kills_zombie_villager"`
-					DeathsZombie                                        float64 `json:"deaths_zombie"`
-					DeathsPlayer                                        float64 `json:"deaths_player"`
-					AuctionsBoughtEpic                                  float64 `json:"auctions_bought_epic"`
-					KillsUnburriedZombie                                float64 `json:"kills_unburried_zombie"`
-					DeathsUnburriedZombie                               float64 `json:"deaths_unburried_zombie"`
-					AuctionsBoughtCommon                                float64 `json:"auctions_bought_common"`
-					KillsSplitterSpider                                 float64 `json:"kills_splitter_spider"`
-					KillsSpiderJockey                                   float64 `json:"kills_spider_jockey"`
-					KillsJockeySkeleton                                 float64 `json:"kills_jockey_skeleton"`
-					KillsVoraciousSpider                                float64 `json:"kills_voracious_spider"`
-					KillsWeaverSpider                                   float64 `json:"kills_weaver_spider"`
-					KillsJockeyShotSilverfish                           float64 `json:"kills_jockey_shot_silverfish"`
-					KillsRuinWolf                                       float64 `json:"kills_ruin_wolf"`
-					KillsOldWolf                                        float64 `json:"kills_old_wolf"`
-					DeathsOldWolf                                       float64 `json:"deaths_old_wolf"`
-					DeathsWolf                                          float64 `json:"deaths_wolf"`
-					KillsRandomSlime                                    float64 `json:"kills_random_slime"`
-					AuctionsCreated                                     float64 `json:"auctions_created"`
-					AuctionsFees                                        float64     `json:"auctions_fees"`
-					KillsGeneratorGhast                                 float64 `json:"kills_generator_ghast"`
-					AuctionsCompleted                                   float64 `json:"auctions_completed"`
-					AuctionsSoldUncommon                                float64 `json:"auctions_sold_uncommon"`
-					AuctionsGoldEarned                                  float64     `json:"auctions_gold_earned"`
-					AuctionsNoBids                                      float64 `json:"auctions_no_bids"`
-					KillsNightRespawningSkeleton                        float64 `json:"kills_night_respawning_skeleton"`
-					KillsBatPinata                                      float64 `json:"kills_bat_pinata"`
-					KillsHorsemanBat                                    float64 `json:"kills_horseman_bat"`
-					DeathsHorsemanHorse                                 float64 `json:"deaths_horseman_horse"`
-					KillsHorsemanZombie                                 float64 `json:"kills_horseman_zombie"`
-					GiftsGiven                                          float64 `json:"gifts_given"`
-					KillsPlayer                                         float64 `json:"kills_player"`
-					ItemsFished                                         float64 `json:"items_fished"`
-					ItemsFishedNormal                                   float64 `json:"items_fished_normal"`
-					PetMilestoneSeaCreaturesKilled                      float64 `json:"pet_milestone_sea_creatures_killed"`
-					KillsNightSquid                                     float64 `json:"kills_night_squid"`
-					KillsSeaWalker                                      float64 `json:"kills_sea_walker"`
-					KillsSeaGuardian                                    float64 `json:"kills_sea_guardian"`
-					ItemsFishedTreasure                                 float64 `json:"items_fished_treasure"`
-					DeathsSeaGuardian                                   float64 `json:"deaths_sea_guardian"`
-					ItemsFishedLargeTreasure                            float64 `json:"items_fished_large_treasure"`
-					GiftsReceived                                       float64 `json:"gifts_received"`
-					KillsZealotEnderman                                 float64 `json:"kills_zealot_enderman"`
-					KillsRespawningSkeleton                             float64 `json:"kills_respawning_skeleton"`
-					DeathsYoungDragon                                   float64 `json:"deaths_young_dragon"`
-					AuctionsBoughtLegendary                             float64 `json:"auctions_bought_legendary"`
-					ForagingRaceBestTime                                float64 `json:"foraging_race_best_time"`
-					KillsSeaArcher                                      float64 `json:"kills_sea_archer"`
-					DeathsWitherSkeleton                                float64 `json:"deaths_wither_skeleton"`
-					DeathsBlaze                                         float64 `json:"deaths_blaze"`
-					AuctionsBoughtRare                                  float64 `json:"auctions_bought_rare"`
-					DeathsUnknown                                       float64 `json:"deaths_unknown"`
-					DeathsUnstableDragon                                float64 `json:"deaths_unstable_dragon"`
-					EnderCrystalsDestroyed                              float64 `json:"ender_crystals_destroyed"`
-					KillsMagmaCubeBoss                                  float64 `json:"kills_magma_cube_boss"`
-					DeathsCorruptedProtector                            float64 `json:"deaths_corrupted_protector"`
-					KillsZombieDeep                                     float64 `json:"kills_zombie_deep"`
-					KillsGuardianDefender                               float64 `json:"kills_guardian_defender"`
-					KillsCreeper                                        float64 `json:"kills_creeper"`
-					KillsWitch                                          float64 `json:"kills_witch"`
-					DeathsProtectorDragon                               float64 `json:"deaths_protector_dragon"`
-					KillsGeneratorSlime                                 float64 `json:"kills_generator_slime"`
-					KillsGeneratorMagmaCube                             float64 `json:"kills_generator_magma_cube"`
-					DeathsOldDragon                                     float64 `json:"deaths_old_dragon"`
-					AuctionsSoldRare                                    float64 `json:"auctions_sold_rare"`
-					KillsBroodMotherCaveSpider                          float64 `json:"kills_brood_mother_cave_spider"`
-					AuctionsSoldCommon                                  float64 `json:"auctions_sold_common"`
-					KillsCatfish                                        float64 `json:"kills_catfish"`
-					KillsChickenDeep                                    float64 `json:"kills_chicken_deep"`
-					KillsCarrotKing                                     float64 `json:"kills_carrot_king"`
-					KillsSeaLeech                                       float64 `json:"kills_sea_leech"`
-					KillsWaterHydra                                     float64 `json:"kills_water_hydra"`
-					KillsDeepSeaProtector                               float64 `json:"kills_deep_sea_protector"`
-					KillsFrozenSteve                                    float64 `json:"kills_frozen_steve"`
-					KillsFrostyTheSnowman                               float64 `json:"kills_frosty_the_snowman"`
-					KillsChicken                                        float64 `json:"kills_chicken"`
-					KillsCow                                            float64 `json:"kills_cow"`
-					KillsRabbit                                         float64 `json:"kills_rabbit"`
-					KillsCryptLurker                                    float64 `json:"kills_crypt_lurker"`
-					KillsCryptTankZombie                                float64 `json:"kills_crypt_tank_zombie"`
-					KillsZombieGrunt                                    float64 `json:"kills_zombie_grunt"`
-					KillsCryptDreadlord                                 float64 `json:"kills_crypt_dreadlord"`
-					DeathsLostAdventurer                                float64 `json:"deaths_lost_adventurer"`
-					KillsScaredSkeleton                                 float64 `json:"kills_scared_skeleton"`
-					KillsDungeonRespawningSkeleton                      float64 `json:"kills_dungeon_respawning_skeleton"`
-					KillsCryptSouleater                                 float64 `json:"kills_crypt_souleater"`
-					DeathsDiamondGuy                                    float64 `json:"deaths_diamond_guy"`
-					KillsSkeletonGrunt                                  float64 `json:"kills_skeleton_grunt"`
-					DeathsSkeletonGrunt                                 float64 `json:"deaths_skeleton_grunt"`
-					DeathsWatcherSummonUndead                           float64 `json:"deaths_watcher_summon_undead"`
-					KillsWatcherSummonUndead                            float64 `json:"kills_watcher_summon_undead"`
-					KillsCellarSpider                                   float64 `json:"kills_cellar_spider"`
-					KillsLostAdventurer                                 float64 `json:"kills_lost_adventurer"`
-					DeathsTrap                                          float64 `json:"deaths_trap"`
-					KillsSkeletonSoldier                                float64 `json:"kills_skeleton_soldier"`
-					DeathsScaredSkeleton                                float64 `json:"deaths_scared_skeleton"`
-					DeathsCryptSouleater                                float64 `json:"deaths_crypt_souleater"`
-					DeathsCryptLurker                                   float64 `json:"deaths_crypt_lurker"`
-					DeathsCryptDreadlord                                float64 `json:"deaths_crypt_dreadlord"`
-					DeathsSkeletonSoldier                               float64 `json:"deaths_skeleton_soldier"`
-					KillsDiamondGuy                                     float64 `json:"kills_diamond_guy"`
-					KillsCryptUndead                                    float64 `json:"kills_crypt_undead"`
-					DeathsZombieGrunt                                   float64 `json:"deaths_zombie_grunt"`
-					KillsSniperSkeleton                                 float64 `json:"kills_sniper_skeleton"`
-					KillsCryptUndeadPieter                              float64 `json:"kills_crypt_undead_pieter"`
-					DeathsBonzoSummonUndead                             float64 `json:"deaths_bonzo_summon_undead"`
-					KillsBonzoSummonUndead                              float64 `json:"kills_bonzo_summon_undead"`
-					DeathsBonzo                                         float64 `json:"deaths_bonzo"`
-					KillsBlazeHigherOrLower                             float64 `json:"kills_blaze_higher_or_lower"`
-					KillsSkeletonMaster                                 float64 `json:"kills_skeleton_master"`
-					DeathsScarfWarrior                                  float64 `json:"deaths_scarf_warrior"`
-					KillsRevenantZombie                                 float64 `json:"kills_revenant_zombie"`
-					KillsDungeonSecretBat                               float64 `json:"kills_dungeon_secret_bat"`
-					KillsCryptUndeadChristian                           float64 `json:"kills_crypt_undead_christian"`
-					DungeonHubCrystalCoreAnythingNoReturnBestTime       float64 `json:"dungeon_hub_crystal_core_anything_no_return_best_time"`
-					DungeonHubCrystalCoreNoPearlsNoReturnBestTime       float64 `json:"dungeon_hub_crystal_core_no_pearls_no_return_best_time"`
-					DungeonHubCrystalCoreNoAbilitiesNoReturnBestTime    float64 `json:"dungeon_hub_crystal_core_no_abilities_no_return_best_time"`
-					KillsCryptUndeadAlexander                           float64 `json:"kills_crypt_undead_alexander"`
-					DeathsScarfArcher                                   float64 `json:"deaths_scarf_archer"`
-					DeathsScarfMage                                     float64 `json:"deaths_scarf_mage"`
-					DeathsScarf                                         float64 `json:"deaths_scarf"`
-					DungeonHubCrystalCoreNothingNoReturnBestTime        float64 `json:"dungeon_hub_crystal_core_nothing_no_return_best_time"`
-					DungeonHubGiantMushroomAnythingNoReturnBestTime     float64 `json:"dungeon_hub_giant_mushroom_anything_no_return_best_time"`
-					DungeonHubGiantMushroomNoPearlsNoReturnBestTime     float64 `json:"dungeon_hub_giant_mushroom_no_pearls_no_return_best_time"`
-					DungeonHubGiantMushroomNoAbilitiesNoReturnBestTime  float64 `json:"dungeon_hub_giant_mushroom_no_abilities_no_return_best_time"`
-					DungeonHubGiantMushroomNothingNoReturnBestTime      float64 `json:"dungeon_hub_giant_mushroom_nothing_no_return_best_time"`
-					DungeonHubPrecursorRuinsAnythingNoReturnBestTime    float64 `json:"dungeon_hub_precursor_ruins_anything_no_return_best_time"`
-					DungeonHubPrecursorRuinsNoPearlsNoReturnBestTime    float64 `json:"dungeon_hub_precursor_ruins_no_pearls_no_return_best_time"`
-					DungeonHubPrecursorRuinsNoAbilitiesNoReturnBestTime float64 `json:"dungeon_hub_precursor_ruins_no_abilities_no_return_best_time"`
-					DungeonHubPrecursorRuinsNothingNoReturnBestTime     float64 `json:"dungeon_hub_precursor_ruins_nothing_no_return_best_time"`
-					KillsTarantulaSpider                                float64 `json:"kills_tarantula_spider"`
-					DeathsSniperSkeleton                                float64 `json:"deaths_sniper_skeleton"`
-					KillsLonelySpider                                   float64 `json:"kills_lonely_spider"`
-					KillsCryptUndeadValentin                            float64 `json:"kills_crypt_undead_valentin"`
-					KillsPackSpirit                                     float64 `json:"kills_pack_spirit"`
-					KillsSoulOfTheAlpha                                 float64 `json:"kills_soul_of_the_alpha"`
-					KillsHowlingSpirit                                  float64 `json:"kills_howling_spirit"`
-					KillsDungeonRespawningSkeletonSkull                 float64 `json:"kills_dungeon_respawning_skeleton_skull"`
-					KillsCryptUndeadMarius                              float64 `json:"kills_crypt_undead_marius"`
-					DeathsObsidianWither                                float64 `json:"deaths_obsidian_wither"`
-					KillsCorruptedProtector                             float64 `json:"kills_corrupted_protector"`
-					DeathsTarantulaSpider                               float64 `json:"deaths_tarantula_spider"`
-					KillsBroodMotherSpider                              float64 `json:"kills_brood_mother_spider"`
-					DeathsSkeletor                                      float64 `json:"deaths_skeletor"`
-					DeathsSkeletonMaster                                float64 `json:"deaths_skeleton_master"`
-					DeathsDungeonRespawningSkeleton                     float64 `json:"deaths_dungeon_respawning_skeleton"`
-					DeathsShadowAssassin                                float64 `json:"deaths_shadow_assassin"`
-					DeathsCryptTankZombie                               float64 `json:"deaths_crypt_tank_zombie"`
-					KillsScarfWarrior                                   float64 `json:"kills_scarf_warrior"`
-					KillsParasite                                       float64 `json:"kills_parasite"`
-					AuctionsSoldEpic                                    float64 `json:"auctions_sold_epic"`
-					MythosKills                                         float64 `json:"mythos_kills"`
-					KillsMinosHunter                                    float64 `json:"kills_minos_hunter"`
-					MythosBurrowsDugNext                                float64 `json:"mythos_burrows_dug_next"`
-					MythosBurrowsDugNextCOMMON                          float64 `json:"mythos_burrows_dug_next_COMMON"`
-					MythosBurrowsDugCombat                              float64 `json:"mythos_burrows_dug_combat"`
-					MythosBurrowsDugCombatCOMMON                        float64 `json:"mythos_burrows_dug_combat_COMMON"`
-					KillsSiameseLynx                                    float64 `json:"kills_siamese_lynx"`
-					MythosBurrowsDugTreasure                            float64 `json:"mythos_burrows_dug_treasure"`
-					MythosBurrowsDugTreasureCOMMON                      float64 `json:"mythos_burrows_dug_treasure_COMMON"`
-					MythosBurrowsChainsComplete                         float64 `json:"mythos_burrows_chains_complete"`
-					MythosBurrowsChainsCompleteCOMMON                   float64 `json:"mythos_burrows_chains_complete_COMMON"`
-					MythosBurrowsDugNextRARE                            float64 `json:"mythos_burrows_dug_next_RARE"`
-					MythosBurrowsDugCombatRARE                          float64 `json:"mythos_burrows_dug_combat_RARE"`
-					KillsMinotaur                                       float64 `json:"kills_minotaur"`
-					DeathsMinotaur                                      float64 `json:"deaths_minotaur"`
-					MythosBurrowsDugTreasureRARE                        float64 `json:"mythos_burrows_dug_treasure_RARE"`
-					DeathsGaiaConstruct                                 float64 `json:"deaths_gaia_construct"`
-					MythosBurrowsChainsCompleteRARE                     float64 `json:"mythos_burrows_chains_complete_RARE"`
-					KillsGaiaConstruct                                  float64 `json:"kills_gaia_construct"`
-					KillsLiquidHotMagma                                 float64 `json:"kills_liquid_hot_magma"`
-					MostWinterSnowballsHit                              float64 `json:"most_winter_snowballs_hit"`
-					MostWinterDamageDealt                               float64 `json:"most_winter_damage_dealt"`
-					MostWinterMagmaDamageDealt                          float64 `json:"most_winter_magma_damage_dealt"`
-					KillsNurseShark                                     float64 `json:"kills_nurse_shark"`
-					KillsBlueShark                                      float64 `json:"kills_blue_shark"`
-					KillsSeaWitch                                       float64 `json:"kills_sea_witch"`
-					KillsTigerShark                                     float64 `json:"kills_tiger_shark"`
-					DeathsWaterHydra                                    float64 `json:"deaths_water_hydra"`
-					AuctionsSoldLegendary                               float64 `json:"auctions_sold_legendary"`
-					AuctionsBoughtSpecial                               float64 `json:"auctions_bought_special"`
-					EndRaceBestTime                                     float64 `json:"end_race_best_time"`
-					MythosBurrowsDugNextNull                            float64 `json:"mythos_burrows_dug_next_null"`
-					MythosBurrowsDugCombatNull                          float64 `json:"mythos_burrows_dug_combat_null"`
-					MythosBurrowsDugTreasureNull                        float64 `json:"mythos_burrows_dug_treasure_null"`
-					MythosBurrowsChainsCompleteNull                     float64 `json:"mythos_burrows_chains_complete_null"`
-					DeathsSpiritBat                                     float64 `json:"deaths_spirit_bat"`
-					DeathsLividClone                                    float64 `json:"deaths_livid_clone"`
-					DeathsLivid                                         float64 `json:"deaths_livid"`
-					KillsWitherGourd                                    float64 `json:"kills_wither_gourd"`
-					KillsPhantomSpirit                                  float64 `json:"kills_phantom_spirit"`
-					KillsWraith                                         float64 `json:"kills_wraith"`
-					KillsTrickOrTreater                                 float64 `json:"kills_trick_or_treater"`
-					KillsBatSpooky                                      float64 `json:"kills_bat_spooky"`
-					KillsScaryJerry                                     float64 `json:"kills_scary_jerry"`
-					KillsBattyWitch                                     float64 `json:"kills_batty_witch"`
-					KillsScarfPriest                                    float64 `json:"kills_scarf_priest"`
-					KillsScarfArcher                                    float64 `json:"kills_scarf_archer"`
-					KillsZombieSoldier                                  float64 `json:"kills_zombie_soldier"`
-					KillsSkeletor                                       float64 `json:"kills_skeletor"`
-					KillsZombieKnight                                   float64 `json:"kills_zombie_knight"`
-					KillsProfessorGuardianSummon                        float64 `json:"kills_professor_guardian_summon"`
-					DeathsZombieSoldier                                 float64 `json:"deaths_zombie_soldier"`
-					KillsWitchBat                                       float64 `json:"kills_witch_bat"`
-					DeathsDeathmite                                     float64 `json:"deaths_deathmite"`
-					DeathsProfessorMageGuardian                         float64 `json:"deaths_professor_mage_guardian"`
-					KillsCryptUndeadNicholas                            float64 `json:"kills_crypt_undead_nicholas"`
-					KillsShadowAssassin                                 float64 `json:"kills_shadow_assassin"`
-					KillsWatcherBonzo                                   float64 `json:"kills_watcher_bonzo"`
-					DeathsProfessor                                     float64 `json:"deaths_professor"`
-					KillsCryptWitherskeleton                            float64 `json:"kills_crypt_witherskeleton"`
-					KillsSuperTankZombie                                float64 `json:"kills_super_tank_zombie"`
-					KillsSuperArcher                                    float64 `json:"kills_super_archer"`
-					KillsSpiritBull                                     float64 `json:"kills_spirit_bull"`
-					KillsSpiritRabbit                                   float64 `json:"kills_spirit_rabbit"`
-					KillsSpiritWolf                                     float64 `json:"kills_spirit_wolf"`
-					KillsSpiritSheep                                    float64 `json:"kills_spirit_sheep"`
-					DeathsSpiritChicken                                 float64 `json:"deaths_spirit_chicken"`
-					KillsSpiritBat                                      float64 `json:"kills_spirit_bat"`
-					DeathsSpiritWolf                                    float64 `json:"deaths_spirit_wolf"`
-					KillsSpiritMiniboss                                 float64 `json:"kills_spirit_miniboss"`
-					DeathsSpiritMiniboss                                float64 `json:"deaths_spirit_miniboss"`
-					KillsThorn                                          float64 `json:"kills_thorn"`
-					KillsSpiritChicken                                  float64 `json:"kills_spirit_chicken"`
-					DeathsSpiritBull                                    float64 `json:"deaths_spirit_bull"`
-					KillsTentaclees                                     float64 `json:"kills_tentaclees"`
-					AuctionsSoldSpecial                                 float64 `json:"auctions_sold_special"`
-					DeathsSpiritSheep                                   float64 `json:"deaths_spirit_sheep"`
-					DeathsSpiritRabbit                                  float64 `json:"deaths_spirit_rabbit"`
-					DeathsWatcherBonzo                                  float64 `json:"deaths_watcher_bonzo"`
-					DeathsArmorStand                                    float64 `json:"deaths_armor_stand"`
-					DeathsTentaclees                                    float64 `json:"deaths_tentaclees"`
-					KillsWatcherScarf                                   float64 `json:"kills_watcher_scarf"`
-					DeathsSkeletorPrime                                 float64 `json:"deaths_skeletor_prime"`
-					KillsZombieCommander                                float64 `json:"kills_zombie_commander"`
-					KillsSkeletorPrime                                  float64 `json:"kills_skeletor_prime"`
-					DeathsMimic                                         float64 `json:"deaths_mimic"`
-					DeathsWatcherLivid                                  float64 `json:"deaths_watcher_livid"`
-					KillsWatcherLivid                                   float64 `json:"kills_watcher_livid"`
-					KillsCryptUndeadBernhard                            float64 `json:"kills_crypt_undead_bernhard"`
-					DeathsCryptWitherskeleton                           float64 `json:"deaths_crypt_witherskeleton"`
-					DeathsSadanStatue                                   float64 `json:"deaths_sadan_statue"`
-					KillsKingMidas                                      float64 `json:"kills_king_midas"`
-					KillsSadanGolem                                     float64 `json:"kills_sadan_golem"`
-					DeathsSadan                                         float64 `json:"deaths_sadan"`
-					KillsMimic                                          float64 `json:"kills_mimic"`
-					DeathsSadanGolem                                    float64 `json:"deaths_sadan_golem"`
-					DeathsSuperTankZombie                               float64 `json:"deaths_super_tank_zombie"`
-					KillsSadanStatue                                    float64 `json:"kills_sadan_statue"`
-					DeathsWatcherGuardian                               float64 `json:"deaths_watcher_guardian"`
-					DeathsWatcherScarf                                  float64 `json:"deaths_watcher_scarf"`
-					KillsGrinch                                         float64 `json:"kills_grinch"`
-					DeathsSadanGiant                                    float64 `json:"deaths_sadan_giant"`
-					KillsSadanGiant                                     float64 `json:"kills_sadan_giant"`
-					DeathsKingMidas                                     float64 `json:"deaths_king_midas"`
-					KillsGreatWhiteShark                                float64 `json:"kills_great_white_shark"`
-					KillsSkeletonLord                                   float64 `json:"kills_skeleton_lord"`
-					KillsZombieLord                                     float64 `json:"kills_zombie_lord"`
-					DeathsZombieLord                                    float64 `json:"deaths_zombie_lord"`
-					DeathsCryptUndeadMinikloon                          float64 `json:"deaths_crypt_undead_minikloon"`
-					DeathsLonelySpider                                  float64 `json:"deaths_lonely_spider"`
-					DeathsCellarSpider                                  float64 `json:"deaths_cellar_spider"`
-					KillsSkeletonEmperor                                float64 `json:"kills_skeleton_emperor"`
-					KillsWerewolf                                       float64 `json:"kills_werewolf"`
-					KillsNightmare                                      float64 `json:"kills_nightmare"`
-					KillsScarecrow                                      float64 `json:"kills_scarecrow"`
-					DeathsZombieCommander                               float64 `json:"deaths_zombie_commander"`
-					KillsWitherMiner                                    float64 `json:"kills_wither_miner"`
-					DeathsMaxor                                         float64 `json:"deaths_maxor"`
-					KillsWitherGuard                                    float64 `json:"kills_wither_guard"`
-					DeathsWitherGuard                                   float64 `json:"deaths_wither_guard"`
-					KillsCryptUndeadFriedrich                           float64 `json:"kills_crypt_undead_friedrich"`
-					DeathsWitherMiner                                   float64 `json:"deaths_wither_miner"`
-					KillsWatcherGiantBoulder                            float64 `json:"kills_watcher_giant_boulder"`
-					DeathsSoulOfTheAlpha                                float64 `json:"deaths_soul_of_the_alpha"`
-					KillsWatcherGiantBigfoot                            float64 `json:"kills_watcher_giant_bigfoot"`
-					DeathsProfessorArcherGuardian                       float64 `json:"deaths_professor_archer_guardian"`
-					KillsWatcherGiantDiamond                            float64 `json:"kills_watcher_giant_diamond"`
-					KillsWatcherGiantLaser                              float64 `json:"kills_watcher_giant_laser"`
-					DeathsCrushed                                       float64 `json:"deaths_crushed"`
-					KillsNecronGuard                                    float64 `json:"kills_necron_guard"`
-					DeathsSkeletonLord                                  float64 `json:"deaths_skeleton_lord"`
-					DeathsWatcherGiantLaser                             float64 `json:"deaths_watcher_giant_laser"`
-					DeathsWatcherGiantBigfoot                           float64 `json:"deaths_watcher_giant_bigfoot"`
-					DeathsSuperArcher                                   float64 `json:"deaths_super_archer"`
-					DeathsSuffocation                                   float64 `json:"deaths_suffocation"`
-					KillsWiseDragon                                     float64 `json:"kills_wise_dragon"`
-					KillsMayorJerryBlue                                 float64 `json:"kills_mayor_jerry_blue"`
-					KillsMayorJerryGreen                                float64 `json:"kills_mayor_jerry_green"`
-					KillsYoungDragon                                    float64 `json:"kills_young_dragon"`
-					KillsMayorJerryPurple                               float64 `json:"kills_mayor_jerry_purple"`
-					KillsStrongDragon                                   float64 `json:"kills_strong_dragon"`
-					KillsMayorJerryGolden                               float64 `json:"kills_mayor_jerry_golden"`
-					DeathsCavernsGhost                                  float64 `json:"deaths_caverns_ghost"`
-					KillsIceWalker                                      float64 `json:"kills_ice_walker"`
-					KillsGoblinWeaklingMelee                            float64 `json:"kills_goblin_weakling_melee"`
-					KillsGoblinKnifeThrower                             float64 `json:"kills_goblin_knife_thrower"`
-					KillsCavernsGhost                                   float64 `json:"kills_caverns_ghost"`
-					KillsGoblin                                         float64 `json:"kills_goblin"`
-					KillsTreasureHoarder                                float64 `json:"kills_treasure_hoarder"`
-					KillsPowderGhast                                    float64 `json:"kills_powder_ghast"`
-					KillsGoblinWeaklingBow                              float64 `json:"kills_goblin_weakling_bow"`
-					KillsCrystalSentry                                  float64 `json:"kills_crystal_sentry"`
-					KillsGoblinCreepertamer                             float64 `json:"kills_goblin_creepertamer"`
-					KillsGoblinCreeper                                  float64 `json:"kills_goblin_creeper"`
-					KillsGoblinBattler                                  float64 `json:"kills_goblin_battler"`
-					KillsGoblinGolem                                    float64 `json:"kills_goblin_golem"`
-					KillsGoblinMurderlover                              float64 `json:"kills_goblin_murderlover"`
-					KillsPhantomFisherman                               float64 `json:"kills_phantom_fisherman"`
-					KillsYeti                                           float64 `json:"kills_yeti"`
-					KillsScarfMage                                      float64 `json:"kills_scarf_mage"`
-					MythosBurrowsDugNextEPIC                            float64 `json:"mythos_burrows_dug_next_EPIC"`
-					MythosBurrowsDugCombatEPIC                          float64 `json:"mythos_burrows_dug_combat_EPIC"`
-					MythosBurrowsDugTreasureEPIC                        float64 `json:"mythos_burrows_dug_treasure_EPIC"`
-					MythosBurrowsChainsCompleteEPIC                     float64 `json:"mythos_burrows_chains_complete_EPIC"`
-					KillsMinosChampion                                  float64 `json:"kills_minos_champion"`
-					MythosBurrowsDugNextLEGENDARY                       float64 `json:"mythos_burrows_dug_next_LEGENDARY"`
-					MythosBurrowsDugCombatLEGENDARY                     float64 `json:"mythos_burrows_dug_combat_LEGENDARY"`
-					MythosBurrowsDugTreasureLEGENDARY                   float64 `json:"mythos_burrows_dug_treasure_LEGENDARY"`
-					MythosBurrowsChainsCompleteLEGENDARY                float64 `json:"mythos_burrows_chains_complete_LEGENDARY"`
-					DeathsMinosChampion                                 float64 `json:"deaths_minos_champion"`
-					DeathsMinosInquisitor                               float64 `json:"deaths_minos_inquisitor"`
-					DeathsSiameseLynx                                   float64 `json:"deaths_siamese_lynx"`
-					KillsForestIslandBat                                float64 `json:"kills_forest_island_bat"`
-					KillsArachne                                        float64 `json:"kills_arachne"`
-					KillsArachneBrood                                   float64 `json:"kills_arachne_brood"`
-					DeathsArachneBrood                                  float64 `json:"deaths_arachne_brood"`
-					KillsArachneKeeper                                  float64 `json:"kills_arachne_keeper"`
-					DeathsArachne                                       float64 `json:"deaths_arachne"`
-					DeathsWeaverSpider                                  float64 `json:"deaths_weaver_spider"`
-					KillsMasterCryptTankZombie                          float64 `json:"kills_master_crypt_tank_zombie"`
-					KillsMasterZombieGrunt                              float64 `json:"kills_master_zombie_grunt"`
-					KillsMasterCryptDreadlord                           float64 `json:"kills_master_crypt_dreadlord"`
-					KillsMasterCryptLurker                              float64 `json:"kills_master_crypt_lurker"`
-					KillsMasterCryptSouleater                           float64 `json:"kills_master_crypt_souleater"`
-					KillsMasterScaredSkeleton                           float64 `json:"kills_master_scared_skeleton"`
-					KillsMasterSkeletonSoldier                          float64 `json:"kills_master_skeleton_soldier"`
-					KillsMasterSkeletonGrunt                            float64 `json:"kills_master_skeleton_grunt"`
-					KillsMasterLostAdventurer                           float64 `json:"kills_master_lost_adventurer"`
-					KillsMasterDungeonRespawningSkeleton                float64 `json:"kills_master_dungeon_respawning_skeleton"`
-					KillsMasterWatcherSummonUndead                      float64 `json:"kills_master_watcher_summon_undead"`
-					DeathsMasterWatcherSummonUndead                     float64 `json:"deaths_master_watcher_summon_undead"`
-					KillsMasterDiamondGuy                               float64 `json:"kills_master_diamond_guy"`
-					KillsMasterCellarSpider                             float64 `json:"kills_master_cellar_spider"`
-					KillsMasterBonzoSummonUndead                        float64 `json:"kills_master_bonzo_summon_undead"`
-					DeathsMasterBonzoSummonUndead                       float64 `json:"deaths_master_bonzo_summon_undead"`
-					DeathsMasterBonzo                                   float64 `json:"deaths_master_bonzo"`
-					KillsMushroomCow                                    float64 `json:"kills_mushroom_cow"`
-					KillsTrapperRabbit                                  float64 `json:"kills_trapper_rabbit"`
-					KillsTrapperChicken                                 float64 `json:"kills_trapper_chicken"`
-					KillsTrapperSheep                                   float64 `json:"kills_trapper_sheep"`
-					KillsLavaPigman                                     float64 `json:"kills_lava_pigman"`
-					KillsLavaBlaze                                      float64 `json:"kills_lava_blaze"`
-					KillsSludge                                         float64 `json:"kills_sludge"`
-					KillsVoidlingFanatic                                float64 `json:"kills_voidling_fanatic"`
-					KillsVoidlingExtremist                              float64 `json:"kills_voidling_extremist"`
-					KillsMasterCryptUndeadPieter                        float64 `json:"kills_master_crypt_undead_pieter"`
-					KillsMasterCryptUndead                              float64 `json:"kills_master_crypt_undead"`
-					KillsMasterSkeletonMaster                           float64 `json:"kills_master_skeleton_master"`
-					DeathsMasterScarfWarrior                            float64 `json:"deaths_master_scarf_warrior"`
-					DeathsMasterScarfMage                               float64 `json:"deaths_master_scarf_mage"`
-					DeathsMasterScarf                                   float64 `json:"deaths_master_scarf"`
-					KillsMasterParasite                                 float64 `json:"kills_master_parasite"`
-					DeathsMasterSkeletonSoldier                         float64 `json:"deaths_master_skeleton_soldier"`
-					KillsMasterCryptUndeadFriedrich                     float64 `json:"kills_master_crypt_undead_friedrich"`
-					DeathsMasterLostAdventurer                          float64 `json:"deaths_master_lost_adventurer"`
-					DeathsMasterShadowAssassin                          float64 `json:"deaths_master_shadow_assassin"`
-					KillsMasterZombieSoldier                            float64 `json:"kills_master_zombie_soldier"`
-					DeathsMasterProfessorMageGuardian                   float64 `json:"deaths_master_professor_mage_guardian"`
-					KillsMasterSkeletor                                 float64 `json:"kills_master_skeletor"`
-					KillsMasterProfessorGuardianSummon                  float64 `json:"kills_master_professor_guardian_summon"`
-					KillsMasterZombieKnight                             float64 `json:"kills_master_zombie_knight"`
-					KillsMasterSniperSkeleton                           float64 `json:"kills_master_sniper_skeleton"`
-					DeathsMasterWatcherBonzo                            float64 `json:"deaths_master_watcher_bonzo"`
-					DeathsMasterProfessor                               float64 `json:"deaths_master_professor"`
-					DeathsMasterProfessorGuardianSummon                 float64 `json:"deaths_master_professor_guardian_summon"`
-					DeathsVoidlingExtremist                             float64 `json:"deaths_voidling_extremist"`
-					KillsOldDragon                                      float64 `json:"kills_old_dragon"`
-				} `json:"stats"`
-				Objectives struct {
-					CollectLog struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"collect_log"`
-					TalkToGuide struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guide"`
-					PublicIsland struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"public_island"`
-					ExploreHub struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"explore_hub"`
-					ExploreVillage struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"explore_village"`
-					TalkToLibrarian struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_librarian"`
-					TalkToFarmer struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_farmer"`
-					TalkToBlacksmith struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_blacksmith"`
-					TalkToLumberjack struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_lumberjack"`
-					TalkToEventMaster struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_event_master"`
-					TalkToAuctionMaster struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_auction_master"`
-					TalkToBanker struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_banker"`
-					TalkToFairy struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_fairy"`
-					TalkToFisherman1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"talk_to_fisherman_1"`
-					TalkToCarpenter struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_carpenter"`
-					TalkToArtist1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_artist_1"`
-					PaintCanvas struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"paint_canvas"`
-					TalkToPetCollector struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_pet_collector"`
-					TalkToPetSitter struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_pet_sitter"`
-					ChopTree struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"chop_tree"`
-					TalkToLumberjack2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_lumberjack_2"`
-					IncreaseForagingSkill struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"increase_foraging_skill"`
-					WarpForagingIslands struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"warp_foraging_islands"`
-					IncreaseForagingSkill5 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"increase_foraging_skill_5"`
-					TalkToGustave1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_gustave_1"`
-					CollectBirchLogs struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"collect_birch_logs"`
-					CollectDarkOakLogs struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"collect_dark_oak_logs"`
-					TalkToCharlie struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_charlie"`
-					TalkToCharlie2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"talk_to_charlie_2"`
-					DepositCoins struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"deposit_coins"`
-					CraftWorkbench struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"craft_workbench"`
-					MineCoal struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"mine_coal"`
-					TalkToLazyMiner struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_lazy_miner"`
-					IncreaseMiningSkill5 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"increase_mining_skill_5"`
-					TalkToTelekinesisApplier struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_telekinesis_applier"`
-					FindPickaxe struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"find_pickaxe"`
-					CollectIngots struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-						IronIngot   bool   `json:"IRON_INGOT"`
-						GoldIngot   bool   `json:"GOLD_INGOT"`
-					} `json:"collect_ingots"`
-					WarpDeepCaverns struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"warp_deep_caverns"`
-					TalkToLapisMiner struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_lapis_miner"`
-					TalkToLiftOperator struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_lift_operator"`
-					ReachLapisQuarry struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"reach_lapis_quarry"`
-					CollectLapis struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-						INKSACK4    bool   `json:"INK_SACK:4"`
-					} `json:"collect_lapis"`
-					ReachPigmensDen struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"reach_pigmens_den"`
-					CollectRedstone struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-						Redstone    bool   `json:"REDSTONE"`
-					} `json:"collect_redstone"`
-					TalkToBlacksmith2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_blacksmith_2"`
-					TalkToFarmhand1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_farmhand_1"`
-					IncreaseFarmingSkill5 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"increase_farming_skill_5"`
-					WarpMushroomDesert struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"warp_mushroom_desert"`
-					KillDangerMobs struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"kill_danger_mobs"`
-					TalkToBartender struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_bartender"`
-					IncreaseCombatSkill struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"increase_combat_skill"`
-					WarpSpidersDen struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"warp_spiders_den"`
-					IncreaseCombatSkill5 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"increase_combat_skill_5"`
-					TalkToRick struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_rick"`
-					WarpTheEnd struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"warp_the_end"`
-					WarpBlazingFortress struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"warp_blazing_fortress"`
-					IncreaseMiningSkill struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"increase_mining_skill"`
-					ReforgeItem struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"reforge_item"`
-					WarpGoldMine struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"warp_gold_mine"`
-					ReachSlimehill struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"reach_slimehill"`
-					TalkToGuber1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guber_1"`
-					TalkToEndDealer struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_end_dealer"`
-					CollectEndStone struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-						EnderStone  bool   `json:"ENDER_STONE"`
-					} `json:"collect_end_stone"`
-					ReachDragonsNest struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"reach_dragons_nest"`
-					FightDragon struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"fight_dragon"`
-					TalkToHaymitch struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_haymitch"`
-					CollectEmerald struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-						Emerald     bool   `json:"EMERALD"`
-					} `json:"collect_emerald"`
-					ReachDiamondReserve struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"reach_diamond_reserve"`
-					TalkToArtist2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_artist_2"`
-					GiveFairySouls struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"give_fairy_souls"`
-					CollectDiamond struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-						Diamond     bool   `json:"DIAMOND"`
-					} `json:"collect_diamond"`
-					ReachObsidianSanctuary struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"reach_obsidian_sanctuary"`
-					CollectObsidian struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-						Obsidian    bool   `json:"OBSIDIAN"`
-					} `json:"collect_obsidian"`
-					CollectWoolCarpenter struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"collect_wool_carpenter"`
-					CompleteTheEndRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_end_race_1"`
-					CompleteTheWoodsRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_woods_race_1"`
-					TalkToGustave2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_gustave_2"`
-					CompleteTheWoodsRace2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_woods_race_2"`
-					TalkToGustave3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_gustave_3"`
-					CompleteTheWoodsRace3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_woods_race_3"`
-					CollectWheat struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"collect_wheat"`
-					TalkToFarmer2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_farmer_2"`
-					IncreaseFarmingSkill struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"increase_farming_skill"`
-					WarpBarnIsland struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"warp_barn_island"`
-					CraftWheatMinion struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"craft_wheat_minion"`
-					TalkToFarmhand2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_farmhand_2"`
-					CollectFarmingResources2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-						INKSACK3    bool   `json:"INK_SACK:3"`
-						Cactus      bool   `json:"CACTUS"`
-						SugarCane   bool   `json:"SUGAR_CANE"`
-					} `json:"collect_farming_resources_2"`
-					CollectFarmAnimalResources2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-						Rabbit      bool   `json:"RABBIT"`
-						Mutton      bool   `json:"MUTTON"`
-					} `json:"collect_farm_animal_resources_2"`
-					TalkToElle struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_elle"`
-					EnchantItem struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"enchant_item"`
-					TalkToMelody struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_melody"`
-					TalkToFrosty struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_frosty"`
-					TalkToGulliver1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_gulliver_1"`
-					CompleteTheChickenRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_chicken_race_1"`
-					TalkToGulliver2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_gulliver_2"`
-					CompleteTheChickenRace2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_chicken_race_2"`
-					TalkToGuildford1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_1"`
-					CompleteTheGiantMushroomAnythingWithReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_anything_with_return_race_1"`
-					CompleteTheGiantMushroomNoPearlsWithReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_no_pearls_with_return_race_1"`
-					CompleteTheGiantMushroomNoAbilitiesWithReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_no_abilities_with_return_race_1"`
-					CompleteTheGiantMushroomNothingWithReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_nothing_with_return_race_1"`
-					CompleteThePrecursorRuinsAnythingWithReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_anything_with_return_race_1"`
-					CompleteThePrecursorRuinsNoPearlsWithReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_no_pearls_with_return_race_1"`
-					CompleteThePrecursorRuinsNoAbilitiesWithReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_no_abilities_with_return_race_1"`
-					CompleteThePrecursorRuinsNothingWithReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_nothing_with_return_race_1"`
-					CompleteTheCrystalCoreAnythingWithReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"complete_the_crystal_core_anything_with_return_race_1"`
-					CompleteTheCrystalCoreNoPearlsWithReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"complete_the_crystal_core_no_pearls_with_return_race_1"`
-					CompleteTheCrystalCoreNoAbilitiesWithReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"complete_the_crystal_core_no_abilities_with_return_race_1"`
-					CompleteTheCrystalCoreNothingWithReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"complete_the_crystal_core_nothing_with_return_race_1"`
-					CompleteTheGiantMushroomAnythingNoReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_anything_no_return_race_1"`
-					CompleteTheGiantMushroomNoPearlsNoReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_no_pearls_no_return_race_1"`
-					CompleteTheGiantMushroomNoAbilitiesNoReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_no_abilities_no_return_race_1"`
-					CompleteTheGiantMushroomNothingNoReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_nothing_no_return_race_1"`
-					CompleteThePrecursorRuinsAnythingNoReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_anything_no_return_race_1"`
-					CompleteThePrecursorRuinsNoPearlsNoReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_no_pearls_no_return_race_1"`
-					CompleteThePrecursorRuinsNoAbilitiesNoReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_no_abilities_no_return_race_1"`
-					CompleteThePrecursorRuinsNothingNoReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_nothing_no_return_race_1"`
-					CompleteTheCrystalCoreAnythingNoReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_crystal_core_anything_no_return_race_1"`
-					CompleteTheCrystalCoreNoPearlsNoReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_crystal_core_no_pearls_no_return_race_1"`
-					CompleteTheCrystalCoreNoAbilitiesNoReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_crystal_core_no_abilities_no_return_race_1"`
-					CompleteTheCrystalCoreNothingNoReturnRace1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_crystal_core_nothing_no_return_race_1"`
-					GiveRickIngots struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"give_rick_ingots"`
-					CollectFarmingResources struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-						PotatoItem  bool   `json:"POTATO_ITEM"`
-						CarrotItem  bool   `json:"CARROT_ITEM"`
-						Pumpkin     bool   `json:"PUMPKIN"`
-						Melon       bool   `json:"MELON"`
-					} `json:"collect_farming_resources"`
-					CollectFarmAnimalResources struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-						RawChicken  bool   `json:"RAW_CHICKEN"`
-						Leather     bool   `json:"LEATHER"`
-						Pork        bool   `json:"PORK"`
-					} `json:"collect_farm_animal_resources"`
-					TalkToGuildfordCrystalCoreAnythingNoReturn1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_crystal_core_anything_no_return_1"`
-					TalkToGuildfordCrystalCoreNoPearlsNoReturn1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_crystal_core_no_pearls_no_return_1"`
-					CompleteTheCrystalCoreAnythingNoReturnRace2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_crystal_core_anything_no_return_race_2"`
-					CompleteTheCrystalCoreNoPearlsNoReturnRace2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_crystal_core_no_pearls_no_return_race_2"`
-					TalkToGuildfordCrystalCoreNoAbilitiesNoReturn1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_crystal_core_no_abilities_no_return_1"`
-					CompleteTheCrystalCoreNoAbilitiesNoReturnRace2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_crystal_core_no_abilities_no_return_race_2"`
-					TalkToGuildfordCrystalCoreAnythingNoReturn2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_crystal_core_anything_no_return_2"`
-					CompleteTheCrystalCoreAnythingNoReturnRace3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_crystal_core_anything_no_return_race_3"`
-					TalkToGuildfordCrystalCoreAnythingNoReturn3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_crystal_core_anything_no_return_3"`
-					CompleteTheCrystalCoreAnythingNoReturnRace4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_crystal_core_anything_no_return_race_4"`
-					TalkToGuildfordCrystalCoreAnythingNoReturn4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_crystal_core_anything_no_return_4"`
-					TalkToGuildfordCrystalCoreNoPearlsNoReturn2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_crystal_core_no_pearls_no_return_2"`
-					CompleteTheCrystalCoreNoPearlsNoReturnRace3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_crystal_core_no_pearls_no_return_race_3"`
-					TalkToGuildfordCrystalCoreNoPearlsNoReturn3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_crystal_core_no_pearls_no_return_3"`
-					CompleteTheCrystalCoreNoPearlsNoReturnRace4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_crystal_core_no_pearls_no_return_race_4"`
-					TalkToGuildfordCrystalCoreNoPearlsNoReturn4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_crystal_core_no_pearls_no_return_4"`
-					TalkToGuildfordCrystalCoreNoAbilitiesNoReturn2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_crystal_core_no_abilities_no_return_2"`
-					CompleteTheCrystalCoreNoAbilitiesNoReturnRace3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_crystal_core_no_abilities_no_return_race_3"`
-					TalkToGuildfordCrystalCoreNoAbilitiesNoReturn3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_crystal_core_no_abilities_no_return_3"`
-					CompleteTheCrystalCoreNoAbilitiesNoReturnRace4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_crystal_core_no_abilities_no_return_race_4"`
-					TalkToGuildfordCrystalCoreNoAbilitiesNoReturn4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_crystal_core_no_abilities_no_return_4"`
-					TalkToGuildfordCrystalCoreNothingNoReturn1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_crystal_core_nothing_no_return_1"`
-					CompleteTheCrystalCoreNothingNoReturnRace2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_crystal_core_nothing_no_return_race_2"`
-					TalkToGuildfordCrystalCoreNothingNoReturn2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_crystal_core_nothing_no_return_2"`
-					CompleteTheCrystalCoreNothingNoReturnRace3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_crystal_core_nothing_no_return_race_3"`
-					TalkToGuildfordCrystalCoreNothingNoReturn3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_crystal_core_nothing_no_return_3"`
-					CompleteTheCrystalCoreNothingNoReturnRace4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_crystal_core_nothing_no_return_race_4"`
-					TalkToGuildfordCrystalCoreNothingNoReturn4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_crystal_core_nothing_no_return_4"`
-					TalkToGuildfordGiantMushroomAnythingNoReturn1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_giant_mushroom_anything_no_return_1"`
-					CompleteTheGiantMushroomAnythingNoReturnRace2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_anything_no_return_race_2"`
-					TalkToGuildfordGiantMushroomAnythingNoReturn2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_giant_mushroom_anything_no_return_2"`
-					CompleteTheGiantMushroomAnythingNoReturnRace3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_anything_no_return_race_3"`
-					TalkToGuildfordGiantMushroomAnythingNoReturn3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_giant_mushroom_anything_no_return_3"`
-					CompleteTheGiantMushroomAnythingNoReturnRace4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_anything_no_return_race_4"`
-					TalkToGuildfordGiantMushroomAnythingNoReturn4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_giant_mushroom_anything_no_return_4"`
-					TalkToGuildfordGiantMushroomNoPearlsNoReturn1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_giant_mushroom_no_pearls_no_return_1"`
-					CompleteTheGiantMushroomNoPearlsNoReturnRace2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_no_pearls_no_return_race_2"`
-					TalkToGuildfordGiantMushroomNoPearlsNoReturn2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_giant_mushroom_no_pearls_no_return_2"`
-					CompleteTheGiantMushroomNoPearlsNoReturnRace3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_no_pearls_no_return_race_3"`
-					TalkToGuildfordGiantMushroomNoPearlsNoReturn3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_giant_mushroom_no_pearls_no_return_3"`
-					CompleteTheGiantMushroomNoPearlsNoReturnRace4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_no_pearls_no_return_race_4"`
-					TalkToGuildfordGiantMushroomNoPearlsNoReturn4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_giant_mushroom_no_pearls_no_return_4"`
-					TalkToGuildfordGiantMushroomNoAbilitiesNoReturn1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_giant_mushroom_no_abilities_no_return_1"`
-					CompleteTheGiantMushroomNoAbilitiesNoReturnRace2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_no_abilities_no_return_race_2"`
-					TalkToGuildfordGiantMushroomNoAbilitiesNoReturn2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_giant_mushroom_no_abilities_no_return_2"`
-					CompleteTheGiantMushroomNoAbilitiesNoReturnRace3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_no_abilities_no_return_race_3"`
-					TalkToGuildfordGiantMushroomNoAbilitiesNoReturn3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_giant_mushroom_no_abilities_no_return_3"`
-					CompleteTheGiantMushroomNoAbilitiesNoReturnRace4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_no_abilities_no_return_race_4"`
-					TalkToGuildfordGiantMushroomNoAbilitiesNoReturn4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_giant_mushroom_no_abilities_no_return_4"`
-					TalkToGuildfordGiantMushroomNothingNoReturn1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_giant_mushroom_nothing_no_return_1"`
-					CompleteTheGiantMushroomNothingNoReturnRace2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_nothing_no_return_race_2"`
-					TalkToGuildfordGiantMushroomNothingNoReturn2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_giant_mushroom_nothing_no_return_2"`
-					CompleteTheGiantMushroomNothingNoReturnRace3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_nothing_no_return_race_3"`
-					TalkToGuildfordGiantMushroomNothingNoReturn3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_giant_mushroom_nothing_no_return_3"`
-					CompleteTheGiantMushroomNothingNoReturnRace4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_giant_mushroom_nothing_no_return_race_4"`
-					TalkToGuildfordGiantMushroomNothingNoReturn4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_giant_mushroom_nothing_no_return_4"`
-					TalkToGuildfordPrecursorRuinsAnythingNoReturn1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_precursor_ruins_anything_no_return_1"`
-					CompleteThePrecursorRuinsAnythingNoReturnRace2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_anything_no_return_race_2"`
-					TalkToGuildfordPrecursorRuinsAnythingNoReturn2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_precursor_ruins_anything_no_return_2"`
-					CompleteThePrecursorRuinsAnythingNoReturnRace3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_anything_no_return_race_3"`
-					TalkToGuildfordPrecursorRuinsAnythingNoReturn3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_precursor_ruins_anything_no_return_3"`
-					CompleteThePrecursorRuinsAnythingNoReturnRace4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_anything_no_return_race_4"`
-					TalkToGuildfordPrecursorRuinsAnythingNoReturn4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_precursor_ruins_anything_no_return_4"`
-					TalkToGuildfordPrecursorRuinsNoPearlsNoReturn1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_precursor_ruins_no_pearls_no_return_1"`
-					CompleteThePrecursorRuinsNoPearlsNoReturnRace2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_no_pearls_no_return_race_2"`
-					TalkToGuildfordPrecursorRuinsNoPearlsNoReturn2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_precursor_ruins_no_pearls_no_return_2"`
-					CompleteThePrecursorRuinsNoPearlsNoReturnRace3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_no_pearls_no_return_race_3"`
-					TalkToGuildfordPrecursorRuinsNoPearlsNoReturn3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_precursor_ruins_no_pearls_no_return_3"`
-					CompleteThePrecursorRuinsNoPearlsNoReturnRace4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_no_pearls_no_return_race_4"`
-					TalkToGuildfordPrecursorRuinsNoPearlsNoReturn4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_precursor_ruins_no_pearls_no_return_4"`
-					TalkToGuildfordPrecursorRuinsNoAbilitiesNoReturn1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_precursor_ruins_no_abilities_no_return_1"`
-					CompleteThePrecursorRuinsNoAbilitiesNoReturnRace2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_no_abilities_no_return_race_2"`
-					TalkToGuildfordPrecursorRuinsNoAbilitiesNoReturn2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_precursor_ruins_no_abilities_no_return_2"`
-					CompleteThePrecursorRuinsNoAbilitiesNoReturnRace3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_no_abilities_no_return_race_3"`
-					TalkToGuildfordPrecursorRuinsNoAbilitiesNoReturn3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_precursor_ruins_no_abilities_no_return_3"`
-					CompleteThePrecursorRuinsNoAbilitiesNoReturnRace4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_no_abilities_no_return_race_4"`
-					TalkToGuildfordPrecursorRuinsNoAbilitiesNoReturn4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_precursor_ruins_no_abilities_no_return_4"`
-					TalkToGuildfordPrecursorRuinsNothingNoReturn1 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_precursor_ruins_nothing_no_return_1"`
-					CompleteThePrecursorRuinsNothingNoReturnRace2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_nothing_no_return_race_2"`
-					TalkToGuildfordPrecursorRuinsNothingNoReturn2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_precursor_ruins_nothing_no_return_2"`
-					CompleteThePrecursorRuinsNothingNoReturnRace3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_nothing_no_return_race_3"`
-					TalkToGuildfordPrecursorRuinsNothingNoReturn3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_precursor_ruins_nothing_no_return_3"`
-					CompleteThePrecursorRuinsNothingNoReturnRace4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_precursor_ruins_nothing_no_return_race_4"`
-					TalkToGuildfordPrecursorRuinsNothingNoReturn4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guildford_precursor_ruins_nothing_no_return_4"`
-					TalkToGulliver3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_gulliver_3"`
-					CompleteTheChickenRace3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_chicken_race_3"`
-					GivePickaxeLapisMiner struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"give_pickaxe_lapis_miner"`
-					TalkToGulliver4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_gulliver_4"`
-					CompleteTheChickenRace4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"complete_the_chicken_race_4"`
-					TalkToGuber2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guber_2"`
-					CompleteTheEndRace2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_end_race_2"`
-					TalkToGuber3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guber_3"`
-					CompleteTheEndRace3 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_end_race_3"`
-					TalkToGuber4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guber_4"`
-					CompleteTheEndRace4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_end_race_4"`
-					TalkToGuber5 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_guber_5"`
-					CraftWoodPickaxe struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"craft_wood_pickaxe"`
-					TalkToGustave4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_gustave_4"`
-					CompleteTheWoodsRace4 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"complete_the_woods_race_4"`
-					TalkToGustave5 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_gustave_5"`
-					CollectSpider struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-						String      bool   `json:"STRING"`
-						SpiderEye   bool   `json:"SPIDER_EYE"`
-					} `json:"collect_spider"`
-					CollectNetherResources struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-						BlazeRod    bool   `json:"BLAZE_ROD"`
-						NetherStalk bool   `json:"NETHER_STALK"`
-					} `json:"collect_nether_resources"`
-					CollectNetherResources2 struct {
-						Status        string `json:"status"`
-						Progress      int    `json:"progress"`
-						CompletedAt   int64  `json:"completed_at"`
-						MagmaCream    bool   `json:"MAGMA_CREAM"`
-						GlowstoneDust bool   `json:"GLOWSTONE_DUST"`
-						Quartz        bool   `json:"QUARTZ"`
-					} `json:"collect_nether_resources_2"`
-					TalkToRhys struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_rhys"`
-					IncreaseMining12 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"increase_mining_12"`
-					HotmGiveMaterials struct {
-						Status            string `json:"status"`
-						Progress          int    `json:"progress"`
-						CompletedAt       int64  `json:"completed_at"`
-						Started           bool   `json:"started"`
-						EnchantedRedstone int    `json:"ENCHANTED_REDSTONE"`
-						EnchantedIron     int    `json:"ENCHANTED_IRON"`
-					} `json:"hotm_give_materials"`
-					Fetchur240 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"fetchur-24-0"`
-					Fetchur260 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"fetchur-26-0"`
-					Fetchur290 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"fetchur-29-0"`
-					Fetchur300 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"fetchur-30-0"`
-					TalkToArchaeologist struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_archaeologist"`
-					TalkToShaggy struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_shaggy"`
-					FindRelics struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"find_relics"`
-					TalkToArchaeologist2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_archaeologist_2"`
-					FindUberRelics struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"find_uber_relics"`
-					TalkToShaggy2 struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_shaggy_2"`
-					TalkToGwendolyn struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_gwendolyn"`
-					TalkToBraum struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"talk_to_braum"`
-					VisitGreaterMines struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int64  `json:"completed_at"`
-					} `json:"visit_greater_mines"`
-					TalkToTheGoblinKing struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"talk_to_the_goblin_king"`
-					KillAutomatons struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"kill_automatons"`
-					EnterDivanMines struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"enter_divan_mines"`
-					FindAJungleKey struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"find_a_jungle_key"`
-					MineRuby struct {
-						Status      string `json:"status"`
-						Progress    int    `json:"progress"`
-						CompletedAt int    `json:"completed_at"`
-					} `json:"mine_ruby"`
-				} `json:"objectives"`
-				Tutorial []string `json:"tutorial"`
-				Quests   struct {
-					CollectLog struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"collect_log"`
-					ExploreHub struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"explore_hub"`
-					ExploreVillage struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"explore_village"`
-					TalkToLibrarian struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_librarian"`
-					TalkToFarmer struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_farmer"`
-					TalkToBlacksmith struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_blacksmith"`
-					TalkToLumberjack struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_lumberjack"`
-					TalkToAuctionMaster struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_auction_master"`
-					TalkToBanker struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_banker"`
-					TalkToCarpenter struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_carpenter"`
-					TalkToArtist1 struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_artist_1"`
-					IncreaseForagingSkill5 struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int    `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"increase_foraging_skill_5"`
-					TalkToGustave1 struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_gustave_1"`
-					TalkToLazyMiner struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_lazy_miner"`
-					IncreaseMiningSkill5 struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"increase_mining_skill_5"`
-					TalkToLapisMiner struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_lapis_miner"`
-					TalkToFarmhand1 struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_farmhand_1"`
-					IncreaseFarmingSkill5 struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"increase_farming_skill_5"`
-					KillDangerMobs struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"kill_danger_mobs"`
-					IncreaseCombatSkill5 struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"increase_combat_skill_5"`
-					TalkToRick struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_rick"`
-					ReforgeItem struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"reforge_item"`
-					TalkToGuber1 struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_guber_1"`
-					TalkToEndDealer struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_end_dealer"`
-					TalkToGulliver1 struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int    `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_gulliver_1"`
-					TalkToGuildford1 struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int    `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_guildford_1"`
-					TalkToRhys struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_rhys"`
-					TalkToArchaeologist struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_archaeologist"`
-					TalkToGwendolyn struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int64  `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_gwendolyn"`
-					TalkToTheGoblinKing struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int    `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"talk_to_the_goblin_king"`
-					KillAutomatons struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int    `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"kill_automatons"`
-					EnterDivanMines struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int    `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"enter_divan_mines"`
-					FindAJungleKey struct {
-						Status        string `json:"status"`
-						ActivatedAt   int64  `json:"activated_at"`
-						ActivatedAtSb int    `json:"activated_at_sb"`
-						CompletedAt   int    `json:"completed_at"`
-						CompletedAtSb int    `json:"completed_at_sb"`
-					} `json:"find_a_jungle_key"`
-				} `json:"quests"`
-				LastDeath                     int      `json:"last_death"`
-				CraftedGenerators             []string `json:"crafted_generators"`
-				VisitedZones                  []string `json:"visited_zones"`
-				FairySoulsCollected           int      `json:"fairy_souls_collected"`
-				FairySouls                    int      `json:"fairy_souls"`
-				FairyExchanges                int      `json:"fairy_exchanges"`
-				FishingTreasureCaught         int      `json:"fishing_treasure_caught"`
-				DeathCount                    int      `json:"death_count"`
-				AchievementSpawnedIslandTypes []string `json:"achievement_spawned_island_types"`
-				SlayerQuest                   struct {
-					Type            string `json:"type"`
-					Tier            int    `json:"tier"`
-					StartTimestamp  int64  `json:"start_timestamp"`
-					CompletionState int    `json:"completion_state"`
-					CombatXp        int    `json:"combat_xp"`
-					RecentMobKills  []struct {
-						Xp        float64 `json:"xp"`
-						Timestamp int64   `json:"timestamp"`
-					} `json:"recent_mob_kills"`
-					LastKilledMobIsland string `json:"last_killed_mob_island"`
-				} `json:"slayer_quest"`
-				SlayerBosses struct {
-					Spider struct {
-						ClaimedLevels struct {
-							Level1 bool `json:"level_1"`
-							Level2 bool `json:"level_2"`
-							Level3 bool `json:"level_3"`
-							Level4 bool `json:"level_4"`
-							Level5 bool `json:"level_5"`
-							Level6 bool `json:"level_6"`
-							Level7 bool `json:"level_7"`
-						} `json:"claimed_levels"`
-						BossKillsTier0 int `json:"boss_kills_tier_0"`
-						Xp             int `json:"xp"`
-						BossKillsTier1 int `json:"boss_kills_tier_1"`
-						BossKillsTier2 int `json:"boss_kills_tier_2"`
-						BossKillsTier3 int `json:"boss_kills_tier_3"`
-					} `json:"spider"`
-					Zombie struct {
-						ClaimedLevels struct {
-							Level1        bool `json:"level_1"`
-							Level2        bool `json:"level_2"`
-							Level3        bool `json:"level_3"`
-							Level4        bool `json:"level_4"`
-							Level5        bool `json:"level_5"`
-							Level6        bool `json:"level_6"`
-							Level7        bool `json:"level_7"`
-							Level7Special bool `json:"level_7_special"`
-						} `json:"claimed_levels"`
-						BossKillsTier0 int `json:"boss_kills_tier_0"`
-						Xp             int `json:"xp"`
-						BossKillsTier1 int `json:"boss_kills_tier_1"`
-						BossKillsTier2 int `json:"boss_kills_tier_2"`
-						BossKillsTier3 int `json:"boss_kills_tier_3"`
-						BossKillsTier4 int `json:"boss_kills_tier_4"`
-					} `json:"zombie"`
-					Wolf struct {
-						ClaimedLevels struct {
-							Level1 bool `json:"level_1"`
-							Level2 bool `json:"level_2"`
-							Level3 bool `json:"level_3"`
-							Level4 bool `json:"level_4"`
-							Level5 bool `json:"level_5"`
-							Level6 bool `json:"level_6"`
-							Level7 bool `json:"level_7"`
-						} `json:"claimed_levels"`
-						BossKillsTier0 int `json:"boss_kills_tier_0"`
-						Xp             int `json:"xp"`
-						BossKillsTier1 int `json:"boss_kills_tier_1"`
-						BossKillsTier2 int `json:"boss_kills_tier_2"`
-						BossKillsTier3 int `json:"boss_kills_tier_3"`
-					} `json:"wolf"`
-					Enderman struct {
-						ClaimedLevels struct {
-							Level1 bool `json:"level_1"`
-							Level2 bool `json:"level_2"`
-							Level3 bool `json:"level_3"`
-						} `json:"claimed_levels"`
-						BossKillsTier0 int `json:"boss_kills_tier_0"`
-						Xp             int `json:"xp"`
-						BossKillsTier1 int `json:"boss_kills_tier_1"`
-					} `json:"enderman"`
-				} `json:"slayer_bosses"`
-				Dungeons struct {
-					DungeonTypes struct {
-						Catacombs struct {
-							TimesPlayed struct {
-								Num0 float64 `json:"0"`
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-								Num4 float64 `json:"4"`
-								Num5 float64 `json:"5"`
-								Num6 float64 `json:"6"`
-								Num7 float64 `json:"7"`
-							} `json:"times_played"`
-							Experience float64 `json:"experience"`
-							BestScore  struct {
-								Num0 float64 `json:"0"`
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-								Num4 float64 `json:"4"`
-								Num5 float64 `json:"5"`
-								Num6 float64 `json:"6"`
-								Num7 float64 `json:"7"`
-							} `json:"best_score"`
-							MobsKilled struct {
-								Num0 float64 `json:"0"`
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-								Num4 float64 `json:"4"`
-								Num5 float64 `json:"5"`
-								Num6 float64 `json:"6"`
-								Num7 float64 `json:"7"`
-							} `json:"mobs_killed"`
-							MostMobsKilled struct {
-								Num0 float64 `json:"0"`
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-								Num4 float64 `json:"4"`
-								Num5 float64 `json:"5"`
-								Num6 float64 `json:"6"`
-								Num7 float64 `json:"7"`
-							} `json:"most_mobs_killed"`
-							MostDamageBerserk struct {
-								Num0 float64 `json:"0"`
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-								Num4 float64 `json:"4"`
-								Num5 float64 `json:"5"`
-								Num6 float64 `json:"6"`
-								Num7 float64 `json:"7"`
-							} `json:"most_damage_berserk"`
-							MostHealing struct {
-								Num0 float64 `json:"0"`
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-								Num4 float64 `json:"4"`
-								Num5 float64 `json:"5"`
-								Num6 float64 `json:"6"`
-								Num7 float64 `json:"7"`
-							} `json:"most_healing"`
-							TierCompletions struct {
-								Num0 float64 `json:"0"`
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-								Num4 float64 `json:"4"`
-								Num5 float64 `json:"5"`
-								Num6 float64 `json:"6"`
-								Num7 float64 `json:"7"`
-							} `json:"tier_completions"`
-							FastestTime struct {
-								Num0 float64 `json:"0"`
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-								Num4 float64 `json:"4"`
-								Num5 float64 `json:"5"`
-								Num6 float64 `json:"6"`
-								Num7 float64 `json:"7"`
-							} `json:"fastest_time"`
-							BestRuns struct {
-								Num0 []struct {
-									Timestamp        int64    `json:"timestamp"`
-									ScoreExploration int      `json:"score_exploration"`
-									ScoreSpeed       int      `json:"score_speed"`
-									ScoreSkill       int      `json:"score_skill"`
-									ScoreBonus       int      `json:"score_bonus"`
-									DungeonClass     string   `json:"dungeon_class"`
-									Teammates        []string `json:"teammates"`
-									ElapsedTime      int      `json:"elapsed_time"`
-									DamageDealt      float64  `json:"damage_dealt"`
-									Deaths           int      `json:"deaths"`
-									MobsKilled       int      `json:"mobs_killed"`
-									SecretsFound     int      `json:"secrets_found"`
-									DamageMitigated  float64  `json:"damage_mitigated"`
-									AllyHealing      float64  `json:"ally_healing,omitempty"`
-								} `json:"0"`
-								Num1 []struct {
-									Timestamp        int64    `json:"timestamp"`
-									ScoreExploration int      `json:"score_exploration"`
-									ScoreSpeed       int      `json:"score_speed"`
-									ScoreSkill       int      `json:"score_skill"`
-									ScoreBonus       int      `json:"score_bonus"`
-									DungeonClass     string   `json:"dungeon_class"`
-									Teammates        []string `json:"teammates"`
-									ElapsedTime      int      `json:"elapsed_time"`
-									DamageDealt      float64  `json:"damage_dealt"`
-									Deaths           int      `json:"deaths"`
-									MobsKilled       int      `json:"mobs_killed"`
-									SecretsFound     int      `json:"secrets_found"`
-									DamageMitigated  float64  `json:"damage_mitigated"`
-									AllyHealing      float64  `json:"ally_healing,omitempty"`
-								} `json:"1"`
-								Num2 []struct {
-									Timestamp        int64    `json:"timestamp"`
-									ScoreExploration int      `json:"score_exploration"`
-									ScoreSpeed       int      `json:"score_speed"`
-									ScoreSkill       int      `json:"score_skill"`
-									ScoreBonus       int      `json:"score_bonus"`
-									DungeonClass     string   `json:"dungeon_class"`
-									Teammates        []string `json:"teammates"`
-									ElapsedTime      int      `json:"elapsed_time"`
-									DamageDealt      float64  `json:"damage_dealt"`
-									Deaths           int      `json:"deaths"`
-									MobsKilled       int      `json:"mobs_killed"`
-									SecretsFound     int      `json:"secrets_found"`
-									DamageMitigated  float64  `json:"damage_mitigated"`
-									AllyHealing      float64  `json:"ally_healing,omitempty"`
-								} `json:"2"`
-								Num3 []struct {
-									Timestamp        int64    `json:"timestamp"`
-									ScoreExploration int      `json:"score_exploration"`
-									ScoreSpeed       int      `json:"score_speed"`
-									ScoreSkill       int      `json:"score_skill"`
-									ScoreBonus       int      `json:"score_bonus"`
-									DungeonClass     string   `json:"dungeon_class"`
-									Teammates        []string `json:"teammates"`
-									ElapsedTime      int      `json:"elapsed_time"`
-									DamageDealt      float64  `json:"damage_dealt"`
-									Deaths           int      `json:"deaths"`
-									MobsKilled       int      `json:"mobs_killed"`
-									SecretsFound     int      `json:"secrets_found"`
-									DamageMitigated  float64  `json:"damage_mitigated"`
-									AllyHealing      float64  `json:"ally_healing,omitempty"`
-								} `json:"3"`
-								Num4 []struct {
-									Timestamp        int64    `json:"timestamp"`
-									ScoreExploration int      `json:"score_exploration"`
-									ScoreSpeed       int      `json:"score_speed"`
-									ScoreSkill       int      `json:"score_skill"`
-									ScoreBonus       int      `json:"score_bonus"`
-									DungeonClass     string   `json:"dungeon_class"`
-									Teammates        []string `json:"teammates"`
-									ElapsedTime      int      `json:"elapsed_time"`
-									DamageDealt      float64  `json:"damage_dealt"`
-									Deaths           int      `json:"deaths"`
-									MobsKilled       int      `json:"mobs_killed"`
-									SecretsFound     int      `json:"secrets_found"`
-									DamageMitigated  float64  `json:"damage_mitigated"`
-									AllyHealing      float64  `json:"ally_healing,omitempty"`
-								} `json:"4"`
-								Num5 []struct {
-									Timestamp        int64    `json:"timestamp"`
-									ScoreExploration int      `json:"score_exploration"`
-									ScoreSpeed       int      `json:"score_speed"`
-									ScoreSkill       int      `json:"score_skill"`
-									ScoreBonus       int      `json:"score_bonus"`
-									DungeonClass     string   `json:"dungeon_class"`
-									Teammates        []string `json:"teammates"`
-									ElapsedTime      int      `json:"elapsed_time"`
-									DamageDealt      float64  `json:"damage_dealt"`
-									Deaths           int      `json:"deaths"`
-									MobsKilled       int      `json:"mobs_killed"`
-									SecretsFound     int      `json:"secrets_found"`
-									DamageMitigated  float64  `json:"damage_mitigated"`
-									AllyHealing      float64  `json:"ally_healing"`
-								} `json:"5"`
-								Num6 []struct {
-									Timestamp        int64    `json:"timestamp"`
-									ScoreExploration int      `json:"score_exploration"`
-									ScoreSpeed       int      `json:"score_speed"`
-									ScoreSkill       int      `json:"score_skill"`
-									ScoreBonus       int      `json:"score_bonus"`
-									DungeonClass     string   `json:"dungeon_class"`
-									Teammates        []string `json:"teammates"`
-									ElapsedTime      int      `json:"elapsed_time"`
-									DamageDealt      float64  `json:"damage_dealt"`
-									Deaths           int      `json:"deaths"`
-									MobsKilled       int      `json:"mobs_killed"`
-									SecretsFound     int      `json:"secrets_found"`
-									DamageMitigated  float64  `json:"damage_mitigated"`
-									AllyHealing      float64  `json:"ally_healing"`
-								} `json:"6"`
-								Num7 []struct {
-									Timestamp        int64    `json:"timestamp"`
-									ScoreExploration int      `json:"score_exploration"`
-									ScoreSpeed       int      `json:"score_speed"`
-									ScoreSkill       int      `json:"score_skill"`
-									ScoreBonus       int      `json:"score_bonus"`
-									DungeonClass     string   `json:"dungeon_class"`
-									Teammates        []string `json:"teammates"`
-									ElapsedTime      int      `json:"elapsed_time"`
-									DamageDealt      float64  `json:"damage_dealt"`
-									Deaths           int      `json:"deaths"`
-									MobsKilled       int      `json:"mobs_killed"`
-									SecretsFound     int      `json:"secrets_found"`
-									DamageMitigated  float64  `json:"damage_mitigated"`
-									AllyHealing      float64  `json:"ally_healing"`
-								} `json:"7"`
-							} `json:"best_runs"`
-							WatcherKills struct {
-								Num0 float64 `json:"0"`
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-								Num4 float64 `json:"4"`
-								Num5 float64 `json:"5"`
-								Num6 float64 `json:"6"`
-								Num7 float64 `json:"7"`
-							} `json:"watcher_kills"`
-							HighestTierCompleted int `json:"highest_tier_completed"`
-							FastestTimeS         struct {
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-								Num4 float64 `json:"4"`
-								Num5 float64 `json:"5"`
-								Num6 float64 `json:"6"`
-								Num7 float64 `json:"7"`
-							} `json:"fastest_time_s"`
-							MostDamageArcher struct {
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-								Num4 float64 `json:"4"`
-								Num6 float64 `json:"6"`
-								Num7 float64 `json:"7"`
-							} `json:"most_damage_archer"`
-							MostDamageHealer struct {
-								Num3 float64 `json:"3"`
-								Num4 float64 `json:"4"`
-								Num5 float64 `json:"5"`
-							} `json:"most_damage_healer"`
-							FastestTimeSPlus struct {
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-								Num4 float64 `json:"4"`
-								Num5 float64 `json:"5"`
-								Num6 float64 `json:"6"`
-								Num7 float64 `json:"7"`
-							} `json:"fastest_time_s_plus"`
-							MostDamageTank struct {
-								Num4 float64 `json:"4"`
-							} `json:"most_damage_tank"`
-							MostDamageMage struct {
-								Num0 float64 `json:"0"`
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-								Num4 float64 `json:"4"`
-								Num5 float64 `json:"5"`
-								Num6 float64 `json:"6"`
-								Num7 float64 `json:"7"`
-							} `json:"most_damage_mage"`
-							MilestoneCompletions struct {
-								Num3 float64 `json:"3"`
-								Num5 float64 `json:"5"`
-								Num6 float64 `json:"6"`
-								Num7 float64 `json:"7"`
-							} `json:"milestone_completions"`
-						} `json:"catacombs"`
-						MasterCatacombs struct {
-							TierCompletions struct {
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-							} `json:"tier_completions"`
-							MilestoneCompletions struct {
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-							} `json:"milestone_completions"`
-							HighestTierCompleted int `json:"highest_tier_completed"`
-							FastestTime          struct {
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-							} `json:"fastest_time"`
-							BestRuns struct {
-								Num1 []struct {
-									Timestamp        int64    `json:"timestamp"`
-									ScoreExploration int      `json:"score_exploration"`
-									ScoreSpeed       int      `json:"score_speed"`
-									ScoreSkill       int      `json:"score_skill"`
-									ScoreBonus       int      `json:"score_bonus"`
-									DungeonClass     string   `json:"dungeon_class"`
-									Teammates        []string `json:"teammates"`
-									ElapsedTime      int      `json:"elapsed_time"`
-									DamageDealt      float64  `json:"damage_dealt"`
-									Deaths           int      `json:"deaths"`
-									MobsKilled       int      `json:"mobs_killed"`
-									SecretsFound     int      `json:"secrets_found"`
-									DamageMitigated  float64  `json:"damage_mitigated"`
-									AllyHealing      float64  `json:"ally_healing,omitempty"`
-								} `json:"1"`
-								Num2 []struct {
-									Timestamp        int64    `json:"timestamp"`
-									ScoreExploration int      `json:"score_exploration"`
-									ScoreSpeed       int      `json:"score_speed"`
-									ScoreSkill       int      `json:"score_skill"`
-									ScoreBonus       int      `json:"score_bonus"`
-									DungeonClass     string   `json:"dungeon_class"`
-									Teammates        []string `json:"teammates"`
-									ElapsedTime      int      `json:"elapsed_time"`
-									DamageDealt      float64  `json:"damage_dealt"`
-									Deaths           int      `json:"deaths"`
-									MobsKilled       int      `json:"mobs_killed"`
-									SecretsFound     int      `json:"secrets_found"`
-									DamageMitigated  float64  `json:"damage_mitigated"`
-								} `json:"2"`
-								Num3 []struct {
-									Timestamp        int64    `json:"timestamp"`
-									ScoreExploration int      `json:"score_exploration"`
-									ScoreSpeed       int      `json:"score_speed"`
-									ScoreSkill       int      `json:"score_skill"`
-									ScoreBonus       int      `json:"score_bonus"`
-									DungeonClass     string   `json:"dungeon_class"`
-									Teammates        []string `json:"teammates"`
-									ElapsedTime      int      `json:"elapsed_time"`
-									DamageDealt      float64  `json:"damage_dealt"`
-									Deaths           int      `json:"deaths"`
-									MobsKilled       int      `json:"mobs_killed"`
-									SecretsFound     int      `json:"secrets_found"`
-									DamageMitigated  float64  `json:"damage_mitigated"`
-									AllyHealing      float64  `json:"ally_healing"`
-								} `json:"3"`
-							} `json:"best_runs"`
-							BestScore struct {
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-							} `json:"best_score"`
-							MobsKilled struct {
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-							} `json:"mobs_killed"`
-							MostMobsKilled struct {
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-							} `json:"most_mobs_killed"`
-							MostDamageBerserk struct {
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-							} `json:"most_damage_berserk"`
-							MostHealing struct {
-								Num1 float64 `json:"1"`
-								Num3 float64 `json:"3"`
-							} `json:"most_healing"`
-							FastestTimeS struct {
-								Num1 float64 `json:"1"`
-								Num2 float64 `json:"2"`
-								Num3 float64 `json:"3"`
-							} `json:"fastest_time_s"`
-							MostDamageArcher struct {
-								Num1 float64 `json:"1"`
-								Num3 float64 `json:"3"`
-							} `json:"most_damage_archer"`
-							FastestTimeSPlus struct {
-								Num1 float64 `json:"1"`
-							} `json:"fastest_time_s_plus"`
-							MostDamageHealer struct {
-								Num3 float64 `json:"3"`
-							} `json:"most_damage_healer"`
-						} `json:"master_catacombs"`
-					} `json:"dungeon_types"`
-					PlayerClasses struct {
-						Healer struct {
-							Experience float64 `json:"experience"`
-						} `json:"healer"`
-						Mage struct {
-							Experience float64 `json:"experience"`
-						} `json:"mage"`
-						Berserk struct {
-							Experience float64 `json:"experience"`
-						} `json:"berserk"`
-						Archer struct {
-							Experience float64 `json:"experience"`
-						} `json:"archer"`
-						Tank struct {
-							Experience float64 `json:"experience"`
-						} `json:"tank"`
-					} `json:"player_classes"`
-					DungeonJournal struct {
-						JournalEntries struct {
-							KaryllesDiary      []int         `json:"karylles_diary"`
-							TheStudy           []int         `json:"the_study"`
-							ExpeditionVolume1  []int         `json:"expedition_volume_1"`
-							UncannyRemains     []int         `json:"uncanny_remains"`
-							ExpeditionVolume2  []int         `json:"expedition_volume_2"`
-							GrimAdversity      []int         `json:"grim_adversity"`
-							ExpeditionVolume3  []int         `json:"expedition_volume_3"`
-							ExpeditionVolume4  []int         `json:"expedition_volume_4"`
-							NecronsMagicScroll []interface{} `json:"necrons_magic_scroll"`
-							TheWalls           []int         `json:"the_walls"`
-						} `json:"journal_entries"`
-					} `json:"dungeon_journal"`
-					DungeonsBlahBlah     []string `json:"dungeons_blah_blah"`
-					SelectedDungeonClass string   `json:"selected_dungeon_class"`
-				} `json:"dungeons"`
-				Griffin struct {
-					Burrows []struct {
-						Ts    int64 `json:"ts"`
-						X     int   `json:"x"`
-						Y     int   `json:"y"`
-						Z     int   `json:"z"`
-						Type  int   `json:"type"`
-						Tier  int   `json:"tier"`
-						Chain int   `json:"chain"`
-					} `json:"burrows"`
-				} `json:"griffin"`
-				Jacob2 struct {
-					MedalsInv struct {
-						Bronze int `json:"bronze"`
-						Silver int `json:"silver"`
-						Gold   int `json:"gold"`
-					} `json:"medals_inv"`
-					Perks struct {
-						DoubleDrops     int `json:"double_drops"`
-						FarmingLevelCap int `json:"farming_level_cap"`
-					} `json:"perks"`
-					Contests struct {
-						One00108SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"100:10_8:SUGAR_CANE"`
-						One001014PUMPKIN struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"100:10_14:PUMPKIN"`
-						One001020INKSACK3 struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"100:10_20:INK_SACK:3"`
-						One001023SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"100:10_23:SUGAR_CANE"`
-						One001029POTATOITEM struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"100:10_29:POTATO_ITEM"`
-						One001224PUMPKIN struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"100:12_24:PUMPKIN"`
-						One001230SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"100:12_30:SUGAR_CANE"`
-						One0115PUMPKIN struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"101:1_5:PUMPKIN"`
-						One0118SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"101:1_8:SUGAR_CANE"`
-						One01111POTATOITEM struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"101:1_11:POTATO_ITEM"`
-						One01123SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"101:1_23:SUGAR_CANE"`
-						One01222SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"101:2_22:SUGAR_CANE"`
-						One01327SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"101:3_27:SUGAR_CANE"`
-						One0154SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"101:5_4:SUGAR_CANE"`
-						One0157POTATOITEM struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"101:5_7:POTATO_ITEM"`
-						One01510INKSACK3 struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"101:5_10:INK_SACK:3"`
-						One01516PUMPKIN struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"101:5_16:PUMPKIN"`
-						One01531POTATOITEM struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"101:5_31:POTATO_ITEM"`
-						One01717POTATOITEM struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"101:7_17:POTATO_ITEM"`
-						One011128PUMPKIN struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"101:11_28:PUMPKIN"`
-						One02321SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"102:3_21:SUGAR_CANE"`
-						One02423INKSACK3 struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"102:4_23:INK_SACK:3"`
-						One02426PUMPKIN struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"102:4_26:PUMPKIN"`
-						One02516PUMPKIN struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"102:5_16:PUMPKIN"`
-						One02522SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"102:5_22:SUGAR_CANE"`
-						One02525POTATOITEM struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"102:5_25:POTATO_ITEM"`
-						One04417PUMPKIN struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"104:4_17:PUMPKIN"`
-						One0454SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"104:5_4:SUGAR_CANE"`
-						One04624POTATOITEM struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"104:6_24:POTATO_ITEM"`
-						One04711SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"104:7_11:SUGAR_CANE"`
-						One04714POTATOITEM struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"104:7_14:POTATO_ITEM"`
-						One04114SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"104:11_4:SUGAR_CANE"`
-						One0612POTATOITEM struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"106:1_2:POTATO_ITEM"`
-						One07717POTATOITEM struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"107:7_17:POTATO_ITEM"`
-						One09219NETHERSTALK struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"109:2_19:NETHER_STALK"`
-						One09222NETHERSTALK struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"109:2_22:NETHER_STALK"`
-						One09231NETHERSTALK struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"109:2_31:NETHER_STALK"`
-						One09420SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"109:4_20:SUGAR_CANE"`
-						One0954NETHERSTALK struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"109:5_4:NETHER_STALK"`
-						One10711NETHERSTALK struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"110:7_11:NETHER_STALK"`
-						One10828NETHERSTALK struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"110:8_28:NETHER_STALK"`
-						One12126SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"112:1_26:SUGAR_CANE"`
-						One12330SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"112:3_30:SUGAR_CANE"`
-						One121017NETHERSTALK struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"112:10_17:NETHER_STALK"`
-						One121026NETHERSTALK struct {
-							Collected int `json:"collected"`
-						} `json:"112:10_26:NETHER_STALK"`
-						One14711NETHERSTALK struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"114:7_11:NETHER_STALK"`
-						One1575SUGARCANE struct {
-							Collected int `json:"collected"`
-						} `json:"115:7_5:SUGAR_CANE"`
-						One151224CARROTITEM struct {
-							Collected int `json:"collected"`
-						} `json:"115:12_24:CARROT_ITEM"`
-						One16129SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"116:1_29:SUGAR_CANE"`
-						One1624SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"116:2_4:SUGAR_CANE"`
-						One18111NETHERSTALK struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"118:1_11:NETHER_STALK"`
-						One18114SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"118:1_14:SUGAR_CANE"`
-						One1821PUMPKIN struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"118:2_1:PUMPKIN"`
-						One1839SUGARCANE struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"118:3_9:SUGAR_CANE"`
-						One18312PUMPKIN struct {
-							Collected           int  `json:"collected"`
-							ClaimedRewards      bool `json:"claimed_rewards"`
-							ClaimedPosition     int  `json:"claimed_position"`
-							ClaimedParticipants int  `json:"claimed_participants"`
-						} `json:"118:3_12:PUMPKIN"`
-						One18810PUMPKIN struct {
-							Collected int `json:"collected"`
-						} `json:"118:8_10:PUMPKIN"`
-						One32129SUGARCANE struct {
-							Collected int `json:"collected"`
-						} `json:"132:12_9:SUGAR_CANE"`
-						One33924NETHERSTALK struct {
-							Collected int `json:"collected"`
-						} `json:"133:9_24:NETHER_STALK"`
-						One52615SUGARCANE struct {
-							Collected int `json:"collected"`
-						} `json:"152:6_15:SUGAR_CANE"`
-					} `json:"contests"`
-					Talked       bool     `json:"talked"`
-					UniqueGolds2 []string `json:"unique_golds2"`
-				} `json:"jacob2"`
-				Experimentation struct {
-					Simon struct {
-						LastAttempt int64 `json:"last_attempt"`
-						Attempts0   int   `json:"attempts_0"`
-						BonusClicks int   `json:"bonus_clicks"`
-						LastClaimed int64 `json:"last_claimed"`
-						Claims0     int   `json:"claims_0"`
-						BestScore0  int   `json:"best_score_0"`
-						Attempts1   int   `json:"attempts_1"`
-						Claims1     int   `json:"claims_1"`
-						BestScore1  int   `json:"best_score_1"`
-						Attempts2   int   `json:"attempts_2"`
-						Claims2     int   `json:"claims_2"`
-						BestScore2  int   `json:"best_score_2"`
-						Attempts3   int   `json:"attempts_3"`
-						Claims3     int   `json:"claims_3"`
-						BestScore3  int   `json:"best_score_3"`
-						Attempts5   int   `json:"attempts_5"`
-						Claims5     int   `json:"claims_5"`
-						BestScore5  int   `json:"best_score_5"`
-					} `json:"simon"`
-					Pairings struct {
-						LastClaimed int64 `json:"last_claimed"`
-						Claims1     int   `json:"claims_1"`
-						LastAttempt int   `json:"last_attempt"`
-						BestScore1  int   `json:"best_score_1"`
-						Claims2     int   `json:"claims_2"`
-						BestScore2  int   `json:"best_score_2"`
-						Claims3     int   `json:"claims_3"`
-						BestScore3  int   `json:"best_score_3"`
-						Claims4     int   `json:"claims_4"`
-						BestScore4  int   `json:"best_score_4"`
-						Claims5     int   `json:"claims_5"`
-						BestScore5  int   `json:"best_score_5"`
-					} `json:"pairings"`
-					Numbers struct {
-						LastAttempt int64 `json:"last_attempt"`
-						Attempts1   int   `json:"attempts_1"`
-						BonusClicks int   `json:"bonus_clicks"`
-						LastClaimed int64 `json:"last_claimed"`
-						Claims1     int   `json:"claims_1"`
-						BestScore1  int   `json:"best_score_1"`
-						Attempts2   int   `json:"attempts_2"`
-						Claims2     int   `json:"claims_2"`
-						BestScore2  int   `json:"best_score_2"`
-						Attempts3   int   `json:"attempts_3"`
-						Claims3     int   `json:"claims_3"`
-						BestScore3  int   `json:"best_score_3"`
-					} `json:"numbers"`
-					ClaimsResets          int   `json:"claims_resets"`
-					ClaimsResetsTimestamp int64 `json:"claims_resets_timestamp"`
-				} `json:"experimentation"`
-				Perks struct {
-					PermanentHealth     int `json:"permanent_health"`
-					PermanentStrength   int `json:"permanent_strength"`
-					PermanentSpeed      int `json:"permanent_speed"`
-					CatacombsBossLuck   int `json:"catacombs_boss_luck"`
-					CatacombsCritDamage int `json:"catacombs_crit_damage"`
-					CatacombsLooting    int `json:"catacombs_looting"`
-					CatacombsStrength   int `json:"catacombs_strength"`
-					CatacombsHealth     int `json:"catacombs_health"`
-					CatacombsDefense    int `json:"catacombs_defense"`
-					PermanentDefense    int `json:"permanent_defense"`
-					ForbiddenBlessing   int `json:"forbidden_blessing"`
-				} `json:"perks"`
-				HarpQuest struct {
-					SelectedSong                          string  `json:"selected_song"`
-					SelectedSongEpoch                     int64   `json:"selected_song_epoch"`
-					SongHymnJoyBestCompletion             float64 `json:"song_hymn_joy_best_completion"`
-					SongHymnJoyCompletions                int     `json:"song_hymn_joy_completions"`
-					SongHymnJoyPerfectCompletions         int     `json:"song_hymn_joy_perfect_completions"`
-					SongFrereJacquesBestCompletion        float64 `json:"song_frere_jacques_best_completion"`
-					SongFrereJacquesCompletions           int     `json:"song_frere_jacques_completions"`
-					SongFrereJacquesPerfectCompletions    int     `json:"song_frere_jacques_perfect_completions"`
-					SongAmazingGraceBestCompletion        float64 `json:"song_amazing_grace_best_completion"`
-					SongAmazingGraceCompletions           int     `json:"song_amazing_grace_completions"`
-					SongAmazingGracePerfectCompletions    int     `json:"song_amazing_grace_perfect_completions"`
-					SongBrahmsBestCompletion              float64 `json:"song_brahms_best_completion"`
-					SongBrahmsCompletions                 int     `json:"song_brahms_completions"`
-					SongHappyBirthdayBestCompletion       float64 `json:"song_happy_birthday_best_completion"`
-					SongHappyBirthdayCompletions          int     `json:"song_happy_birthday_completions"`
-					SongHappyBirthdayPerfectCompletions   int     `json:"song_happy_birthday_perfect_completions"`
-					SongGreensleevesBestCompletion        float64 `json:"song_greensleeves_best_completion"`
-					SongGreensleevesCompletions           int     `json:"song_greensleeves_completions"`
-					SongGreensleevesPerfectCompletions    int     `json:"song_greensleeves_perfect_completions"`
-					SongJeopardyBestCompletion            float64 `json:"song_jeopardy_best_completion"`
-					SongJeopardyCompletions               int     `json:"song_jeopardy_completions"`
-					SongJeopardyPerfectCompletions        int     `json:"song_jeopardy_perfect_completions"`
-					SongMinuetCompletions                 int     `json:"song_minuet_completions"`
-					SongBrahmsPerfectCompletions          int     `json:"song_brahms_perfect_completions"`
-					SongMinuetBestCompletion              float64 `json:"song_minuet_best_completion"`
-					SongMinuetPerfectCompletions          int     `json:"song_minuet_perfect_completions"`
-					SongJoyWorldBestCompletion            float64 `json:"song_joy_world_best_completion"`
-					SongJoyWorldCompletions               int     `json:"song_joy_world_completions"`
-					SongJoyWorldPerfectCompletions        int     `json:"song_joy_world_perfect_completions"`
-					SongPureImaginationBestCompletion     float64 `json:"song_pure_imagination_best_completion"`
-					SongPureImaginationCompletions        int     `json:"song_pure_imagination_completions"`
-					SongPureImaginationPerfectCompletions int     `json:"song_pure_imagination_perfect_completions"`
-					SongVieEnRoseBestCompletion           float64 `json:"song_vie_en_rose_best_completion"`
-					SongVieEnRoseCompletions              int     `json:"song_vie_en_rose_completions"`
-				} `json:"harp_quest"`
-				ActiveEffects []struct {
-					Effect    string `json:"effect"`
-					Level     int    `json:"level"`
-					Modifiers []struct {
-						Key string `json:"key"`
-						Amp int    `json:"amp"`
-					} `json:"modifiers"`
-					TicksRemaining int  `json:"ticks_remaining"`
-					Infinite       bool `json:"infinite"`
-				} `json:"active_effects"`
-				PausedEffects         []interface{} `json:"paused_effects"`
-				DisabledPotionEffects []interface{} `json:"disabled_potion_effects"`
-				VisitedModes          []string      `json:"visited_modes"`
-				TempStatBuffs         []struct {
-					Stat     int    `json:"stat"`
-					Key      string `json:"key"`
-					Amount   int    `json:"amount"`
-					ExpireAt int64  `json:"expire_at"`
-				} `json:"temp_stat_buffs"`
-				MiningCore struct {
-					Nodes struct {
-						MiningSpeed      int `json:"mining_speed"`
-						MiningFortune    int `json:"mining_fortune"`
-						TitaniumInsanium int `json:"titanium_insanium"`
-						MiningSpeedBoost int `json:"mining_speed_boost"`
-						DailyPowder      int `json:"daily_powder"`
-						EfficientMiner   int `json:"efficient_miner"`
-						MiningExperience int `json:"mining_experience"`
-					} `json:"nodes"`
-					ReceivedFreeTier            bool    `json:"received_free_tier"`
-					Tokens                      int     `json:"tokens"`
-					PowderMithril               int     `json:"powder_mithril"`
-					PowderMithrilTotal          int     `json:"powder_mithril_total"`
-					TokensSpent                 int     `json:"tokens_spent"`
-					PowderSpentMithril          int     `json:"powder_spent_mithril"`
-					Experience                  float64 `json:"experience"`
-					LastReset                   int64   `json:"last_reset"`
-					RetroactiveTier2Token       bool    `json:"retroactive_tier2_token"`
-					SelectedPickaxeAbility      string  `json:"selected_pickaxe_ability"`
-					DailyOresMinedDayMithrilOre int     `json:"daily_ores_mined_day_mithril_ore"`
-					DailyOresMinedMithrilOre    int     `json:"daily_ores_mined_mithril_ore"`
-					GreaterMinesLastAccess      int64   `json:"greater_mines_last_access"`
-					Crystals                    struct {
-						JadeCrystal struct {
-						} `json:"jade_crystal"`
-						AmberCrystal struct {
-						} `json:"amber_crystal"`
-						AmethystCrystal struct {
-						} `json:"amethyst_crystal"`
-						SapphireCrystal struct {
-						} `json:"sapphire_crystal"`
-						TopazCrystal struct {
-						} `json:"topaz_crystal"`
-						JasperCrystal struct {
-						} `json:"jasper_crystal"`
-						RubyCrystal struct {
-						} `json:"ruby_crystal"`
-					} `json:"crystals"`
-					Biomes struct {
-						Dwarven struct {
-							StatuesPlaced []interface{} `json:"statues_placed"`
-						} `json:"dwarven"`
-					} `json:"biomes"`
-					PowderGemstone      int `json:"powder_gemstone"`
-					PowderGemstoneTotal int `json:"powder_gemstone_total"`
-				} `json:"mining_core"`
-				Forge struct {
-					ForgeProcesses struct {
-						Forge1 struct {
-						} `json:"forge_1"`
-					} `json:"forge_processes"`
-				} `json:"forge"`
-				ExperienceSkillRunecrafting float64  `json:"experience_skill_runecrafting"`
-				ExperienceSkillMining       float64  `json:"experience_skill_mining"`
-				UnlockedCollTiers           []string `json:"unlocked_coll_tiers"`
-				ExperienceSkillAlchemy      float64  `json:"experience_skill_alchemy"`
-				BackpackContents            struct {
-					Num0 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"0"`
-					Num1 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"1"`
-					Num2 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"2"`
-					Num3 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"3"`
-					Num4 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"4"`
-					Num5 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"5"`
-					Num6 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"6"`
-					Num7 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"7"`
-					Num8 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"8"`
-					Num9 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"9"`
-					Num10 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"10"`
-					Num11 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"11"`
-					Num12 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"12"`
-					Num13 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"13"`
-					Num14 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"14"`
-					Num15 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"15"`
-					Num16 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"16"`
-					Num17 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"17"`
-				} `json:"backpack_contents"`
-				ExperienceSkillTaming float64 `json:"experience_skill_taming"`
-				SacksCounts           struct {
-					String             int `json:"STRING"`
-					Sulphur            int `json:"SULPHUR"`
-					BlazeRod           int `json:"BLAZE_ROD"`
-					GhastTear          int `json:"GHAST_TEAR"`
-					SpiderEye          int `json:"SPIDER_EYE"`
-					RottenFlesh        int `json:"ROTTEN_FLESH"`
-					Bone               int `json:"BONE"`
-					SlimeBall          int `json:"SLIME_BALL"`
-					EnderPearl         int `json:"ENDER_PEARL"`
-					MagmaCream         int `json:"MAGMA_CREAM"`
-					Log                int `json:"LOG"`
-					LOG1               int `json:"LOG:1"`
-					LOG2               int `json:"LOG:2"`
-					LOG21              int `json:"LOG_2:1"`
-					Log2               int `json:"LOG_2"`
-					LOG3               int `json:"LOG:3"`
-					RevenantFlesh      int `json:"REVENANT_FLESH"`
-					TarantulaWeb       int `json:"TARANTULA_WEB"`
-					RAWFISH1           int `json:"RAW_FISH:1"`
-					RawFish            int `json:"RAW_FISH"`
-					ClayBall           int `json:"CLAY_BALL"`
-					WaterLily          int `json:"WATER_LILY"`
-					RAWFISH3           int `json:"RAW_FISH:3"`
-					InkSack            int `json:"INK_SACK"`
-					PrismarineCrystals int `json:"PRISMARINE_CRYSTALS"`
-					PrismarineShard    int `json:"PRISMARINE_SHARD"`
-					Sponge             int `json:"SPONGE"`
-					RAWFISH2           int `json:"RAW_FISH:2"`
-					WolfTooth          int `json:"WOLF_TOOTH"`
-					RuneWhiteSpiral1   int `json:"RUNE_WHITE_SPIRAL_1"`
-					RuneGem1           int `json:"RUNE_GEM_1"`
-					RuneBlood21        int `json:"RUNE_BLOOD_2_1"`
-					RuneSnow1          int `json:"RUNE_SNOW_1"`
-					RuneSparkling1     int `json:"RUNE_SPARKLING_1"`
-					RuneHearts1        int `json:"RUNE_HEARTS_1"`
-					RuneGolden1        int `json:"RUNE_GOLDEN_1"`
-					RuneLava1          int `json:"RUNE_LAVA_1"`
-					RuneRainbow1       int `json:"RUNE_RAINBOW_1"`
-					RuneZombieSlayer1  int `json:"RUNE_ZOMBIE_SLAYER_1"`
-					RuneZap1           int `json:"RUNE_ZAP_1"`
-					RuneClouds1        int `json:"RUNE_CLOUDS_1"`
-					RuneHot1           int `json:"RUNE_HOT_1"`
-					RuneIce1           int `json:"RUNE_ICE_1"`
-					RuneWake1          int `json:"RUNE_WAKE_1"`
-					NullSphere         int `json:"NULL_SPHERE"`
-					RedGift            int `json:"RED_GIFT"`
-					SnowBall           int `json:"SNOW_BALL"`
-					IceHunk            int `json:"ICE_HUNK"`
-				} `json:"sacks_counts"`
-				EssenceUndead int `json:"essence_undead"`
-				BackpackIcons struct {
-					Num0 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"0"`
-					Num1 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"1"`
-					Num2 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"2"`
-					Num3 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"3"`
-					Num4 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"4"`
-					Num5 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"5"`
-					Num6 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"6"`
-					Num7 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"7"`
-					Num8 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"8"`
-					Num9 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"9"`
-					Num10 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"10"`
-					Num11 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"11"`
-					Num12 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"12"`
-					Num13 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"13"`
-					Num14 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"14"`
-					Num15 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"15"`
-					Num16 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"16"`
-					Num17 struct {
-						Type int    `json:"type"`
-						Data string `json:"data"`
-					} `json:"17"`
-				} `json:"backpack_icons"`
-				ExperienceSkillCombat  float64 `json:"experience_skill_combat"`
-				EssenceDiamond         int     `json:"essence_diamond"`
-				ExperienceSkillFarming float64 `json:"experience_skill_farming"`
-				Collection             struct {
-					Log                    int `json:"LOG"`
-					LOG2                   int `json:"LOG:2"`
-					LOG1                   int `json:"LOG:1"`
-					LOG21                  int `json:"LOG_2:1"`
-					InkSack                int `json:"INK_SACK"`
-					WaterLily              int `json:"WATER_LILY"`
-					Log2                   int `json:"LOG_2"`
-					LOG3                   int `json:"LOG:3"`
-					RottenFlesh            int `json:"ROTTEN_FLESH"`
-					Cobblestone            int `json:"COBBLESTONE"`
-					Seeds                  int `json:"SEEDS"`
-					Bone                   int `json:"BONE"`
-					String                 int `json:"STRING"`
-					EnderPearl             int `json:"ENDER_PEARL"`
-					Pork                   int `json:"PORK"`
-					Wheat                  int `json:"WHEAT"`
-					Coal                   int `json:"COAL"`
-					GoldIngot              int `json:"GOLD_INGOT"`
-					INKSACK4               int `json:"INK_SACK:4"`
-					SpiderEye              int `json:"SPIDER_EYE"`
-					SlimeBall              int `json:"SLIME_BALL"`
-					Diamond                int `json:"DIAMOND"`
-					IronIngot              int `json:"IRON_INGOT"`
-					Mutton                 int `json:"MUTTON"`
-					CarrotItem             int `json:"CARROT_ITEM"`
-					MushroomCollection     int `json:"MUSHROOM_COLLECTION"`
-					Sulphur                int `json:"SULPHUR"`
-					MagmaCream             int `json:"MAGMA_CREAM"`
-					Redstone               int `json:"REDSTONE"`
-					BlazeRod               int `json:"BLAZE_ROD"`
-					GhastTear              int `json:"GHAST_TEAR"`
-					EnderStone             int `json:"ENDER_STONE"`
-					Obsidian               int `json:"OBSIDIAN"`
-					Emerald                int `json:"EMERALD"`
-					RawFish                int `json:"RAW_FISH"`
-					RAWFISH1               int `json:"RAW_FISH:1"`
-					ClayBall               int `json:"CLAY_BALL"`
-					RAWFISH3               int `json:"RAW_FISH:3"`
-					RAWFISH2               int `json:"RAW_FISH:2"`
-					PrismarineCrystals     int `json:"PRISMARINE_CRYSTALS"`
-					PrismarineShard        int `json:"PRISMARINE_SHARD"`
-					Melon                  int `json:"MELON"`
-					Pumpkin                int `json:"PUMPKIN"`
-					PotatoItem             int `json:"POTATO_ITEM"`
-					Ice                    int `json:"ICE"`
-					GlowstoneDust          int `json:"GLOWSTONE_DUST"`
-					Sponge                 int `json:"SPONGE"`
-					SugarCane              int `json:"SUGAR_CANE"`
-					Gravel                 int `json:"GRAVEL"`
-					Feather                int `json:"FEATHER"`
-					RawChicken             int `json:"RAW_CHICKEN"`
-					Leather                int `json:"LEATHER"`
-					Rabbit                 int `json:"RABBIT"`
-					Cactus                 int `json:"CACTUS"`
-					EnchantedFlint         int `json:"ENCHANTED_FLINT"`
-					EnchantedDiamond       int `json:"ENCHANTED_DIAMOND"`
-					EnchantedString        int `json:"ENCHANTED_STRING"`
-					EnchantedSpiderEye     int `json:"ENCHANTED_SPIDER_EYE"`
-					EnchantedRedstone      int `json:"ENCHANTED_REDSTONE"`
-					RabbitHide             int `json:"RABBIT_HIDE"`
-					RabbitFoot             int `json:"RABBIT_FOOT"`
-					EnchantedRabbit        int `json:"ENCHANTED_RABBIT"`
-					NetherStalk            int `json:"NETHER_STALK"`
-					Netherrack             int `json:"NETHERRACK"`
-					Quartz                 int `json:"QUARTZ"`
-					Sand                   int `json:"SAND"`
-					INKSACK3               int `json:"INK_SACK:3"`
-					Egg                    int `json:"EGG"`
-					EnchantedGlowstoneDust int `json:"ENCHANTED_GLOWSTONE_DUST"`
-					EnchantedCarrot        int `json:"ENCHANTED_CARROT"`
-					EnchantedLapisLazuli   int `json:"ENCHANTED_LAPIS_LAZULI"`
-					SnowBall               int `json:"SNOW_BALL"`
-					EnchantedEmerald       int `json:"ENCHANTED_EMERALD"`
-					EnchantedPotato        int `json:"ENCHANTED_POTATO"`
-					EnchantedClayBall      int `json:"ENCHANTED_CLAY_BALL"`
-					MithrilOre             int `json:"MITHRIL_ORE"`
-					EnchantedSnowBlock     int `json:"ENCHANTED_SNOW_BLOCK"`
-					HardStone              int `json:"HARD_STONE"`
-					GemstoneCollection     int `json:"GEMSTONE_COLLECTION"`
-				} `json:"collection"`
-				EssenceDragon             int     `json:"essence_dragon"`
-				EssenceGold               int     `json:"essence_gold"`
-				ExperienceSkillEnchanting float64 `json:"experience_skill_enchanting"`
-				ExperienceSkillFishing    float64 `json:"experience_skill_fishing"`
-				EssenceIce                int     `json:"essence_ice"`
-				EssenceWither             int     `json:"essence_wither"`
-				EssenceSpider             int     `json:"essence_spider"`
-				ExperienceSkillForaging   float64 `json:"experience_skill_foraging"`
-				ExperienceSkillCarpentry  float64 `json:"experience_skill_carpentry"`
-			} `json:"members"`
-		CommunityUpgrades struct {
-			CurrentlyUpgrading interface{} `json:"currently_upgrading"`
-			UpgradeStates      []struct {
-				Upgrade     string `json:"upgrade"`
-				Tier        int    `json:"tier"`
-				StartedMs   int64  `json:"started_ms"`
-				StartedBy   string `json:"started_by"`
-				ClaimedMs   int64  `json:"claimed_ms"`
-				ClaimedBy   string `json:"claimed_by"`
-				Fasttracked bool   `json:"fasttracked"`
-			} `json:"upgrade_states"`
-		} `json:"community_upgrades"`
-		CuteName string `json:"cute_name"`
-		Banking  struct {
-			Balance      float64 `json:"balance"`
-			Transactions []struct {
-				Amount        float64    `json:"amount"`
-				Timestamp     int64  `json:"timestamp"`
-				Action        string `json:"action"`
-				InitiatorName string `json:"initiator_name"`
-			} `json:"transactions"`
-		} `json:"banking"`
-	} `json:"profiles"`
+	Success  bool                     `json:"success"`
+	Profiles []HypixelSkyblockProfile `json:"profiles"`
 }

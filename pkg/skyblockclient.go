@@ -45,7 +45,6 @@ func (s SkyblockClient) doGet(url string) ([]byte, error) {
 		return nil, err
 	}
 
-	fmt.Printf("status code %d\n", resp.StatusCode)
 	defer resp.Body.Close()
 
 	body, err := ioutil.ReadAll(resp.Body)
@@ -139,4 +138,40 @@ func (s SkyblockClient) GetSkyblockPlayer(playerUUID string) (*HypixelSkyblockRe
 
 	return &playerInfo, nil
 }
+
+// GetSkyblockProfile gets profile based on cutename
+func (s SkyblockClient) GetSkyblockProfile(playerUUID string, cuteName string) (*HypixelSkyblockProfile, error) {
+
+	sbPlayer, err := s.GetSkyblockPlayer(playerUUID)
+	if err != nil {
+		log.Errorf("unable to get skyblock player info : %s", err.Error())
+		return nil, err
+	}
+
+	for _, profile := range sbPlayer.Profiles {
+		if profile.CuteName == cuteName {
+			return &profile, nil
+		}
+	}
+	return nil, fmt.Errorf("unable to find profile for playerUUID %s : cuteName %s", playerUUID, cuteName)
+}
+
+// GetSkyblockProfileMember gets profile based on cutename and memberUUID
+func (s SkyblockClient) GetSkyblockProfileMember(playerUUID string, cuteName string, memberUUID string) (*HypixelSkyblockMember, error) {
+
+	profile, err := s.GetSkyblockProfile(playerUUID, cuteName)
+	if err != nil {
+		log.Errorf("unable to get skyblock profile info : %s", err.Error())
+		return nil, err
+	}
+
+	if member,ok := profile.Members[memberUUID]; ok {
+		return &member,nil
+	}
+
+	return nil, fmt.Errorf("unable to find member %s for playerUUID/cutename  %s/%s",memberUUID, playerUUID, cuteName)
+}
+
+
+
 
